@@ -1,0 +1,40 @@
+{
+  "name": "cmplr-technologies.testing",
+  "version": "1.0.0",
+  "description": "Testing CMPLR Website",
+  "main": "index.js",
+  "scripts": {
+    "clean:reports": "rmdir /S /Q cypress\\reports && mkdir cypress\\reports  && mkdir cypress\\reports\\mochareports",
+    "pretest": "npm run clean:reports",
+    "scripts": "cypress run",
+    "combine-reports": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/mochareports/report.json",
+    "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
+    "posttest": "npm run pretest && npm run combine-reports && npm run generate-report",
+    "test-report": "npm run scripts || npm run posttest",
+    "test": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://CMPLR-Technologies@dev.azure.com/CMPLR-Technologies/CMPLR-Technologies.Testing/_git/CMPLR-Technologies.Testing"
+  },
+  "keywords": [
+    "Cypress",
+    "CMPLR",
+    "TESTING"
+  ],
+  "author": [
+    "Ziad Aatef",
+    "WE'am Bassem"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.0.0",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-mailslurp": "^1.3.0",
+    "cypress-multi-reporters": "^1.5.0",
+    "mocha": "^9.1.3",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^6.0.1"
+  }
+}
