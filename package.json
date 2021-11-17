@@ -22,10 +22,7 @@
     "CMPLR",
     "TESTING"
   ],
-  "author": [
-    "Ziad Aatef",
-    "WE'am Bassem"
-  ],
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^9.0.0",

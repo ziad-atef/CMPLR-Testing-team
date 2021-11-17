@@ -8,6 +8,9 @@ class Login {
         // return cy.get('a.HhR12._xpjA.i_kY6[href="/login"]');
         return cy.get('a.Z8Ux2.qjTo7.IMvK3[href="/login"]');
     }
+    secondaryLoginButton() {
+        return cy.get('a.Z8Ux2.qjTo7.CguuB.bS3ge[href="/login"]').last();
+    }
     emailField() {
         // return cy.get('input.o4KIk[name="email"]');
         return cy.get('input.gj_Aq[name="email"]');
