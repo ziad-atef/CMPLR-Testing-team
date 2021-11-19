@@ -11,8 +11,7 @@
     "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
     "posttest": "npm run pretest && npm run combine-reports && npm run generate-report",
     "test-report": "npm run scripts || npm run posttest",
-    "test": "npx cypress open",
-    "appium-scripts": "npx wdio run wdio.conf.js"
+    "test": "npx cypress open"
   },
   "repository": {
     "type": "git",
@@ -26,15 +25,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@wdio/appium-service": "^7.16.6",
-    "@wdio/browserstack-service": "^7.16.8",
-    "@wdio/crossbrowsertesting-service": "^7.16.8",
-    "@wdio/devtools-service": "^7.16.8",
-    "@wdio/local-runner": "^7.16.8",
-    "@wdio/mocha-framework": "^7.16.6",
-    "@wdio/selenium-standalone-service": "^7.16.6",
-    "@wdio/spec-reporter": "^7.16.4",
-    "appium": "^1.22.1",
     "cypress": "^9.0.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-mailslurp": "^1.3.0",
@@ -42,18 +32,6 @@
     "mocha": "^9.1.3",
     "mochawesome": "^7.0.1",
     "mochawesome-merge": "^4.2.0",
-    "mochawesome-report-generator": "^6.0.1",
-    "wdio-cleanuptotal-service": "^1.0.1",
-    "wdio-docker-service": "^3.1.4",
-    "wdio-eslinter-service": "^0.0.2",
-    "wdio-image-comparison-service": "^3.0.0",
-    "wdio-reportportal-service": "^7.3.1",
-    "wdio-rerun-service": "^1.7.2",
-    "wdio-timeline-reporter": "^5.1.4",
-    "wdio-video-reporter": "^3.1.3",
-    "wdio-wait-for": "^2.2.1"
-  },
-  "dependencies": {
-    "@wdio/cli": "^7.16.8"
+    "mochawesome-report-generator": "^6.0.1"
   }
 }
