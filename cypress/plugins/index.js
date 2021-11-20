@@ -19,4 +19,11 @@
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
+  on("before:browser:launch", (browser, launchOptions) => {
+    console.log(launchOptions.args);
+    if (browser.name === "chrome") {
+      launchOptions.args.push("--incognito");
+    }
+    return launchOptions;
+  });
 }

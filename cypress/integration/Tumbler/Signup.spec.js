@@ -32,11 +32,40 @@ const fillSignupData = (email, password, blogName) => {
     SignupPOM.signupButtoninside().click();
 }
 
+const ageEntry = (age) =>{
+    cy.get('input[name = "age"]').type(age);
+    cy.get('button[type = "submit"]').click({ force: true });
+
+    if(age<13){
+        ageFail();
+    }
+    else{
+        ageSucess();
+    }
+}
+
 const failAssertions = (failMessage) =>{
 
     cy.contains(failMessage);
     cy.url().should("include", "register?source=login_register_center")
 }
+
+const successAssertions = () =>{
+
+    cy.contains("Sign up").should("not.exist");
+    cy.get('input[name = "age"]').should("be.enabled").and("be.visible");
+    cy.get('button[type = "submit"]').should("be.enabled").and("be.visible");
+}
+
+const ageFail = () =>{
+    cy.contains("Sorry");
+    cy.contains("We could not complete your registration at this time");
+}
+
+const ageSucess = () =>{
+
+}
+
 describe('Signup', () => {
     beforeEach(() => {
         /*
@@ -150,4 +179,30 @@ describe('Signup', () => {
 
         failAssertions(invalidEmailMessage);
     });
+
+    it('signup valid info but invalid age', () => {
+
+        SignupPOM.signupButton().click({ force: true });
+
+        fillSignupData(email, password, blogName);
+
+        successAssertions();
+
+        ageEntry(10);
+
+    });
+
+    it('signup valid info and age', () => {
+
+        SignupPOM.signupButton().click({ force: true });
+
+        fillSignupData(email, password, blogName);
+
+        successAssertions();
+
+        ageEntry(18);
+
+        cy.get('button[class = "onboarding-skip-button"]').click({ force: true });
+    });
+
 });
