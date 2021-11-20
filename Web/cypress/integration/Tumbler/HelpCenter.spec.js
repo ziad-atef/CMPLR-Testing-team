@@ -19,7 +19,7 @@ const fillEmailAndPassword = (passEmail, passPassword) => {
 
 describe('Help center', () => {
 
-    it('access blog without sign in', () => {
+    it('Checking static pages', () => {
         /*
         cy.visit('https://www.tumblr.com/');
         

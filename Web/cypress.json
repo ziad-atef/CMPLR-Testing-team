@@ -1,7 +1,7 @@
 {
     "experimentalStudio": true,
     "env": {
-        "MAILSLURP_API_KEY": ""
+        "MAILSLURP_API_KEY": "8de71497219a41320b92504b3fbbe83cb07be6b3bfb8f56da1f2641978f4ef74"
     },
     "reporter": "cypress-multi-reporters",
     "reporterOptions": {
