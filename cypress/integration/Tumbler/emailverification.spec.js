@@ -15,20 +15,9 @@ describe('email verification', () => {
     const VerificationPOM = new Verification();
 
     before(function () {
-        // // cy.visit('https://www.tumblr.com/register');
-        // // cy.log("Wrap inbox before test");
-        // // cy.mailslurp()
-        // //     .then(mailslurp => mailslurp.createInbox())
-        // //     .then(inbox => {
-        // //         cy.log(`Inbox id ${inbox.id}`);
-        // //         // save inbox id and email address to this (make sure you use function and not arrow syntax)
-        // //         cy.wrap(inbox.id).as('inboxId');
-        // //         cy.wrap(inbox.emailAddress).as('emailAddress');
-        // //         expect(inbox.emailAddress).to.contain("@mailslurp");
-        // //     })
         cy.fixture('userLoginData').then((user) => {
-            email = user.dumpyEmail;
-            password = user.dumpyPassword;
+            email = user.newEmail;
+            password = user.newPassword;
         });
     });
 
@@ -39,7 +28,7 @@ describe('email verification', () => {
 
         cy.get('input[placeholder="Email"]').type(email);
         cy.get('input[placeholder="Password"]').type(password);
-        cy.get('input[placeholder="Blog name"]').type("ToTestEmailVerification77777");
+        cy.get('input[placeholder="Blog name"]').type("ToTestEmailVerification1776677");
         cy.get('button[aria-label="Sign up"]').click();
 
         cy.get('input[placeholder="How old are you?"]').type(22);

@@ -1,4 +1,4 @@
-import { success } from '../Utils/log in/pageassertion'
+import { success, fail } from '../Utils/log in/pageassertion'
 import 'cypress-file-upload';
 
 // ***********************************************
@@ -27,10 +27,20 @@ import 'cypress-file-upload';
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('login', (POM, email, password) => {
+Cypress.Commands.add('login', (POM, email, password, successfulLogin = true, failMessage = '') => {
     POM.emailField().type(email);
     POM.passwordField().type(password);
     POM.loginButtoninside().click();
 
-    success();
-})
+
+    if (successfulLogin)
+        success();
+    else
+        fail(failMessage);
+});
+
+Cypress.Commands.add('forceVisit', url => {
+    cy.window().then(win => {
+        return win.open(url, '_self');
+    });
+});

@@ -17,6 +17,7 @@ module.exports.success = () => {
   cy.contains("Radar").should("exist");
 
   cy.url().should("not.include", "login");
+  cy.url().should("include", "dashboard");
 };
 
 module.exports.fail = (failMessage) => {
@@ -38,4 +39,5 @@ module.exports.fail = (failMessage) => {
 
   cy.contains(failMessage);
   cy.url().should("include", "login");
+  cy.url().should("not.include", "dashboard");
 };

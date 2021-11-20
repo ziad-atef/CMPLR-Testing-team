@@ -9,7 +9,7 @@
     "scripts": "cypress run",
     "combine-reports": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/mochareports/report.json",
     "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
-    "posttest": "npm run pretest && npm run combine-reports && npm run generate-report",
+    "posttest": "npm run combine-reports && npm run generate-report",
     "test-report": "npm run scripts || npm run posttest",
     "test": "npx cypress open"
   },

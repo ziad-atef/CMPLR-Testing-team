@@ -24,6 +24,9 @@ class Login {
         // return cy.get('button.xBRdB.ZYq7T._xpjA.kmijQ.FJv1f[type="submit"]');
         return cy.get('button.TRX6J.CxLjL.qjTo7.CguuB.yC5pj[type="submit"]');
     }
+    resetPassword() {
+        return cy.get('a.i9WPo').contains("Forgot your password?").should('exist');
+    }
 }
 
 export default Login;
