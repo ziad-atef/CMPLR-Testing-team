@@ -1,0 +1,23 @@
+{
+    "experimentalStudio": true,
+    "env": {
+        "MAILSLURP_API_KEY": ""
+    },
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporterOptions": {
+            "reportDir": "cypress/reports/mocha",
+            "quite": true,
+            "overwrite": false,
+            "video": true,
+            "html": true,
+            "json": true
+        }
+    },
+    "chromeWebSecurity": false,
+    "pageLoadTimeout": 1200000,
+    "defaultCommandTimeout": 30000,
+    "responseTimeout": 30000,
+    "requestTimeout": 30000
+}

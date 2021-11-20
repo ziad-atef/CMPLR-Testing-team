@@ -124,4 +124,3 @@ cypress/reports
 cypress/videos
 final reports/videoes
 cypress/screenshots
-cypress.json

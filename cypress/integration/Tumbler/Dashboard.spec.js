@@ -111,8 +111,8 @@ describe('logged', () => {
     beforeEach(() => {
         cy.fixture('userLoginData').then((user) => {
             Accesstoken = user.token;
+            cy.setCookie('sid', `${Accesstoken}`);
         });
-        cy.setCookie('sid', `${Accesstoken}`);
         cy.visit("https://www.tumblr.com/dashboard");
 
         // cy.fixture('userLoginData').then((user) => {
