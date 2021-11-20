@@ -41,3 +41,14 @@ module.exports.fail = (failMessage) => {
   cy.url().should("include", "login");
   cy.url().should("not.include", "dashboard");
 };
+
+module.exports.noAuth = () => {
+  cy.contains("Text").should("have.length", 0).and("not.exist");
+  cy.contains("Photo").should("have.length", 0).and("not.exist");
+  cy.contains("Quote").should("have.length", 0).and("not.exist");
+  cy.contains("Link").should("have.length", 0).and("not.exist");
+  cy.contains("Chat").should("have.length", 0).and("not.exist");
+  cy.contains("Audio").should("have.length", 0).and("not.exist");
+  cy.contains("Video").should("have.length", 0).and("not.exist");
+  cy.contains("Radar").should("have.length", 0).and("not.exist");
+}
