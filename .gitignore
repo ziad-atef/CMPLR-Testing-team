@@ -120,7 +120,7 @@ cypress/fixtures/userLoginData.json
 cypress/fixtures/userSignupData.json
 
 #cypress reports and videos
-cypress/reports
-cypress/videos
-final reports/videoes
-cypress/screenshots
+web/cypress/reports
+web/cypress/videos
+web/final reports/videoes
+web/cypress/screenshots

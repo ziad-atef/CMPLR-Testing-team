@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-20T16:25:40.920Z",
+    "end": "2021-11-20T16:25:53.260Z",
+    "duration": 12340,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "91a1f53f-a339-48c3-9e9c-3007a6035e0b",
+      "title": "",
+      "fullFile": "cypress/integration/Tumbler/Basic.spec.js",
+      "file": "cypress/integration/Tumbler/Basic.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f4478e5b-4a0c-442a-87d6-a7a96457c6e2",
+          "title": "Basic",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "when reload the page the background changes",
+              "fullTitle": "Basic when reload the page the background changes",
+              "timedOut": null,
+              "duration": 6130,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('img[loading=\"lazy\"]').invoke('attr', 'srcset').then(prevBackground => {\n  cy.reload();\n  cy.get('img[loading=\"lazy\"]').invoke('attr', 'srcset').then(currBackground => {\n    expect(currBackground).to.not.eq(prevBackground);\n  });\n});",
+              "err": {},
+              "uuid": "bd9c4f6d-3a93-4c92-9b6b-88f8a2284d81",
+              "parentUUID": "f4478e5b-4a0c-442a-87d6-a7a96457c6e2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bd9c4f6d-3a93-4c92-9b6b-88f8a2284d81"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6130,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "video": true,
+        "html": true,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

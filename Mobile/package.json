@@ -1,0 +1,29 @@
+{
+  "name": "mobile",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "emu-appium": "start /b emulator @Pixel -no-boot-anim -gpu on && Appium",
+    "test": "wdio",
+    "wdio": "wdio run wdio.conf.js"
+  },
+  "keywords": [],
+  "author": "We'am and Ziad",
+  "license": "ISC",
+  "devDependencies": {
+    "@wdio/cli": "^7.16.7",
+    "@wdio/local-runner": "^7.16.7",
+    "@wdio/mocha-framework": "^7.16.6",
+    "@wdio/spec-reporter": "^7.16.4",
+    "chai": "^4.3.4",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.1"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "description": ""
+}

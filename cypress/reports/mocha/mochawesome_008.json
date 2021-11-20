@@ -1,0 +1,203 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-20T17:04:46.989Z",
+    "end": "2021-11-20T17:05:21.765Z",
+    "duration": 34776,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "04211aca-dea3-4a9b-b750-d974c6216462",
+      "title": "",
+      "fullFile": "cypress/integration/Tumbler/Splash.spec.js",
+      "file": "cypress/integration/Tumbler/Splash.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "de132801-f4c1-4307-891d-26812b9e2279",
+          "title": "Splash",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Routing through main login button",
+              "fullTitle": "Splash Routing through main login button",
+              "timedOut": null,
+              "duration": 11665,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "LoginPOM.loginButton().click({\n  force: true\n});\nloginAssertions();",
+              "err": {},
+              "uuid": "6ff4cb82-db31-4ce6-8261-bdadb2a0ee8a",
+              "parentUUID": "de132801-f4c1-4307-891d-26812b9e2279",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Routing through App Bar login button",
+              "fullTitle": "Splash Routing through App Bar login button",
+              "timedOut": null,
+              "duration": 4423,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "LoginPOM.appbarLoginButton().click({\n  force: true\n});\nloginAssertions();",
+              "err": {},
+              "uuid": "f564a34d-6aaa-4dc9-82a8-cdbf6660deff",
+              "parentUUID": "de132801-f4c1-4307-891d-26812b9e2279",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Routing through secondary login button",
+              "fullTitle": "Splash Routing through secondary login button",
+              "timedOut": null,
+              "duration": 2049,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "LoginPOM.secondaryLoginButton().click({\n  force: true\n});\nloginAssertions();",
+              "err": {},
+              "uuid": "667a951a-af3b-4939-bad7-1ac6346ea16e",
+              "parentUUID": "de132801-f4c1-4307-891d-26812b9e2279",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Rouring through main signup button",
+              "fullTitle": "Splash Rouring through main signup button",
+              "timedOut": null,
+              "duration": 3000,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "SignupPOM.signupButton().click({\n  force: true\n});\nsignupAssertions();",
+              "err": {},
+              "uuid": "5fd26ba7-fc30-4a49-917f-44acb2901deb",
+              "parentUUID": "de132801-f4c1-4307-891d-26812b9e2279",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Rouring through App Bar signup button",
+              "fullTitle": "Splash Rouring through App Bar signup button",
+              "timedOut": null,
+              "duration": 4106,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "SignupPOM.appbarSignupButton().click({\n  force: true\n});\nsignupAssertions();",
+              "err": {},
+              "uuid": "ffdc8beb-0978-4cdc-831c-8070aa45944b",
+              "parentUUID": "de132801-f4c1-4307-891d-26812b9e2279",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Rouring through secondary signup button",
+              "fullTitle": "Splash Rouring through secondary signup button",
+              "timedOut": null,
+              "duration": 2220,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "SignupPOM.secondarySignupButton().click({\n  force: true\n});\nsignupAssertions();",
+              "err": {},
+              "uuid": "6959782d-c9df-4c9d-9052-d2848e151066",
+              "parentUUID": "de132801-f4c1-4307-891d-26812b9e2279",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6ff4cb82-db31-4ce6-8261-bdadb2a0ee8a",
+            "f564a34d-6aaa-4dc9-82a8-cdbf6660deff",
+            "667a951a-af3b-4939-bad7-1ac6346ea16e",
+            "5fd26ba7-fc30-4a49-917f-44acb2901deb",
+            "ffdc8beb-0978-4cdc-831c-8070aa45944b",
+            "6959782d-c9df-4c9d-9052-d2848e151066"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 27463,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "video": true,
+        "html": true,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

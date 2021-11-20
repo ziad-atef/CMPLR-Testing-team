@@ -1,0 +1,174 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 2,
+    "pending": 0,
+    "failures": 2,
+    "start": "2021-11-20T16:50:32.882Z",
+    "end": "2021-11-20T16:54:51.597Z",
+    "duration": 258715,
+    "testsRegistered": 4,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f00f86fe-45ae-46f0-81c2-d315d50a1c90",
+      "title": "",
+      "fullFile": "cypress/integration/Tumbler/emailverification.spec.js",
+      "file": "cypress/integration/Tumbler/emailverification.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "00488018-0e46-449f-89d5-9d593f35547c",
+          "title": "email verification",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Signup New Email To Be Verified",
+              "fullTitle": "email verification Signup New Email To Be Verified",
+              "timedOut": null,
+              "duration": 139307,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.tumblr.com/register');\nexpect(email).to.contain(\"@mailslurp\");\ncy.get('input[placeholder=\"Email\"]').type(email);\ncy.get('input[placeholder=\"Password\"]').type(password);\ncy.get('input[placeholder=\"Blog name\"]').type(\"ToTestEmailVerification22776677\");\ncy.get('button[aria-label=\"Sign up\"]').click();\ncy.get('input[placeholder=\"How old are you?\"]').type(22);\ncy.get('button[aria-label=\"Next\"]').click();\ncy.url().should('contain', 'getting_to_know_tumblr');\ncy.get('span.skip-button-container').contains(\"Skip\").should('have.text', 'Skip').click();\ncy.url().should('contain', 'dashboard');\ncy.get('h3.RUFdS').should('exist').contains(verificationSentence);\ncy.mailslurp().then(mailslurp => mailslurp.waitForLatestEmail(password, 30000, false)).then(email => {\n  // verify we received an email\n  assert.isDefined(email);\n  expect(email.subject).to.contain(emailVerificationMessages[0]);\n});",
+              "err": {},
+              "uuid": "af14e2d4-9a0e-4968-a18a-446b5b60a3e7",
+              "parentUUID": "00488018-0e46-449f-89d5-9d593f35547c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check That Email Is Not Verified",
+              "fullTitle": "email verification Check That Email Is Not Verified",
+              "timedOut": null,
+              "duration": 12500,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.tumblr.com/login');\ncy.login(new _login.default(), email, password);\ncy.url().should('contain', 'dashboard');\ncy.get('h3.RUFdS').should('exist').contains(verificationSentence);",
+              "err": {},
+              "uuid": "c88418ea-8d6f-4b66-b522-5b6bf74e6195",
+              "parentUUID": "00488018-0e46-449f-89d5-9d593f35547c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify email",
+              "fullTitle": "email verification Verify email",
+              "timedOut": null,
+              "duration": 45740,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.mailslurp().then(mailslurp => mailslurp.waitForLatestEmail(password, 30000, false)).then(email => {\n  // verify we received an email\n  assert.isDefined(email);\n  expect(email.subject).to.contain(emailVerificationMessages[0]);\n  cy.visit(`https://app.mailslurp.com/emails/${email.id}/`, {\n    failOnStatusCode: false\n  });\n  cy.contains(\"Login with Google\").click();\n  cy.wait(3000);\n  cy.visit(`https://app.mailslurp.com/emails/${email.id}/`, {\n    failOnStatusCode: false\n  });\n  MailSlurpPOM.VerificationLink().invoke('attr', 'src').then(link => {\n    cy.visit(link);\n    cy.contains(emailVerificationMessages[1]);\n    cy.contains(emailVerificationMessages[2]);\n    cy.contains(emailVerificationButtonText).click();\n    VerificationPOM.recaptcha().click();\n    cy.wait(10000);\n    VerificationPOM.verificationButton().contains(\"Verify Email\").click();\n  });\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `iframe.iframe.iframe-content.html-preview.form-control[data-name=\"html-preview\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `iframe.iframe.iframe-content.html-preview.form-control[data-name=\"html-preview\"]`, but never found it.\n    at MailSlurp.VerificationLink (https://app.mailslurp.com/__cypress/tests?p=cypress\\integration\\Tumbler\\emailverification.spec.js:172:15)\n    at Context.eval (https://app.mailslurp.com/__cypress/tests?p=cypress\\integration\\Tumbler\\emailverification.spec.js:293:20)",
+                "diff": null
+              },
+              "uuid": "dd2332cf-79eb-486c-8556-e8098a1ed3ac",
+              "parentUUID": "00488018-0e46-449f-89d5-9d593f35547c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "check email has been verified",
+              "fullTitle": "email verification check email has been verified",
+              "timedOut": null,
+              "duration": 38215,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.tumblr.com/login');\ncy.login(new _login.default(), email, password);\ncy.url().should('contain', 'dashboard');\ncy.get('h3.RUFdS').should('not.exist');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 30000ms: Expected <h3.RUFdS> not to exist in the DOM, but it was continuously found.",
+                "estack": "AssertionError: Timed out retrying after 30000ms: Expected <h3.RUFdS> not to exist in the DOM, but it was continuously found.\n    at Context.eval (https://www.tumblr.com/__cypress/tests?p=cypress\\integration\\Tumbler\\emailverification.spec.js:308:24)",
+                "diff": null
+              },
+              "uuid": "05378968-235a-4b63-a330-fc61313fde9c",
+              "parentUUID": "00488018-0e46-449f-89d5-9d593f35547c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "af14e2d4-9a0e-4968-a18a-446b5b60a3e7",
+            "c88418ea-8d6f-4b66-b522-5b6bf74e6195"
+          ],
+          "failures": [
+            "dd2332cf-79eb-486c-8556-e8098a1ed3ac",
+            "05378968-235a-4b63-a330-fc61313fde9c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 235762,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "video": true,
+        "html": true,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}
