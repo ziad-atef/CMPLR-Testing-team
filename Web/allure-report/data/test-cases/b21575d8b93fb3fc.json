@@ -1,0 +1,36 @@
+{
+  "uid" : "b21575d8b93fb3fc",
+  "name" : "log in with not registered email valid password",
+  "fullName" : "log in with not registered email valid password",
+  "historyId" : "cefd0db6a3ca198a0d957f114ad40f32",
+  "time" : {
+    "start" : 1638113710917,
+    "stop" : 1638113710917,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "statusMessage" : "Test ignored",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Logging In With Body Button"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b21575d8b93fb3fc.json",
+  "parameterValues" : [ ]
+}

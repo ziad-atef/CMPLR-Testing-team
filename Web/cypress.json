@@ -1,23 +1,16 @@
 {
-    "experimentalStudio": true,
     "env": {
-        "MAILSLURP_API_KEY": "8de71497219a41320b92504b3fbbe83cb07be6b3bfb8f56da1f2641978f4ef74"
-    },
-    "reporter": "cypress-multi-reporters",
-    "reporterOptions": {
-        "reporterEnabled": "mochawesome",
-        "mochawesomeReporterOptions": {
-            "reportDir": "cypress/reports/mocha",
-            "quite": true,
-            "overwrite": false,
-            "video": true,
-            "html": true,
-            "json": true
-        }
+        "allureResultsPath": "allure-results",
+        "tmsPrefix": "https://url-to-bug-tracking-system/task-",
+        "issuePrefix": "https://url-to-tms/tests/caseId-"
     },
     "chromeWebSecurity": false,
     "pageLoadTimeout": 1200000,
     "defaultCommandTimeout": 30000,
     "responseTimeout": 30000,
-    "requestTimeout": 30000
+    "requestTimeout": 30000,
+    "video":false,
+    "screenshotOnRunFailure":false
+
+
 }

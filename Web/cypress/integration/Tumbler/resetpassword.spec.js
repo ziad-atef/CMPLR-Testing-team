@@ -51,7 +51,7 @@ describe("reset password", () => {
     const notMatchingErrorMessage = "The new passwords do not match."
 
     before(function () {
-        cy.fixture('userLoginData').then((user) => {
+        cy.fixture('PersonalData').then((user) => {
             emailAddress = user.dumpyEmail;
             password = user.dumpyPassword;
             newPassword = user.dumpyPasswordNew;

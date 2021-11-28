@@ -121,8 +121,11 @@ cypress/fixtures/userSignupData.json
 
 #cypress reports and videos
 web/cypress/reports
+web/allure-results
 web/cypress/videos
-web/final reports/videoes
+web/reports
 web/cypress/screenshots
 Web/cypress/fixtures/PersonalData.json
 Mobile/test/fixtures/emails.json
+Mobile/allure-results
+Mobile/allure-report

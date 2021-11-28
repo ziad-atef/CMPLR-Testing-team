@@ -1,0 +1,36 @@
+{
+  "uid" : "3cdec3d0dd7e4548",
+  "name" : "successfully log in",
+  "fullName" : "successfully log in",
+  "historyId" : "6d78fbe39bf8506af0d3367749d3c6c0",
+  "time" : {
+    "start" : 1638113710918,
+    "stop" : 1638113710918,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "statusMessage" : "Test ignored",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Logging In With Body Button"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3cdec3d0dd7e4548.json",
+  "parameterValues" : [ ]
+}

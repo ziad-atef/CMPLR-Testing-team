@@ -6,7 +6,7 @@
     "emu-appium": "start /b emulator @Pixel -no-boot-anim -gpu on && Appium",
     "test": "wdio",
     "wdio": "wdio run wdio.conf.js",
-    "clean:reports": "rmdir /S /Q allure-results && rmdir /S /Q allure-reports",
+    "clean:reports": "rmdir /S /Q allure-results && rmdir /S /Q allure-report",
     "pretest": "npm run clean:reports",
     "test-report":"allure generate allure-results",
     "allure-open":"allure open"

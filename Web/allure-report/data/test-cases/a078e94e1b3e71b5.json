@@ -1,0 +1,188 @@
+{
+  "uid" : "a078e94e1b3e71b5",
+  "name" : "Post a Photo post",
+  "fullName" : "Post a Photo post",
+  "historyId" : "59017f603a1bb316d363918a16f98c25",
+  "time" : {
+    "start" : 1638113458926,
+    "stop" : 1638113490501,
+    "duration" : 31575
+  },
+  "status" : "failed",
+  "statusMessage" : "Timed out retrying after 30000ms: Expected to find element: `button.FOqaP[aria-label=\"Photo\"]`, but never found it.",
+  "statusTrace" : "AssertionError: Timed out retrying after 30000ms: Expected to find element: `button.FOqaP[aria-label=\"Photo\"]`, but never found it.\n    at Dashboard.photoPostButton (https://www.tumblr.com/__cypress/tests?p=cypress\\integration\\Tumbler\\Dashboard.spec.js:117:15)\n    at Context.eval (https://www.tumblr.com/__cypress/tests?p=cypress\\integration\\Tumbler\\Dashboard.spec.js:442:18)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "Timed out retrying after 30000ms: Expected to find element: `button.FOqaP[aria-label=\"Photo\"]`, but never found it.",
+    "statusTrace" : "AssertionError: Timed out retrying after 30000ms: Expected to find element: `button.FOqaP[aria-label=\"Photo\"]`, but never found it.\n    at Dashboard.photoPostButton (https://www.tumblr.com/__cypress/tests?p=cypress\\integration\\Tumbler\\Dashboard.spec.js:117:15)\n    at Context.eval (https://www.tumblr.com/__cypress/tests?p=cypress\\integration\\Tumbler\\Dashboard.spec.js:442:18)",
+    "steps" : [ {
+      "name" : "\"before each\" hook",
+      "time" : {
+        "start" : 1638113458927,
+        "stop" : 1638113460473,
+        "duration" : 1546
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "fixture (\"userLoginData\")",
+        "time" : {
+          "start" : 1638113459075,
+          "stop" : 1638113459075,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "hasContent" : false,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "setCookie sid, undefined",
+        "time" : {
+          "start" : 1638113459076,
+          "stop" : 1638113459083,
+          "duration" : 7
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "hasContent" : false,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "visit https://www.tumblr.com/dashboard -> 302: https://www.tumblr.com/login?redirect_to=%2Fdashboard",
+        "time" : {
+          "start" : 1638113459083,
+          "stop" : 1638113460472,
+          "duration" : 1389
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "hasContent" : false,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "POST /services/bblog",
+        "time" : {
+          "start" : 1638113460471,
+          "stop" : 1638113460471,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "hasContent" : false,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "POST 200 https://o248881.ingest.sentry.io/api/5720031/envelope/?sentry_key=b93ddebac1c34cc393134ffa692bca07&sentry_version=7",
+        "time" : {
+          "start" : 1638113460471,
+          "stop" : 1638113460471,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "hasContent" : false,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "fixture (\"posts\")",
+        "time" : {
+          "start" : 1638113460472,
+          "stop" : 1638113460472,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "hasContent" : false,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 6,
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "get button.FOqaP[aria-label=\"Photo\"]",
+      "time" : {
+        "start" : 1638113460481,
+        "stop" : 1638113490500,
+        "duration" : 30019
+      },
+      "status" : "failed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "POST /services/bblog",
+      "time" : {
+        "start" : 1638113490499,
+        "stop" : 1638113490499,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 9,
+    "hasContent" : true,
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "logged"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "a078e94e1b3e71b5.json",
+  "parameterValues" : [ ]
+}
