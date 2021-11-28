@@ -1,0 +1,122 @@
+{
+  "uid" : "1d80c0c8ca91435b",
+  "name" : "Check Reset Password Email",
+  "fullName" : "Check Reset Password Email",
+  "historyId" : "cfd88b458c55664bad4f1d43012a4efb",
+  "time" : {
+    "start" : 1638113847205,
+    "stop" : 1638113848164,
+    "duration" : 959
+  },
+  "status" : "failed",
+  "statusMessage" : "expected 'Your account has been logged into.' to include 'Tumblr Password'",
+  "statusTrace" : "AssertionError: expected 'Your account has been logged into.' to include 'Tumblr Password'\n    at Context.eval (https://www.tumblr.com/__cypress/tests?p=cypress\\integration\\Tumbler\\resetpassword.spec.js:520:9)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "expected 'Your account has been logged into.' to include 'Tumblr Password'",
+    "statusTrace" : "AssertionError: expected 'Your account has been logged into.' to include 'Tumblr Password'\n    at Context.eval (https://www.tumblr.com/__cypress/tests?p=cypress\\integration\\Tumbler\\resetpassword.spec.js:520:9)",
+    "steps" : [ {
+      "name" : "mailslurp",
+      "time" : {
+        "start" : 1638113847442,
+        "stop" : 1638113847443,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "GET https://api.mailslurp.com/waitForLatestEmail?inboxId=4ef9b62f-4ccc-4752-bd62-f11ae5f0b1a4&timeout=30000&unreadOnly=false",
+      "time" : {
+        "start" : 1638113848157,
+        "stop" : 1638113848157,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "assert expected **Your account has been logged into.** to include **Tumblr Password**",
+      "time" : {
+        "start" : 1638113848163,
+        "stop" : 1638113848163,
+        "duration" : 0
+      },
+      "status" : "failed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "Your account has been logged into."
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "assert expected **{ Object (analysis, attachments, ...) }** to not equal **undefined**",
+      "time" : {
+        "start" : 1638113848163,
+        "stop" : 1638113848163,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"analysis\": {\n    \"dkimVerdict\": \"PASS\",\n    \"dmarcVerdict\": \"PASS\",\n    \"spamVerdict\": \"PASS\",\n    \"spfVerdict\": \"PASS\",\n    \"virusVerdict\": \"PASS\"\n  },\n  \"attachments\": [\n    \"1638113763-05de235e-1ed3-42b5-9bf9-2c015f0fd14c\"\n  ],\n  \"bcc\": [],\n  \"body\": \"<!DOCTYPE html PUBLIC \\\"-//W3C//DTD XHTML 1.0 Strict//EN\\\" \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\\\"><html style=\\\"margin:0; padding:0;\\\"><head><title> Your account has been logged into. </title><meta name=\\\"robots\\\" content=\\\"noindex,nofollow\\\"><meta property=\\\"og:title\\\" content='Your account has been logged into.'><style type=\\\"text/css\\\" media=\\\"screen\\\">         @media only screen and (max-device-width: 480px) {\\r\\n        *[id=middle_column_table] {\\r\\n            width: 320px !important;\\r\\n            padding: 10px !important;\\r\\n        }\\r\\n\\r\\n        *[class=middle_column_table_spacer] {\\r\\n            height: 0px !important\\r\\n        }\\r\\n\\r\\n        *[class=middle_column_table_spacer_inner] {\\r\\n            height: 0px !important;\\r\\n            min-height: 0px !important;\\r\\n            max-height: 0px !important;\\r\\n        }\\r\\n\\r\\n        *[id=middle_column_content_cell] {\\r\\n            padding: 20px !important;\\r\\n        }\\r\\n\\r\\n        *[class=address_line] {\\r\\n            display: block;\\r\\n        }\\r\\n\\r\\n        *[id=middle_column_footer_address_cell] {\\r\\n            font-size: 11px !important;\\r\\n        }\\r\\n\\r\\n        .top-banner {\\r\\n            padding: 20px !important;\\r\\n        }\\r\\n\\r\\n        .logo-cell {\\r\\n            padding: 20px 0 20px 0 !important;\\r\\n        }\\r\\n    }\\r\\n\\r\\n    a[href^=x-apple-data-detectors] {\\r\\n        color: inherit;\\r\\n        text-decoration: none;\\r\\n    }\\r\\n\\r\\n    body {\\r\\n        -webkit-font-smoothing: antialiased;\\r\\n    }\\r\\n\\r\\n    .post-content img {\\r\\n        max-width: 100% !important;\\r\\n        -webkit-border-radius: 3px !important; /* Rounded corner er'ywhere */\\r\\n        -moz-border-radius: 3px !important;\\r\\n        border-radius: 3px !important;\\r\\n    }\\r\\n\\r\\n    .post-content a:link, .post-content a:visited, .post-content a:hover, .post-content a:active {\\r\\n        color: #4b7aa3;\\r\\n    }\\r\\n\\r\\n    .post-content p {\\r\\n        margin-top: 1em;\\r\\n    !important;\\r\\n        margin-bottom: 1em;\\r\\n    !important;\\r\\n    }\\r\\n\\r\\n    .post-content p:first-child {\\r\\n        margin-top: 0 !important;\\r\\n    }     </style></head><body style=\\\"margin:0; padding:0; background:#eeeeee;\\\">           <!-- #body_table --><table id=\\\"body_table\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\" width=\\\"100%\\\" style=\\\"background-color:#eeeeee;\\\"><tr><td>                  <!-- #middle_column_table --><table id=\\\"middle_column_table\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\" align=\\\"center\\\"\\r\\n                   style=\\\"width:640px; padding-left:20px; padding-right:20px;border-collapse:separate;\\\"><tr><td class=\\\"middle_column_table_spacer\\\" style=\\\"height:20px;\\\"><div class=\\\"middle_column_table_spacer_inner\\\"\\r\\n                             style=\\\"height:20px; min-height:20px; max-height:20px; vertical-align:top; overflow:hidden\\\"></div></td></tr><tr><td>                              <!-- #middle_column_inner_table --><table id=\\\"middle_column_inner_table\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\" align=\\\"center\\\"\\r\\n                               width=\\\"100%\\\">                                                                   \\r\\n                            <tr><td>                                         \\r\\n                                    <!-- #middle_column_content_table --><table id=\\\"middle_column_content_table\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"40\\\"\\r\\n                                       width=\\\"100%\\\"\\r\\n                                       style=\\\"background:#ffffff; -webkit-border-radius:8px; -moz-border-radius:8px; border-radius:8px;\\\"><tr><td id=\\\"middle_column_content_cell\\\"\\r\\n                                    style=\\\"background-color:#ffffff;                                                 -webkit-border-radius:6px; -moz-border-radius:6px; border-radius:6px;                                                 -webkit-box-shadow:0 1px 3px rgba(0,0,0, 0.2);                                                 -moz-box-shadow:0 1px 3px rgba(0,0,0, 0.2);                                                 box-shadow:0 1px 3px rgba(0,0,0, 0.2);\\\"><span style=\\\"font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;                                                     font-size:16px; line-height:22px; color:#424242;\\\"><!-- content_for_layout -->                                         \\r\\n<style>\\r\\n    p {\\r\\n        text-align: left;\\r\\n        line-height: 22px;\\r\\n    }\\r\\n\\r\\n    h1 {\\r\\n        text-align: center;\\r\\n        margin: auto;\\r\\n        line-height: 32px;\\r\\n    }\\r\\n\\r\\n    .support_bar {\\r\\n        display:inline-block;\\r\\n        width:100%;\\r\\n        background-color:#eaf3ff;\\r\\n        text-decoration:none; color:#5486c6;\\r\\n        font-size:18px;\\r\\n        font-weight:bold; text-align:center;\\r\\n        padding:15px 0px;\\r\\n        -webkit-border-radius:2px;\\r\\n        -moz-border-radius:2px;\\r\\n        border-radius:2px;\\r\\n    }\\r\\n</style><h1 style=\\\"text-align: center; color: #424242\\\">Hopefully it was you</h1><p>If it wasn’t, here’s what to do:</p><p>\\r\\n    1. <a href='https://mx.tumblr.com/ls/click?upn=PtYvm-2B-2F0v24E24vEgAcloU7aT7iTg4aoLF0d3dvDscRWLZOhhgUpDRG0REuKnWpCk1Zr_CF-2BD01JIohVy3Zf7DGP4MdXXQDgRCGVD5JCEQ-2BprxZyMMQdFQ-2Fv70Z-2B-2BS8BjvfwXHPP8Zm78SUa2HJeAnPo6CH0h4zqOrMjNK39DfUF-2BQKSaGAs4ljggsLsMt3Sq-2FMI8yP-2B4TZynR3hbTzfva3U-2BVYG6q64DsOs36HisAdC2VpAXduHTwxaVjl-2Ffsm41VSUb4x-2BQRrnO0RSRO-2FFPmaOwhW5oHbEl8cEjmEHSwQL5VS046Lojbe9wKjG5buqPnp-2FGaWeDwQtnyN4Cqw8aEhy5jT7cvfs662n6D6DVc2KLoYh6ug00SHLxnSXxnEKpLI-2BYbwL0CuESvMub4hvf1eWf7g-3D-3D'>Change your password.</a> Don’t delay. If you’re using the same password in other places, you’re going to want to change them all.\\r\\n    <br/>\\r\\n    2. <a href='https://mx.tumblr.com/ls/click?upn=PtYvm-2B-2F0v24E24vEgAclod9PdH8ooHxCS93s3HoewNOMiOzWS5HbloAd5-2BXNS5wFrwhd_CF-2BD01JIohVy3Zf7DGP4MdXXQDgRCGVD5JCEQ-2BprxZyMMQdFQ-2Fv70Z-2B-2BS8BjvfwXHPP8Zm78SUa2HJeAnPo6CH0h4zqOrMjNK39DfUF-2BQKSaGAs4ljggsLsMt3Sq-2FMI8yP-2B4TZynR3hbTzfva3U-2BVRWImNmhB6sDu7-2Fo1mV2G7SfHmptDkvL6d2yqXhqn0K-2BYBnzusRpMVNS-2FK7R-2BXlEyWQWQLwmYy9gOZuFsXC4J-2FlY2tv2iNkt3S7-2FADT0ocsEex2yuAwmqrzyFuSFvDDi-2FX4CmAKDRTPCmVnJ8tzGVxnNv8FYyVIg730PSXlNmzbqqXq3dUffNBYYkJO-2F1TQKsw-3D-3D'>Contact our Support team.</a>\\r\\n\\r\\n    \\r\\n        \\r\\n            \\r\\n        \\r\\n    \\r\\n</p><p>If it was you, no need to worry. You opted to get these emails whenever there’s new login or password activity on your account, so that’s why we’re telling you all this.</p><p>\\r\\n    Details:\\r\\n    <br/>\\r\\n    IP: 156.196.51.106<br/> Time: 28-11-2021 10:36:01<br/> User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.0.0 Chrome/94.0.4606.81 Electron/15.2.0 Safari/537.36<br/> Geolocation: C-Cairo\\r\\n</p>\\r\\n\\r\\n                                                        <!-- content_for_layout -->\\r\\n                                                        \\r\\n                                                            </span></td></tr></table>\\r\\n                                                \\r\\n                                                        <!-- #middle_column_content_table --></td></tr>\\r\\n                                                                                                                                                                    <tr><td height=\\\"18\\\"></td></tr>                                      <tr>                                         <td>                                              <!--  #middle_column_footer_table -->                                             <table id=\\\"middle_column_footer_table\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\" align=\\\"center\\\" width=\\\"100%\\\" style=\\\"padding-bottom:10px;\\\">                                                 <tr>                                                     <td id=\\\"middle_column_footer_logo_cell\\\" valign=\\\"top\\\" width=\\\"127\\\">                                                         <a href=\\\"https://mx.tumblr.com/ls/click?upn=PtYvm-2B-2F0v24E24vEgAcloSDw-2BCa9AhhGsOIjBjSAGqM-3DhlbJ_CF-2BD01JIohVy3Zf7DGP4MdXXQDgRCGVD5JCEQ-2BprxZyMMQdFQ-2Fv70Z-2B-2BS8BjvfwXHPP8Zm78SUa2HJeAnPo6CH0h4zqOrMjNK39DfUF-2BQKSaGAs4ljggsLsMt3Sq-2FMI8yP-2B4TZynR3hbTzfva3U-2BVZGlxzhH6jLRbUnRFmUmJG523Fy6ntmbNbGLM6zprPbKLvxPW7l-2FiZx0IuY5nMpj1dbnfsX2EsWy9ZylY8vFwKfXa3rqQvpmSTVOWUvjGOQ00Dvk2WGoNmfY7es5p959cMgBTzf13dlgw7Vzh8lmnJfauD9-2BLrrI2XsZohYA3FP1iW8VS-2BCRT-2BNgCELSIi-2ByQQ-3D-3D\\\" title=\\\"Tumblr\\\"><img src=\\\"cid:email_footer_logo_2x.png\\\" width=\\\"126\\\" height=\\\"28\\\" border=\\\"0\\\" alt='Tumblr'></a>                                                     </td>                                                     <td id=\\\"middle_column_footer_address_cell\\\" valign=\\\"top\\\" align=\\\"right\\\" width=\\\"*\\\"                                                     style=\\\"font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;                                                     font-size:11px; line-height:15px; color:#9d9d9d;                                                     -webkit-text-size-adjust:none; -ms-text-size-adjust:none;\\\">                                                         <span class=\\\"address_line\\\">60 29th Street #343</span> <span class=\\\"address_line\\\">San Francisco, CA 94110.<br /></span>                                                         <a href=\\\"https://mx.tumblr.com/ls/click?upn=PtYvm-2B-2F0v24E24vEgAclobpJUyK72zi870R6cyhge4GuuudVpv21ADSPRPln-2Fl7ac8mm_CF-2BD01JIohVy3Zf7DGP4MdXXQDgRCGVD5JCEQ-2BprxZyMMQdFQ-2Fv70Z-2B-2BS8BjvfwXHPP8Zm78SUa2HJeAnPo6CH0h4zqOrMjNK39DfUF-2BQKSaGAs4ljggsLsMt3Sq-2FMI8yP-2B4TZynR3hbTzfva3U-2BVU3ZCHrra5cV4tjt6peP3hoOGhqMQyzLvEqpy6X6HJhRy822KEqD-2BMk7OqYWHshUJw-2BRCeX6xRwWSL9Q7RygOQ5nHXX3q6zfPAQ-2BM8ptStWiilptAoYhSCvc-2BO5Q-2FmY0xaLsN-2Fs3jDVz1pIJb6kSwTk75t9AscguZSuT-2BDj89XXt-2BAYhqpg4WTmmQtDauOiiIg-3D-3D\\\" style=\\\"color:#666; text-decoration:none; font-weight:bold;\\\">Email settings</a>                                                                                                              </td>                                                 </tr>                                             </table>                                             <!--  #middle_column_footer_table -->                                          </td>                                     </tr>                                                                                                   </table>                             <!-- #middle_column_inner_table -->                          </td>                     </tr>                      <tr><td class=\\\"middle_column_table_spacer\\\" style=\\\"height:20px;\\\"><div class=\\\"middle_column_table_spacer_inner\\\" style=\\\"height:20px; min-height:20px; max-height:20px; vertical-align:top; overflow:hidden\\\"></div></td></tr>                 </table>                 <!-- #middle_column_table -->             </td>         </tr>     </table>     <!-- #body_table --> <img src=\\\"https://mx.tumblr.com/wf/open?upn=qdo7fXtEk9mc0NRTRUVY4-2BOrCbqOAgOYG4wLvc0Alvdjf-2BFa7obxJu8qmyaayA-2BBD3AJbHe75vUmzIAoTZb-2B0YXZwksLbhAkgpjRnizMXqy8f-2Bj0AJ6t3-2FcWqgFn2ek0jm-2B-2FICfgZD5BJVYMpRNlfLjdtaZECuBKB2-2BaJ9vjlxZElGmAZG6mPjCHe92EG7SrOfrqchcJbrw3EIanDbyKzY1-2BAHOWiwnDxi4M1PVMjWNqixU1BzTInmBTT1FaVz5V1YljxYZogBj2wAa2KHvh084-2FDj6YG-2F4qK1N704BzP7l3n-2BNA4G8sqIsyGQgTj-2FBEZ9oytKk5pDf4p2-2B9nmJoeujr7wJLyPsXyZE75cAHUPg-3D\\\" alt=\\\"\\\" width=\\\"1\\\" height=\\\"1\\\" border=\\\"0\\\" style=\\\"height:1px !important;width:1px !important;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !important;\\\"/></body> </html>\\r\\n\",\n  \"bodyExcerpt\": \"<!DOCTYPE html PUBLIC \\\"-//W3C//DTD XHTML 1.0 Strict//EN\\\" \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-str\",\n  \"bodyMD5Hash\": \"732B82C94133E5919152C3514783F643\",\n  \"cc\": [],\n  \"charset\": \"UTF-8\",\n  \"createdAt\": \"2021-11-28T15:36:03.597Z\",\n  \"from\": \"no-reply@tumblr.com\",\n  \"headers\": {\n    \"Return-Path\": \"<no-reply@tumblr.com>\",\n    \"Received\": \"from smtp-outbound.tumblr.net (unknown)\\r\\n\\tby ismtpd0149p1iad2.sendgrid.net (SG) with ESMTP id sO30TMj4RqmAM9ar_QUgvg\\r\\n\\tfor <4ef9b62f-4ccc-4752-bd62-f11ae5f0b1a4@mailslurp.com>;\\r\\n\\tSun, 28 Nov 2021 15:36:01.777 +0000 (UTC)\",\n    \"X-SES-Spam-Verdict\": \"PASS\",\n    \"X-SES-Virus-Verdict\": \"PASS\",\n    \"Received-SPF\": \"pass (spfCheck: domain of tumblr.com designates 198.37.150.29 as permitted sender) client-ip=198.37.150.29; envelope-from=no-reply@tumblr.com; helo=o9.mx.tumblr.com;\",\n    \"Authentication-Results\": \"amazonses.com;\\r\\n spf=pass (spfCheck: domain of tumblr.com designates 198.37.150.29 as permitted sender) client-ip=198.37.150.29; envelope-from=no-reply@tumblr.com; helo=o9.mx.tumblr.com;\\r\\n dkim=pass header.i=@tumblr.com;\\r\\n dmarc=pass header.from=tumblr.com;\",\n    \"X-SES-RECEIPT\": \"AEFBQUFBQUFBQUFINEVxUTZBb05PcUI3UTNlQ3FEK3RlQTR0VlZxY1I5MUIydW9ucXBnSzRrNjlOMEpSNUNHUG5raUt4dlhob1Y4SUpCT1dySFZKZUlWT2cvVWxVRi9ObDNhSWhYY01OUW1MNUltSmorbWdwUTNEenRKa0RKY2F6NzRvdVdaSW5KbjBBODhSMHlQUFFVM2ZMZWhiUTVLUCswVjFkUVkvRUMrY2RXdktidTNPWWpBQnRUMTJFWTE2YVlhc2ZiTmN4b1BLWDVaVTN1K2w2cFo3U0NtMTE5amhOdUVOdXE3V0hBZG5GMkc4Z1k4eFZ1ZHczMlYwcVlNZTJJbXNxY3U5Y0VXVW5KM05lVDIzRURJOTlCMHN5VUIzeHE3QmtjbHNUZTdDTmhHVmJPWW50K3c9PQ==\",\n    \"X-SES-DKIM-SIGNATURE\": \"a=rsa-sha256; q=dns/txt; b=OHqtzdaxJaxuLNzmN+Zwx8HMxBDHslvp8EtBUyY6Ck8g4ZI4I2cnfw5Av9qXtEHvqfbhaxGnj8Ge7fsInVMkxFbsW1537WqJnDRDhHeexCabTvYQmvpanTFT3DbqxsTlous0xct+9BF/Q3wxkNA6WJ84+TlEF0VI3cNkMS9XdeU=; c=relaxed/simple; s=7v7vs6w47njt4pimodk5mmttbegzsi6n; d=amazonses.com; t=1638113763; v=1; bh=cJXNeZKb79f93YEoz7HjXpmFlPAKuIf4YtXsFgsSiH4=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;\",\n    \"DKIM-Signature\": \"v=1; a=rsa-sha256; c=relaxed/relaxed; d=tumblr.com;\\r\\n\\th=from:subject:mime-version:content-type:to;\\r\\n\\ts=smtpapi; bh=i6JNqm1w9Vw3RRGKGUXe3rCP+CNJKo9GiiaHCYKYVFA=;\\r\\n\\tb=ScVbqAfBOBUuPm6ftm7JxnNnLwco31uCFe/OdGlXrkoNb1BRSXzB8BY+4f+ygpcdm+UY\\r\\n\\tn8l+f9irL8VM8UYGDqsExX8uJzWo1+LGSVjDuRXsnri80uU++oEw3RYnmfkw3/qg4oh5lX\\r\\n\\tQXg5TF2mvLqzVhLfJpJZNVwchFPFG46rg=\",\n    \"From\": \"Tumblr <no-reply@tumblr.com>\",\n    \"Message-ID\": \"<2121150134.155431768.1638113761764.JavaMail.nobody@push-prod-bb9c98b88-9rw2g>\",\n    \"Subject\": \"Your account has been logged into.\",\n    \"MIME-Version\": \"1.0\",\n    \"Content-Type\": \"multipart/alternative; \\r\\n\\tboundary=\\\"----=_Part_155431766_3521939.1638113761763\\\"\",\n    \"X-optoutCategory\": \"no-optout\",\n    \"X-userId\": \"433280252\",\n    \"X-Priority\": \"3\",\n    \"X-category\": \"account_action_login\",\n    \"X-Tumblr-Priority\": \"high\",\n    \"X-Tumblr-Provider\": \"\",\n    \"X-Mailer\": \"TumblrBot\",\n    \"Date\": \"Sun, 28 Nov 2021 15:36:01 +0000 (UTC)\",\n    \"X-SG-EID\": \"=?us-ascii?Q?GoUIAwJ7HRtN+IUDZ8zODIzj6aX0VStG8cFz2QNNYlTWYqGEOS5yBmM2hF6E=2FX?=\\r\\n =?us-ascii?Q?N6rCnxNXwSb6AW37uzmFanYcffW=2FxU4TANJ5=2FaF?=\\r\\n =?us-ascii?Q?HYPe8aSedB8cfB+hNa0VlTeQJURlyuRdG9WB=2Fmj?=\\r\\n =?us-ascii?Q?D91SAInkpnYbDWGkoO4RVOBUdUPmLOVanmqxvSu?=\\r\\n =?us-ascii?Q?0Pi2MJeyNPhjucMa1gT3WNfpbT7WXtRUvA8VlbT?=\\r\\n =?us-ascii?Q?ytOcK4hxQaLS1Eb0+kpH3nP5aijpVCKpzyIarP1?=\\r\\n =?us-ascii?Q?49wQnvOWXVD6H7M58K3kw=3D=3D?=\",\n    \"X-SG-ID\": \"=?us-ascii?Q?N2C25iY2uzGMFz6rgvQsb0=2F1fG5uGzrV7gTjGhr2868hv8E2Zp5ibX9iG4OYmg?=\\r\\n =?us-ascii?Q?lFj4ER7J7pCQ+2KgbkU7AN4tDpHwUel4bcqFN+W?=\\r\\n =?us-ascii?Q?pG6VYw=3D?=\",\n    \"To\": \"\\\"4ef9b62f-4ccc-4752-bd62-f11ae5f0b1a4@mailslurp.com\\\"\\r\\n\\t<4ef9b62f-4ccc-4752-bd62-f11ae5f0b1a4@mailslurp.com>\",\n    \"X-Entity-ID\": \"kitenFtsHci5WkZS6XpEXw==\"\n  },\n  \"id\": \"316a27c1-9eb7-4f96-8b9a-bf54ab8a69c6\",\n  \"inboxId\": \"4ef9b62f-4ccc-4752-bd62-f11ae5f0b1a4\",\n  \"isHTML\": true,\n  \"read\": false,\n  \"recipients\": {\n    \"bcc\": [],\n    \"cc\": [],\n    \"to\": [\n      {\n        \"emailAddress\": \"4ef9b62f-4ccc-4752-bd62-f11ae5f0b1a4@mailslurp.com\",\n        \"name\": \"4ef9b62f-4ccc-4752-bd62-f11ae5f0b1a4@mailslurp.com\",\n        \"rawValue\": \"\\\"4ef9b62f-4ccc-4752-bd62-f11ae5f0b1a4@mailslurp.com\\\" <4ef9b62f-4ccc-4752-bd62-f11ae5f0b1a4@mailslurp.com>\"\n      }\n    ]\n  },\n  \"replyTo\": \"no-reply@tumblr.com\",\n  \"sender\": {\n    \"emailAddress\": \"no-reply@tumblr.com\",\n    \"name\": \"Tumblr\",\n    \"rawValue\": \"Tumblr <no-reply@tumblr.com>\"\n  },\n  \"subject\": \"Your account has been logged into.\",\n  \"teamAccess\": true,\n  \"to\": [\n    \"4ef9b62f-4ccc-4752-bd62-f11ae5f0b1a4@mailslurp.com\"\n  ],\n  \"updatedAt\": \"2021-11-28T15:36:03.597Z\",\n  \"userId\": \"1d61896d-cf94-4404-80c7-0243ae238692\"\n}"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "hasContent" : true,
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "reset password"
+  }, {
+    "name" : "suite",
+    "value" : "Reset With Old Password"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "1d80c0c8ca91435b.json",
+  "parameterValues" : [ ]
+}

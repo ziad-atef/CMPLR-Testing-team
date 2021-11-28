@@ -1,0 +1,479 @@
+{
+  "uid" : "43140a1e40dbd0c3",
+  "name" : "signup valid info and age",
+  "fullName" : "signup valid info and age",
+  "historyId" : "279de3aa2a255ba646f49ac1be972c82",
+  "time" : {
+    "start" : 1638113932923,
+    "stop" : 1638113974664,
+    "duration" : 41741
+  },
+  "status" : "failed",
+  "statusMessage" : "Timed out retrying after 30000ms: Expected not to find content: 'Sign up' but continuously found it.",
+  "statusTrace" : "AssertionError: Timed out retrying after 30000ms: Expected not to find content: 'Sign up' but continuously found it.\n    at successAssertions (https://www.tumblr.com/__cypress/tests?p=cypress\\integration\\Tumbler\\Signup.spec.js:193:26)\n    at Context.eval (https://www.tumblr.com/__cypress/tests?p=cypress\\integration\\Tumbler\\Signup.spec.js:312:5)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "Timed out retrying after 30000ms: Expected not to find content: 'Sign up' but continuously found it.",
+    "statusTrace" : "AssertionError: Timed out retrying after 30000ms: Expected not to find content: 'Sign up' but continuously found it.\n    at successAssertions (https://www.tumblr.com/__cypress/tests?p=cypress\\integration\\Tumbler\\Signup.spec.js:193:26)\n    at Context.eval (https://www.tumblr.com/__cypress/tests?p=cypress\\integration\\Tumbler\\Signup.spec.js:312:5)",
+    "steps" : [ {
+      "name" : "\"before each\" hook",
+      "time" : {
+        "start" : 1638113932924,
+        "stop" : 1638113943132,
+        "duration" : 10208
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "visit https://www.tumblr.com/",
+        "time" : {
+          "start" : 1638113932997,
+          "stop" : 1638113943131,
+          "duration" : 10134
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "hasContent" : false,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "POST 200 https://o248881.ingest.sentry.io/api/5720031/envelope/?sentry_key=b93ddebac1c34cc393134ffa692bca07&sentry_version=7",
+        "time" : {
+          "start" : 1638113943130,
+          "stop" : 1638113943130,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "hasContent" : false,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "POST /services/bblog",
+        "time" : {
+          "start" : 1638113943130,
+          "stop" : 1638113943130,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "hasContent" : false,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "fixture (\"userSignupData\")",
+        "time" : {
+          "start" : 1638113943131,
+          "stop" : 1638113943131,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "hasContent" : false,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 4,
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "get a.Z8Ux2.qjTo7.CguuB.bS3ge[href=\"/register?source=login_register_center\"]",
+      "time" : {
+        "start" : 1638113943136,
+        "stop" : 1638113943159,
+        "duration" : 23
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "first",
+      "time" : {
+        "start" : 1638113943159,
+        "stop" : 1638113943172,
+        "duration" : 13
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "click {force: true}",
+      "time" : {
+        "start" : 1638113943173,
+        "stop" : 1638113943376,
+        "duration" : 203
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "new url https://www.tumblr.com/register?source=login_register_center",
+      "time" : {
+        "start" : 1638113943376,
+        "stop" : 1638113943376,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "POST /services/bblog",
+      "time" : {
+        "start" : 1638113943376,
+        "stop" : 1638113943376,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "POST /svc/pop/performance",
+      "time" : {
+        "start" : 1638113943376,
+        "stop" : 1638113943376,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "get input.gj_Aq[name=\"email\"]",
+      "time" : {
+        "start" : 1638113943376,
+        "stop" : 1638113943401,
+        "duration" : 25
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "type sdbfldkkfs@gmail.com",
+      "time" : {
+        "start" : 1638113943401,
+        "stop" : 1638113943801,
+        "duration" : 400
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "POST /services/bblog",
+      "time" : {
+        "start" : 1638113943801,
+        "stop" : 1638113943801,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "get input.gj_Aq[name=\"password\"]",
+      "time" : {
+        "start" : 1638113943801,
+        "stop" : 1638113943817,
+        "duration" : 16
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "type dfg5d64ht#$",
+      "time" : {
+        "start" : 1638113943817,
+        "stop" : 1638113944147,
+        "duration" : 330
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "get input.gj_Aq[name = \"blogName\"]",
+      "time" : {
+        "start" : 1638113944147,
+        "stop" : 1638113944191,
+        "duration" : 44
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "type amkfdsdsblog",
+      "time" : {
+        "start" : 1638113944191,
+        "stop" : 1638113944520,
+        "duration" : 329
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "GET 200 /api/v2/user/name_suggest",
+      "time" : {
+        "start" : 1638113944519,
+        "stop" : 1638113944519,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "get button.TRX6J.CxLjL.qjTo7.CguuB.yC5pj[type=\"submit\"]",
+      "time" : {
+        "start" : 1638113944520,
+        "stop" : 1638113944534,
+        "duration" : 14
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "click",
+      "time" : {
+        "start" : 1638113944534,
+        "stop" : 1638113944632,
+        "duration" : 98
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "POST /api/v2/register/account/validate",
+      "time" : {
+        "start" : 1638113944632,
+        "stop" : 1638113944632,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "contains Sign up",
+      "time" : {
+        "start" : 1638113944632,
+        "stop" : 1638113974663,
+        "duration" : 30031
+      },
+      "status" : "failed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "assert expected **<button.TRX6J.CxLjL.qjTo7.CguuB.yC5pj>** not to exist in the DOM",
+      "time" : {
+        "start" : 1638113974662,
+        "stop" : 1638113974662,
+        "duration" : 0
+      },
+      "status" : "failed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "<button.TRX6J.CxLjL.qjTo7.CguuB.yC5pj>"
+      }, {
+        "name" : "expected",
+        "value" : "<button.TRX6J.CxLjL.qjTo7.CguuB.yC5pj>"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "POST 200 /api/v2/password/strength",
+      "time" : {
+        "start" : 1638113974663,
+        "stop" : 1638113974663,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "POST /services/bblog",
+      "time" : {
+        "start" : 1638113974663,
+        "stop" : 1638113974663,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "uncaught exception undefined: undefined",
+      "time" : {
+        "start" : 1638113974663,
+        "stop" : 1638113974663,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "POST /services/bblog",
+      "time" : {
+        "start" : 1638113974663,
+        "stop" : 1638113974663,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 28,
+    "hasContent" : true,
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Signup"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "43140a1e40dbd0c3.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,261 @@
+{
+  "uid" : "b732fc471e76f34b",
+  "name" : "when reload the page the background changes",
+  "fullName" : "when reload the page the background changes",
+  "historyId" : "70769e75591c0b444aa9bac956ac9eca",
+  "time" : {
+    "start" : 1638113245102,
+    "stop" : 1638113253695,
+    "duration" : 8593
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "\"before each\" hook",
+      "time" : {
+        "start" : 1638113245103,
+        "stop" : 1638113252337,
+        "duration" : 7234
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "visit https://www.tumblr.com/",
+        "time" : {
+          "start" : 1638113245116,
+          "stop" : 1638113252336,
+          "duration" : 7220
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "hasContent" : false,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "POST 200 https://o248881.ingest.sentry.io/api/5720031/envelope/?sentry_key=b93ddebac1c34cc393134ffa692bca07&sentry_version=7",
+        "time" : {
+          "start" : 1638113252336,
+          "stop" : 1638113252336,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "hasContent" : false,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      }, {
+        "name" : "POST /services/bblog",
+        "time" : {
+          "start" : 1638113252336,
+          "stop" : 1638113252336,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "hasContent" : false,
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 3,
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "get img[loading=\"lazy\"]",
+      "time" : {
+        "start" : 1638113252338,
+        "stop" : 1638113252356,
+        "duration" : 18
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "invoke .attr(srcset)",
+      "time" : {
+        "start" : 1638113252356,
+        "stop" : 1638113252361,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "reload",
+      "time" : {
+        "start" : 1638113252362,
+        "stop" : 1638113253263,
+        "duration" : 901
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "POST /services/bblog",
+      "time" : {
+        "start" : 1638113253262,
+        "stop" : 1638113253262,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "POST /services/bblog",
+      "time" : {
+        "start" : 1638113253262,
+        "stop" : 1638113253262,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "POST 200 https://o248881.ingest.sentry.io/api/5720031/envelope/?sentry_key=b93ddebac1c34cc393134ffa692bca07&sentry_version=7",
+      "time" : {
+        "start" : 1638113253262,
+        "stop" : 1638113253262,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "get img[loading=\"lazy\"]",
+      "time" : {
+        "start" : 1638113253263,
+        "stop" : 1638113253685,
+        "duration" : 422
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "POST 200 /services/bblog",
+      "time" : {
+        "start" : 1638113253684,
+        "stop" : 1638113253684,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "invoke .attr(srcset)",
+      "time" : {
+        "start" : 1638113253685,
+        "stop" : 1638113253689,
+        "duration" : 4
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    }, {
+      "name" : "assert expected **https://64.media.tumblr.com/29a5ca6f18d096abae2c0bd5da735284/49b0c02b0b3d0826-0f/s1280x1920/e2224bc5ac4c4680c339b19da0a678da510c291b.png 1280w** to not equal **https://64.media.tumblr.com/4e3221fca4a079dfe31b1f9d8ae56bc9/6fc4808c0117f086-a0/s2048x3072/929d2361021caa1ee265a08c3f27950554a4a244.jpg 2048w**",
+      "time" : {
+        "start" : 1638113253693,
+        "stop" : 1638113253693,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "https://64.media.tumblr.com/29a5ca6f18d096abae2c0bd5da735284/49b0c02b0b3d0826-0f/s1280x1920/e2224bc5ac4c4680c339b19da0a678da510c291b.png 1280w"
+      }, {
+        "name" : "expected",
+        "value" : "https://64.media.tumblr.com/4e3221fca4a079dfe31b1f9d8ae56bc9/6fc4808c0117f086-a0/s2048x3072/929d2361021caa1ee265a08c3f27950554a4a244.jpg 2048w"
+      } ],
+      "stepsCount" : 0,
+      "hasContent" : true,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 14,
+    "hasContent" : true,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Basic"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b732fc471e76f34b.json",
+  "parameterValues" : [ ]
+}

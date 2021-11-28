@@ -1,6 +1,7 @@
 import Login from '../../Page Objects/login';
 import MailSlurp from '../../Page Objects/mailslurp';
-import Verification from "../../Page Objects/verification"
+import Verification from "../../Page Objects/verification";
+var faker = require('faker/locale/en');
 
 describe('email verification', () => {
     let email, password;
@@ -15,20 +16,19 @@ describe('email verification', () => {
     const VerificationPOM = new Verification();
 
     before(function () {
-        cy.fixture('userLoginData').then((user) => {
+        cy.fixture('PersonalData').then((user) => {
             email = user.newEmail;
             password = user.newPassword;
         });
     });
 
     it('Signup New Email To Be Verified', function () {
-
         cy.visit('https://www.tumblr.com/register');
         expect(email).to.contain("@mailslurp");
 
         cy.get('input[placeholder="Email"]').type(email);
         cy.get('input[placeholder="Password"]').type(password);
-        cy.get('input[placeholder="Blog name"]').type("ToTestEmailVerification1776677");
+        cy.get('input[placeholder="Blog name"]').type(`${faker.lorem.word(faker.datatype.number(20,25))}-testblog`);
         cy.get('button[aria-label="Sign up"]').click();
 
         cy.get('input[placeholder="How old are you?"]').type(22);

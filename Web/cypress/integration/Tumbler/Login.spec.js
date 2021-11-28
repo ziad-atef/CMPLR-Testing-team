@@ -59,7 +59,7 @@ describe('Logging In With App Bar Button', () => {
             so if you want to try this on your own add userLoginData.json file 
             at fixtures and add your authenticated email and password.
         */
-        cy.fixture('userLoginData').then((user) => {
+        cy.fixture('PersonalData').then((user) => {
             email = user.email;
             password = user.password;
         });

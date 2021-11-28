@@ -9,7 +9,7 @@ describe("Dashboard", () => {
     beforeEach(() => {
         cy.visit("https://www.tumblr.com/dashboard");
 
-        cy.fixture('userLoginData').then((user) => {
+        cy.fixture('PersonalData').then((user) => {
             cy.login(new Login(), user.email, user.password);
         });
 

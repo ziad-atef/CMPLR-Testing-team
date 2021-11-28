@@ -1,0 +1,96 @@
+{
+  "uid" : "f552bbf532eb0364",
+  "name" : "Reset Password Doesn't Match Confirmation",
+  "fullName" : "Reset Password Doesn't Match Confirmation",
+  "historyId" : "770369252bd232235f33c720945c6097",
+  "time" : {
+    "start" : 1638113757842,
+    "stop" : 1638113757878,
+    "duration" : 36
+  },
+  "status" : "failed",
+  "statusMessage" : "`cy.visit()` must be called with a `url` or an `options` object containing a `url` as its 1st argument\n\nhttps://on.cypress.io/visit",
+  "statusTrace" : "CypressError: `cy.visit()` must be called with a `url` or an `options` object containing a `url` as its 1st argument\n\nhttps://on.cypress.io/visit\n    at Context.visit (https://www.tumblr.com/__cypress/runner/cypress_runner.js:157797:78)\nFrom Your Spec Code:\n    at Context.eval (https://www.tumblr.com/__cypress/tests?p=cypress\\integration\\Tumbler\\resetpassword.spec.js:472:10)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "time" : { },
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "fixture (\"PersonalData\")",
+      "time" : {
+        "start" : 1638113724666,
+        "stop" : 1638113724683,
+        "duration" : 17
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "hasContent" : true,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "`cy.visit()` must be called with a `url` or an `options` object containing a `url` as its 1st argument\n\nhttps://on.cypress.io/visit",
+    "statusTrace" : "CypressError: `cy.visit()` must be called with a `url` or an `options` object containing a `url` as its 1st argument\n\nhttps://on.cypress.io/visit\n    at Context.visit (https://www.tumblr.com/__cypress/runner/cypress_runner.js:157797:78)\nFrom Your Spec Code:\n    at Context.eval (https://www.tumblr.com/__cypress/tests?p=cypress\\integration\\Tumbler\\resetpassword.spec.js:472:10)",
+    "steps" : [ {
+      "name" : "visit (\"undefined\")",
+      "time" : {
+        "start" : 1638113757875,
+        "stop" : 1638113757877,
+        "duration" : 2
+      },
+      "status" : "failed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "hasContent" : true,
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "reset password"
+  }, {
+    "name" : "suite",
+    "value" : "Reset With New Password"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "f552bbf532eb0364.json",
+  "parameterValues" : [ ]
+}

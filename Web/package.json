@@ -4,13 +4,15 @@
   "description": "Testing CMPLR Website",
   "main": "index.js",
   "scripts": {
-    "clean:reports": "rmdir /S /Q cypress\\reports && mkdir cypress\\reports  && mkdir cypress\\reports\\mochareports",
+    "clean:reports": "rmdir /S /Q allure-results",
     "pretest": "npm run clean:reports",
     "scripts": "cypress run",
     "combine-reports": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/mochareports/report.json",
     "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
     "posttest": "npm run combine-reports && npm run generate-report",
-    "test-report": "npm run scripts || npm run posttest",
+    "test-mochawesome-report": "npm run scripts || npm run posttest",
+    "test-report": "npm run pretest && npx cypress run --env allure=true",
+    "allure-report": "allure generate allure-results --clean",
     "test": "npx cypress open"
   },
   "repository": {
@@ -25,13 +27,20 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.22.0",
     "cypress": "^9.0.0",
+    "cypress-dotenv": "^2.0.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-mailslurp": "^1.3.0",
     "cypress-multi-reporters": "^1.5.0",
+    "dotenv": "^10.0.0",
     "mocha": "^9.1.3",
     "mochawesome": "^7.0.1",
     "mochawesome-merge": "^4.2.0",
     "mochawesome-report-generator": "^6.0.1"
+  },
+  "dependencies": {
+    "faker": "^5.5.3",
+    "fakerator": "^0.3.4"
   }
 }
