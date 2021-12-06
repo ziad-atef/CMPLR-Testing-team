@@ -5,10 +5,10 @@
   "scripts": {
     "emu-appium": "start /b emulator @Pixel -no-boot-anim -gpu on && Appium",
     "test": "wdio",
-    "wdio": "wdio run wdio.conf.js",
-    "clean:reports": "rmdir /S /Q allure-results && rmdir /S /Q allure-report",
+    "wdio": "npm run pretest && wdio run wdio.conf.js",
+    "clean:reports": "rmdir /S /Q allure-results",
     "pretest": "npm run clean:reports",
-    "test-report":"allure generate allure-results",
+    "test-report":"allure generate allure-results --clean",
     "allure-open":"allure open"
   },
   "keywords": [],
