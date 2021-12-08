@@ -26,6 +26,11 @@ class Dashboard {
         // return cy.get('ul.VsedS').children('li');
         return cy.get('ul.kbIQf').children('li');
     }
+
+    DashboardPosts() {
+        return cy.get('div.j8ha0').children().eq(1)
+        .should('be.visible');
+    }
 }
 
 export default Dashboard;
