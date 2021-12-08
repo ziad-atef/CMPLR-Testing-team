@@ -15,17 +15,14 @@ const PostboardPOM = new Postboard();
 const DashboardPOM = new Dashboard();
 
 
-describe("Dashboard", () => {
-    let postsList;
+describe("Dashboard Posting", () => {
     beforeEach(() => {
         cy.authorize();
-
-        cy.visit("https://www.tumblr.com/dashboard");
+        cy.url().should('include', 'dashboard');
         success();
-
-        cy.fixture('posts').then((posts) => {
-            postsList = posts;
-        });
+    });
+    it('Render Posts', () => {
+        DashboardPOM.DashboardPosts().children().should('have.length.greaterThan', 1)
     });
     it("Post a text post", () => {
         const Title = faker.lorem.sentence(3, 10);
@@ -63,7 +60,6 @@ describe("Dashboard", () => {
 
         PostboardPOM.postButton('button.button-area').should('be.disabled').should("have.text", "Post");
     });
-
     it("(Text) Only Tags Doesn't Enable Post Button", () => {
         const Tags = faker.lorem.words(faker.random.number({
             min: 3,
@@ -73,7 +69,6 @@ describe("Dashboard", () => {
 
         PostboardPOM.postButton('button.button-area').should('be.disabled').should("have.text", "Post");
     });
-
     it("Post a Quote post", () => {
         const Quote = faker.lorem.sentences(faker.random.number({
             min: 1,
@@ -95,7 +90,6 @@ describe("Dashboard", () => {
 
         QuotePostAssertions(Quote, Source, Tags);
     });
-    
     it("(Quote) Disable Post Button After Clearing", () => {
         const Quote = faker.lorem.sentences(faker.random.number({
             min: 1,
@@ -124,7 +118,6 @@ describe("Dashboard", () => {
 
         PostboardPOM.postButton('button.button-area').should('be.disabled').should("have.text", "Post");
     });
-
     it("Post a Photo post", () => {
         DashboardPOM.photoPostButton().click();
         cy.visit("https://www.tumblr.com/new/photo");
@@ -144,4 +137,63 @@ describe("Dashboard", () => {
 
         cy.get('figure').first().find('div').children();
     });
+});
+
+describe("Dashboard Rebloging", () => {
+    let postIndex = 0,
+        owner, content = [];
+    let contentLength, tags;
+    beforeEach(() => {
+        cy.authorize();
+        cy.url().should('include', 'dashboard');
+        success();
+    });
+
+    it('Render Posts', () => {
+        DashboardPOM.DashboardPosts().children().should('have.length.greaterThan', 1);
+    });
+
+    it('Reblog a Post', () => {
+        DashboardPOM.DashboardPosts().children().should('have.length.greaterThan', 1);
+
+        PostboardPOM.PostContentDom(postIndex).within($content => {
+            $content.toArray().forEach(element => {
+                content.push(element.innerHTML);
+            });
+        });
+        PostboardPOM.PostTagsDom(postIndex).within($tags => {
+            tags = $tags.text().split('#');
+        });
+        PostboardPOM.PostOwnerDom(postIndex).within($postOwner => {
+            owner = $postOwner.text();
+        }).then(() => {
+
+            PostboardPOM.reblogButtonDom(postIndex).click();
+
+            PostboardPOM.visitPostIframe(owner);
+
+            PostboardPOM.reblogBodyDom();
+            PostboardPOM.reblogTagsDom();
+            PostboardPOM.reblogCloseButtonDom();
+            PostboardPOM.reblogReblogButtonDom().click({
+                force: true
+            });
+        });
+    });
+
+    it('Assert That Post Is Reblogged', () => {
+        cy.visit('https://www.tumblr.com/blog/cmplr23');
+
+
+        cy.get('article').children('header').within($header => {
+            cy.log($header.attr('aria-label'));
+            expect($header.attr('aria-label')).to.equal(`cmplr23 reblogged a post from ${owner}`);
+        });
+        cy.get('article').children('div').eq(1).find('div.GzjsW').children().within($currentContent => {
+            var i = 0;
+            $currentContent.toArray().forEach(currentContent => {
+                expect(currentContent.innerHTML).to.equal(content[i++]);
+            });
+        });
+    })
 });
