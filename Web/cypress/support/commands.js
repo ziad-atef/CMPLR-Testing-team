@@ -1,4 +1,7 @@
-import { success, fail } from '../Utils/log in/pageassertion'
+import {
+    success,
+    fail
+} from '../Utils/log in/pageassertion'
 import 'cypress-file-upload';
 
 // ***********************************************
@@ -37,6 +40,14 @@ Cypress.Commands.add('login', (POM, email, password, successfulLogin = true, fai
         success();
     else
         fail(failMessage);
+});
+Cypress.Commands.add('authorize', () => {
+    cy.fixture('PersonalData').then((user) => {
+        let Accesstoken = user.token;
+        cy.setCookie('sid', `${Accesstoken}`);
+    });
+    cy.visit("https://www.tumblr.com");
+    cy.url().should('not.include', "login?redirect_to");
 });
 
 Cypress.Commands.add('forceVisit', url => {

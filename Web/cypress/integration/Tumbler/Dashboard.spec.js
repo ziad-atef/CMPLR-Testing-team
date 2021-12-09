@@ -1,89 +1,123 @@
-import Login from '../../Page Objects/login';
 import Postboard from '../../Page Objects/post';
 import Dashboard from '../../Page Objects/dashboard';
+import {
+    success
+} from '../../Utils/Dashboard/pageassertion';
+import {
+    TextPost,
+    QuotePost,
+    TextPostAssertions,
+    QuotePostAssertions,
+    VisitMyBlog
+} from '../../Utils/Dashboard/utils';
+const faker = require('faker');
+const PostboardPOM = new Postboard();
+const DashboardPOM = new Dashboard();
 
-describe("Dashboard", () => {
-    var postsList;
-    let PostboardPOM;
-    let DashboardPOM;
+
+describe("Dashboard Posting", () => {
     beforeEach(() => {
-        cy.visit("https://www.tumblr.com/dashboard");
-
-        cy.fixture('PersonalData').then((user) => {
-            cy.login(new Login(), user.email, user.password);
-        });
-
-        cy.fixture('posts').then((posts) => {
-            postsList = posts;
-        });
-
-        PostboardPOM = new Postboard();
-        DashboardPOM = new Dashboard();
+        cy.authorize();
+        cy.url().should('include', 'dashboard');
+        success();
     });
-
+    it('Render Posts', () => {
+        DashboardPOM.DashboardPosts().children().should('have.length.greaterThan', 1)
+    });
     it("Post a text post", () => {
-        let post = postsList.testpost1;     // first thing I do I grab text post stored in sample data
-        DashboardPOM.textPostButton().click();      // then click on Text "Text" at the dashboard to post a text
-
-        // not sure of this yet but dealing with iframes is a headache to me 
-        // and this help to make it work because the iframe refers to another url
-        cy.visit("https://www.tumblr.com/new/text");
-
-        // here I assure that the post button is disabled as the post is still empty
-        // then I fill the post data from the arbitrary data then press post
-        PostboardPOM.postButton("button.button-area.disabled").should('be.disabled').should("have.text", "Post");
-        // ^___ this is a bad practice to send the selector as a string to the function
-        PostboardPOM.postTitleDOM().type(post.title);
-        PostboardPOM.postBodyDOM().type(post.textcontent);
-        PostboardPOM.postTagsDOM().type(`${post.tags[0]} {enter}`);
-        PostboardPOM.postTagsDOM().type(`${post.tags[1]} {enter}`);
+        const Title = faker.lorem.sentence(3, 10);
+        const Body = faker.lorem.paragraph(faker.random.number({
+            min: 3,
+            max: 10
+        }));
+        const Tags = faker.lorem.words(faker.random.number({
+            min: 3,
+            max: 10
+        })).split(' ');
+        TextPost(Title, Body, Tags);
 
         PostboardPOM.postButton('button.button-area').should('be.enabled').should("have.text", "Post").click();
 
-        // redirection to the dashboard then open posts page
-        cy.visit("https://www.tumblr.com/dashboard");
-        DashboardPOM.accountButton().click();
-        DashboardPOM.accountLowerList().eq(0).click();      // this should be "posts" at the account menue
+        VisitMyBlog();
 
-        // assure that tha post content are displayed at the screen 
-        cy.contains(post.title);
-        cy.contains(post.textcontent);
-        cy.contains(post.tags[0]);
-        cy.contains(post.tags[1]);
-
-        // it's a better practice that I check the data content at the post itself, the first post on the page  .
-        cy.get('article').children('div').eq(1).find('h1').should('have.text', post.title);
-        cy.get('article').children('div').eq(1).find('p').should('have.text', post.textcontent);
+        TextPostAssertions(Title, Body, Tags);
     });
+    it("(Text) Disable Post Button After Clearing", () => {
+        const Title = faker.lorem.sentence(3, 10);
+        const Body = faker.lorem.paragraph(faker.random.number({
+            min: 3,
+            max: 10
+        }));
+        const Tags = faker.lorem.words(faker.random.number({
+            min: 3,
+            max: 10
+        })).split(' ');
+        TextPost(Title, Body, Tags);
 
+
+        PostboardPOM.postTitleDOM().clear();
+        PostboardPOM.postBodyDOM().clear();
+
+        PostboardPOM.postButton('button.button-area').should('be.disabled').should("have.text", "Post");
+    });
+    it("(Text) Only Tags Doesn't Enable Post Button", () => {
+        const Tags = faker.lorem.words(faker.random.number({
+            min: 3,
+            max: 10
+        })).split(' ');
+        TextPost('', '', Tags);
+
+        PostboardPOM.postButton('button.button-area').should('be.disabled').should("have.text", "Post");
+    });
     it("Post a Quote post", () => {
-        let post = postsList.quotepost1;
-        DashboardPOM.quotePostButton().click();
-        cy.visit("https://www.tumblr.com/new/quote");
+        const Quote = faker.lorem.sentences(faker.random.number({
+            min: 1,
+            max: 2
+        }));
+        const Source = faker.name.firstName();
+        const Tags = faker.lorem.words(faker.random.number({
+            min: 0,
+            max: 10
+        })).split(' ');
 
-        PostboardPOM.postButton("button.button-area.disabled").should('be.disabled').should("have.text", "Post");
-        PostboardPOM.quoteDOM().type(post.quote);
-        PostboardPOM.sourceDOM().type(post.source);
-        PostboardPOM.postTagsDOM().type(`${post.tags[0]} {enter}`);
-        PostboardPOM.postTagsDOM().type(`${post.tags[1]} {enter}`);
+        QuotePost(Quote, Source, Tags);
+
+
 
         PostboardPOM.postButton('button.button-area').should('be.enabled').click();
 
+        VisitMyBlog();
 
-        cy.visit("https://www.tumblr.com/dashboard");
-        DashboardPOM.accountButton().click();
-        DashboardPOM.accountLowerList().eq(0).click();
+        QuotePostAssertions(Quote, Source, Tags);
+    });
+    it("(Quote) Disable Post Button After Clearing", () => {
+        const Quote = faker.lorem.sentences(faker.random.number({
+            min: 1,
+            max: 2
+        }));
+        const Source = faker.name.firstName();
+        const Tags = faker.lorem.words(faker.random.number({
+            min: 0,
+            max: 10
+        })).split(' ');
 
-        cy.contains(post.quote);
-        cy.contains(post.source);
-        cy.contains(post.tags[0]);
-        cy.contains(post.tags[1]);
+        QuotePost(Quote, Source, Tags);
 
+        PostboardPOM.quoteDOM().clear();
+        PostboardPOM.sourceDOM().clear();
 
-        cy.get('article').children('div').eq(1).find('span').should('have.text', post.quote);
-        cy.get('article').children('div').eq(1).find('p').should('have.text', post.source);
+        PostboardPOM.postButton('button.button-area').should('be.disabled').should("have.text", "Post");
     });
 
+    it("(Quote) Only Tags Doesn't Enable Post Button", () => {
+        const Tags = faker.lorem.words(faker.random.number({
+            min: 3,
+            max: 10
+        })).split(' ');
+        QuotePost('', '', Tags);
+
+        PostboardPOM.postButton('button.button-area').should('be.disabled').should("have.text", "Post");
+    });
     it("Post a Photo post", () => {
         DashboardPOM.photoPostButton().click();
         cy.visit("https://www.tumblr.com/new/photo");
@@ -94,11 +128,72 @@ describe("Dashboard", () => {
         PostboardPOM.photoDOM().attachFile(imageFile);
         cy.wait(300);
 
-        PostboardPOM.postButton('button.button-area').should('be.enabled').click({ force: true });
+        PostboardPOM.postButton('button.button-area').should('be.enabled').click({
+            force: true
+        });
 
         DashboardPOM.accountButton().click();
         DashboardPOM.accountLowerList().eq(0).click();
 
         cy.get('figure').first().find('div').children();
     });
+});
+
+describe("Dashboard Rebloging", () => {
+    let postIndex = 0,
+        owner, content = [];
+    let contentLength, tags;
+    beforeEach(() => {
+        cy.authorize();
+        cy.url().should('include', 'dashboard');
+        success();
+    });
+
+    it('Render Posts', () => {
+        DashboardPOM.DashboardPosts().children().should('have.length.greaterThan', 1);
+    });
+
+    it('Reblog a Post', () => {
+        DashboardPOM.DashboardPosts().children().should('have.length.greaterThan', 1);
+
+        PostboardPOM.PostContentDom(postIndex).within($content => {
+            $content.toArray().forEach(element => {
+                content.push(element.innerHTML);
+            });
+        });
+        PostboardPOM.PostTagsDom(postIndex).within($tags => {
+            tags = $tags.text().split('#');
+        });
+        PostboardPOM.PostOwnerDom(postIndex).within($postOwner => {
+            owner = $postOwner.text();
+        }).then(() => {
+
+            PostboardPOM.reblogButtonDom(postIndex).click();
+
+            PostboardPOM.visitPostIframe(owner);
+
+            PostboardPOM.reblogBodyDom();
+            PostboardPOM.reblogTagsDom();
+            PostboardPOM.reblogCloseButtonDom();
+            PostboardPOM.reblogReblogButtonDom().click({
+                force: true
+            });
+        });
+    });
+
+    it('Assert That Post Is Reblogged', () => {
+        cy.visit('https://www.tumblr.com/blog/cmplr23');
+
+
+        cy.get('article').children('header').within($header => {
+            cy.log($header.attr('aria-label'));
+            expect($header.attr('aria-label')).to.equal(`cmplr23 reblogged a post from ${owner}`);
+        });
+        cy.get('article').children('div').eq(1).find('div.GzjsW').children().within($currentContent => {
+            var i = 0;
+            $currentContent.toArray().forEach(currentContent => {
+                expect(currentContent.innerHTML).to.equal(content[i++]);
+            });
+        });
+    })
 });

@@ -1,49 +1,86 @@
-const getIframeDocument = () => {
-    // return cy.get('iframe.RXu2m').its('0.contentDocument').should('exist')
-    return cy.get('iframe.vP3g8').its('0.contentDocument').should('exist')
-}
-
-const getIframeBody = () => {
-    return getIframeDocument().its('body').should('not.be.undefined').then(cy.wrap)
-}
+import Dashboard from './dashboard';
+const DashboardPOM = new Dashboard();
+import {
+    getIframeBody
+} from '../Utils/utils';
 class Postboard {
-
-    postButton(classname) {
-        return getIframeBody().find(classname);
+    postButton() {
+        return getIframeBody('iframe.vP3g8').find("button.button-area").should('have.text', 'Post');
     }
 
     postTitleDOM() {
-        getIframeBody().contains('Title');
-        return getIframeBody().find('div.editor.editor-plaintext[aria-label="Post title"]');
+        return getIframeBody('iframe.vP3g8').find('div.editor.editor-plaintext[aria-label="Post title"]');
     }
 
     postBodyDOM() {
-        getIframeBody().contains('Your text here');
-        return getIframeBody().find('div.editor-richtext[aria-label="Post body"]');
+        return getIframeBody('iframe.vP3g8').find('div.editor-richtext[aria-label="Post body"]');
     }
 
     postTagsDOM() {
-        return getIframeBody().find('div.editor-plaintext[aria-label="Post tags"]');
+        return getIframeBody('iframe.vP3g8').find('div.editor-plaintext[aria-label="Post tags"]');
     }
 
     quoteDOM() {
-        getIframeBody().contains('“Quote”');
-        return getIframeBody().find('div.editor.editor-plaintext[aria-label="Quote"]');
+        return getIframeBody('iframe.vP3g8').find('div.editor.editor-plaintext[aria-label="Quote"]');
     }
 
     sourceDOM() {
-        getIframeBody().contains('Source');
-        return getIframeBody().find('div.editor.editor-richtext[aria-label="Source"]')
+        return getIframeBody('iframe.vP3g8').find('div.editor.editor-richtext[aria-label="Source"]')
     }
 
     photoDOM() {
-        // return getIframeBody().find('div.split-cell-inner');
-        return getIframeBody().find('input[type="file"]').first();
+        return getIframeBody('iframe.vP3g8').find('input[type="file"]').first();
     }
 
     videoSwitchDOM() {
-        // return getIframeBody().find('div.split-cell-inner');
-        return getIframeBody().find('input.confirm-tos--checkbox[type="checkbox"]');
+        return getIframeBody('iframe.vP3g8').find('input.confirm-tos--checkbox[type="checkbox"]');
+    }
+
+    PostOwnerDom(index) {
+        return DashboardPOM.DashboardPosts().children().eq(index).find('a.BSUG4[role="link"]').eq(1);
+    }
+
+    PostContentDom(index) {
+        return DashboardPOM.DashboardPosts().children().eq(index).find('div.GzjsW').children();
+    }
+
+    PostTagsDom(index) {
+        return DashboardPOM.DashboardPosts().children().eq(index).find('div.hAFp3').find('a');
+    }
+
+    reblogButtonDom(index) {
+        return DashboardPOM.DashboardPosts().children().eq(index).find('div.MCavR').find('a[aria-label="Reblog"]');
+    }
+
+    reblogReblogButtonDom() {
+        return getIframeBody('iframe.vP3g8').find('button.button-area.create_post_button')
+            .should('have.text', 'Reblog').and('be.visible').and('be.enabled');
+    }
+
+    reblogCloseButtonDom() {
+        return getIframeBody('iframe.vP3g8').find('button.tx-button')
+            .should('have.text', 'Close').and('be.visible').and('be.enabled');
+    }
+
+    reblogBodyDom() {
+        return getIframeBody('iframe.vP3g8').find('div.editor[aria-label="Post body"]')
+            .should('be.visible');
+    }
+
+    reblogTagsDom() {
+        return getIframeBody('iframe.vP3g8').find('div.editor[aria-label="Post tags"]')
+            .should('be.visible');
+    }
+
+    visitPostIframe(owner) {
+        cy.get('iframe.vP3g8').within($element => {
+            const src = $element.attr('src')
+            const link = src.substring(src.indexOf('reblog/')).split('/')
+            // cy.log(`https://www.tumblr.com/${link[0]+'/'+owner+'/'+link[1]+'/'+link[2]}`);
+            cy.visit(`https://www.tumblr.com/${link[0]+'/'+owner+'/'+link[1]+'/'+link[2]}`, {
+                failOnStatusCode: false
+            })
+        });
     }
 }
 

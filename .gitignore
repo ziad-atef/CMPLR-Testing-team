@@ -129,3 +129,4 @@ Web/cypress/fixtures/PersonalData.json
 Mobile/test/fixtures/emails.json
 Mobile/allure-results
 Mobile/allure-report
+Web/cypress.env.json
