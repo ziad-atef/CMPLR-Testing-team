@@ -5,3 +5,4 @@ const getIframeDocument = (query) => {
 module.exports.getIframeBody = (query) => {
     return getIframeDocument(query).its('body').should('not.be.undefined').then(cy.wrap)
 }
+

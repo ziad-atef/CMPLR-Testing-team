@@ -5,6 +5,7 @@ let email;
 let takenEmail = "sfd@gmail.com"
 let password;
 let blogName;
+let inbox;
 
 const emptyEmailMessage = "You forgot to enter your email!";
 const emptyPasswordMessage = "You forgot to enter your password!";
@@ -13,7 +14,7 @@ const emptyEmailPasswordAndBlogNameMessage = "You do have to fill this stuff out
 const takenEmailMessage = "This email address is already in use.";
 const invalidEmailMessage = "That's not a valid email address. Please try again.";
 
-const fillSignupData = (email, password, blogName) => {
+const fillSignupData = function(email, password, blogName) {
     if (email === '')
         SignupPOM.emailField();
     else
@@ -33,8 +34,8 @@ const fillSignupData = (email, password, blogName) => {
 }
 
 const ageEntry = (age) =>{
-    cy.get('input[name = "age"]').type(age);
-    cy.get('button[type = "submit"]').click({ force: true });
+    SignupPOM.ageField().type(age);
+    SignupPOM.ageButton().click({ force: true });
 
     if(age<13){
         ageFail();
@@ -53,8 +54,8 @@ const failAssertions = (failMessage) =>{
 const successAssertions = () =>{
 
     cy.contains("Sign up").should("not.exist");
-    cy.get('input[name = "age"]').should("be.enabled").and("be.visible");
-    cy.get('button[type = "submit"]').should("be.enabled").and("be.visible");
+    SignupPOM.ageField().should("be.enabled").and("be.visible");
+    SignupPOM.ageButton().should("be.enabled").and("be.visible");
 }
 
 const ageFail = () =>{
@@ -67,6 +68,7 @@ const ageSucess = () =>{
 }
 
 describe('Signup', () => {
+
     beforeEach(() => {
         /*
             first you have to pass the url of the website, or the page you want
@@ -97,6 +99,8 @@ describe('Signup', () => {
             password = user.password;
             blogName = user.blogName;
         });
+        
+        
     });
     
     it('signup with empty email', () => {
@@ -180,29 +184,39 @@ describe('Signup', () => {
         failAssertions(invalidEmailMessage);
     });
 
-    it('signup valid info but invalid age', () => {
+    describe('Signup', () => {
+        before(function () {
+            return cy.mailslurp()
+                .then(mailslurp => mailslurp.createInbox())
+                .then(inbox => {
+                    // save inbox id and email address to this (make sure you use function and not arrow syntax)
+                    cy.wrap(inbox.id).as('newInboxId')
+                    cy.wrap(inbox.emailAddress).as('newEmailAddress')
+                })
+        });
+        it('signup valid info but invalid age', function() {
 
-        SignupPOM.signupButton().click({ force: true });
+            SignupPOM.signupButton().click({ force: true });
 
-        fillSignupData(email, password, blogName);
+            fillSignupData(this.newEmailAddress, password, this.newInboxId);
 
-        successAssertions();
+            successAssertions();
 
-        ageEntry(10);
+            ageEntry(10);
 
+        });
+
+        it('signup valid info and age', function() {
+
+            SignupPOM.signupButton().click({ force: true });
+
+            fillSignupData(email, password, blogName);
+
+            successAssertions();
+
+            ageEntry(18);
+
+            cy.get('button[class = "onboarding-skip-button"]').click({ force: true });
+        });
     });
-
-    it('signup valid info and age', () => {
-
-        SignupPOM.signupButton().click({ force: true });
-
-        fillSignupData(email, password, blogName);
-
-        successAssertions();
-
-        ageEntry(18);
-
-        cy.get('button[class = "onboarding-skip-button"]').click({ force: true });
-    });
-
 });
