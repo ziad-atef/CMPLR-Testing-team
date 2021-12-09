@@ -33,8 +33,8 @@ const fillSignupData = (email, password, blogName) => {
 }
 
 const ageEntry = (age) =>{
-    cy.get('input[name = "age"]').type(age);
-    cy.get('button[type = "submit"]').click({ force: true });
+    SignupPOM.ageField().type(age);
+    SignupPOM.ageButton().click({ force: true });
 
     if(age<13){
         ageFail();
@@ -53,8 +53,8 @@ const failAssertions = (failMessage) =>{
 const successAssertions = () =>{
 
     cy.contains("Sign up").should("not.exist");
-    cy.get('input[name = "age"]').should("be.enabled").and("be.visible");
-    cy.get('button[type = "submit"]').should("be.enabled").and("be.visible");
+    SignupPOM.ageField().should("be.enabled").and("be.visible");
+    SignupPOM.ageButton().should("be.enabled").and("be.visible");
 }
 
 const ageFail = () =>{
@@ -97,6 +97,8 @@ describe('Signup', () => {
             password = user.password;
             blogName = user.blogName;
         });
+        
+        
     });
     
     it('signup with empty email', () => {

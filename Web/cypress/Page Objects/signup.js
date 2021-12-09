@@ -15,11 +15,17 @@ class Signup{
     passwordField() {
         return cy.get('input.gj_Aq[name="password"]');
     }
+    ageField() {
+        return cy.get('input[name = "age"]');
+    }
     blogNameField() {
         return cy.get('input.gj_Aq[name = "blogName"]');
     }
     signupButtoninside() {
         return cy.get('button.TRX6J.CxLjL.qjTo7.CguuB.yC5pj[type="submit"]');
+    }
+    ageButton() {
+        return cy.get('button[type = "submit"]');
     }
 }
 
