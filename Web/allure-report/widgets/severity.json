@@ -1,660 +1,630 @@
 [ {
-  "uid" : "9bd07af74fdfdff3",
-  "name" : "Reset Password With Weak New Password",
-  "time" : {
-    "start" : 1638113757796,
-    "stop" : 1638113757830,
-    "duration" : 34
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "43140a1e40dbd0c3",
-  "name" : "signup valid info and age",
-  "time" : {
-    "start" : 1638113932923,
-    "stop" : 1638113974664,
-    "duration" : 41741
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "4cbf84689f76b736",
-  "name" : "log in with valid email not valid password",
-  "time" : {
-    "start" : 1638113664847,
-    "stop" : 1638113669082,
-    "duration" : 4235
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "45d886f50c6af298",
-  "name" : "sign in and access different blog",
-  "time" : {
-    "start" : 1638114016825,
-    "stop" : 1638114072816,
-    "duration" : 55991
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "f7e1488884145715",
-  "name" : "Checking static pages",
-  "time" : {
-    "start" : 1638113582936,
-    "stop" : 1638113640179,
-    "duration" : 57243
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "272c7870b95edc99",
-  "name" : "log in with empty password",
-  "time" : {
-    "start" : 1638113657722,
-    "stop" : 1638113661364,
-    "duration" : 3642
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "62ae4bb28690f1ea",
-  "name" : "signup with empty data",
-  "time" : {
-    "start" : 1638113893096,
-    "stop" : 1638113894561,
-    "duration" : 1465
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "f552bbf532eb0364",
-  "name" : "Reset Password Doesn't Match Confirmation",
-  "time" : {
-    "start" : 1638113757842,
-    "stop" : 1638113757878,
-    "duration" : 36
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "c77d9b72f164f5a8",
-  "name" : "Log In With Old Password Again",
-  "time" : {
-    "start" : 1638113848263,
-    "stop" : 1638113858302,
-    "duration" : 10039
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "ba93f9da72841a26",
-  "name" : "log in with empty email and password",
-  "time" : {
-    "start" : 1638113710911,
-    "stop" : 1638113710913,
-    "duration" : 2
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "f795a07eab5f85ae",
-  "name" : "log in with empty email",
-  "time" : {
-    "start" : 1638113710909,
-    "stop" : 1638113710910,
-    "duration" : 1
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "9ebff34e2d583dec",
-  "name" : "Post a Quote post",
-  "time" : {
-    "start" : 1638113342844,
-    "stop" : 1638113380678,
-    "duration" : 37834
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "cffa9a9c3c8d50ca",
-  "name" : "Reset Password With New Password",
-  "time" : {
-    "start" : 1638113757886,
-    "stop" : 1638113757925,
-    "duration" : 39
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "817f85e2220f714b",
-  "name" : "check email has been verified",
-  "time" : {
-    "start" : 1638113534563,
-    "stop" : 1638113569883,
-    "duration" : 35320
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "d2b0a1b03e20baee",
-  "name" : "successfully log in with command",
-  "time" : {
-    "start" : 1638113704626,
-    "stop" : 1638113710838,
-    "duration" : 6212
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "eb4bc493e2e5243e",
-  "name" : "Post a text post",
-  "time" : {
-    "start" : 1638113266990,
-    "stop" : 1638113342715,
-    "duration" : 75725
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "85c98cd456ab4a6f",
-  "name" : "signup taken email",
-  "time" : {
-    "start" : 1638113894595,
-    "stop" : 1638113897135,
-    "duration" : 2540
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "f27d1421ba71ce96",
-  "name" : "successfully log in",
-  "time" : {
-    "start" : 1638113686416,
-    "stop" : 1638113704544,
-    "duration" : 18128
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "9585ba6643e5f4dd",
-  "name" : "Post a Quote post",
-  "time" : {
-    "start" : 1638113427241,
-    "stop" : 1638113458912,
-    "duration" : 31671
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "c47ae5087c77ea16",
-  "name" : "Rouring through main signup button",
-  "time" : {
-    "start" : 1638113995108,
-    "stop" : 1638113996945,
-    "duration" : 1837
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "d9858580325fd929",
-  "name" : "Post a Photo post",
-  "time" : {
-    "start" : 1638113380785,
-    "stop" : 1638113395468,
-    "duration" : 14683
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "5f7f47738d30b04",
-  "name" : "access blog without sign in",
-  "time" : {
-    "start" : 1638114012257,
-    "stop" : 1638114016753,
-    "duration" : 4496
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "de0d2956559d1fe7",
-  "name" : "log in with not valid email valid password (1)",
-  "time" : {
-    "start" : 1638113710914,
-    "stop" : 1638113710915,
-    "duration" : 1
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "de2327fc141c6cc7",
-  "name" : "log in with not valid email valid password (2)",
-  "time" : {
-    "start" : 1638113673743,
-    "stop" : 1638113677739,
-    "duration" : 3996
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "b4be890edf29e3b7",
-  "name" : "Rouring through App Bar signup button",
-  "time" : {
-    "start" : 1638113996965,
-    "stop" : 1638113999255,
-    "duration" : 2290
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "336c68c4218ac9c8",
-  "name" : "Signup New Email To Be Verified",
-  "time" : {
-    "start" : 1638113505880,
-    "stop" : 1638113527499,
-    "duration" : 21619
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "c619c76ca1953f97",
-  "name" : "signup with empty blog name",
-  "time" : {
-    "start" : 1638113884947,
-    "stop" : 1638113887237,
-    "duration" : 2290
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "43955b7c18eb0c0e",
-  "name" : "Routing through main login button",
-  "time" : {
-    "start" : 1638113987370,
-    "stop" : 1638113990854,
-    "duration" : 3484
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "45bf8653ec777568",
-  "name" : "Send Reset Password Email",
-  "time" : {
-    "start" : 1638113829339,
-    "stop" : 1638113847086,
-    "duration" : 17747
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "1d80c0c8ca91435b",
-  "name" : "Check Reset Password Email",
-  "time" : {
-    "start" : 1638113847205,
-    "stop" : 1638113848164,
-    "duration" : 959
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "254796c0664b85f5",
-  "name" : "Log In With Old Password",
-  "time" : {
-    "start" : 1638113724691,
-    "stop" : 1638113730833,
-    "duration" : 6142
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "f2959909db4af1a4",
-  "name" : "Routing through secondary login button",
-  "time" : {
-    "start" : 1638113993697,
-    "stop" : 1638113995078,
-    "duration" : 1381
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "16c1376d93e88a9e",
-  "name" : "log in with not valid email valid password (3)",
-  "time" : {
-    "start" : 1638113710916,
-    "stop" : 1638113710917,
-    "duration" : 1
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "437aea8f90861ddd",
-  "name" : "Log In With New Password Again",
-  "time" : {
-    "start" : 1638113793381,
-    "stop" : 1638113829294,
-    "duration" : 35913
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "71d909560c5cf0fe",
-  "name" : "Reset Password With Old Password",
-  "time" : {
-    "start" : 1638113848177,
-    "stop" : 1638113848254,
-    "duration" : 77
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "b732fc471e76f34b",
-  "name" : "when reload the page the background changes",
-  "time" : {
-    "start" : 1638113245102,
-    "stop" : 1638113253695,
-    "duration" : 8593
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "a683298482ef2dd7",
-  "name" : "Check Reset Password Email",
-  "time" : {
-    "start" : 1638113756723,
-    "stop" : 1638113757574,
-    "duration" : 851
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "b21575d8b93fb3fc",
-  "name" : "log in with not registered email valid password",
-  "time" : {
-    "start" : 1638113710917,
-    "stop" : 1638113710917,
-    "duration" : 0
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "ea22ea697ec049f",
-  "name" : "Log In With New Password Again",
-  "time" : {
-    "start" : 1638113858441,
-    "stop" : 1638113863072,
-    "duration" : 4631
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "16821dbaf285f623",
-  "name" : "log in with not valid email valid password (3)",
-  "time" : {
-    "start" : 1638113677769,
-    "stop" : 1638113681978,
-    "duration" : 4209
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "1bf3a9917c519dd0",
-  "name" : "log in with not registered email valid password",
-  "time" : {
-    "start" : 1638113682005,
-    "stop" : 1638113686386,
-    "duration" : 4381
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "63af3ebd012eaa8c",
-  "name" : "log in with not valid email valid password (1)",
-  "time" : {
-    "start" : 1638113669129,
-    "stop" : 1638113673714,
-    "duration" : 4585
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "b670c1925b5d9d96",
-  "name" : "log in with valid email not valid password",
-  "time" : {
-    "start" : 1638113710913,
-    "stop" : 1638113710914,
-    "duration" : 1
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "b98b1a448de544db",
-  "name" : "Verify email",
-  "time" : {
-    "start" : 1638113533945,
-    "stop" : 1638113534518,
-    "duration" : 573
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "a0fd8cf90df89d93",
-  "name" : "Send Reset Password Email",
-  "time" : {
-    "start" : 1638113730924,
-    "stop" : 1638113748632,
-    "duration" : 17708
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "390d9af3326c1318",
-  "name" : "signup with empty email and blog name",
-  "time" : {
-    "start" : 1638113889599,
-    "stop" : 1638113891376,
-    "duration" : 1777
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "a6086e84169bd3fb",
-  "name" : "log in with not valid email valid password (2)",
-  "time" : {
-    "start" : 1638113710915,
-    "stop" : 1638113710916,
-    "duration" : 1
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "a078e94e1b3e71b5",
-  "name" : "Post a Photo post",
-  "time" : {
-    "start" : 1638113458926,
-    "stop" : 1638113490501,
-    "duration" : 31575
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "c81719029b7766a",
-  "name" : "signup valid info but invalid age",
-  "time" : {
-    "start" : 1638113900278,
-    "stop" : 1638113932866,
-    "duration" : 32588
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "285266c5ae604ecd",
-  "name" : "Check That Email Is Not Verified",
-  "time" : {
-    "start" : 1638113527590,
-    "stop" : 1638113533856,
-    "duration" : 6266
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "d775abb263486dba",
-  "name" : "log in with empty email",
-  "time" : {
-    "start" : 1638113653055,
-    "stop" : 1638113657678,
-    "duration" : 4623
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "98d8fb7377d6eeca",
+  "uid" : "16f1dc31bc7cbc7a",
   "name" : "Routing through App Bar login button",
   "time" : {
-    "start" : 1638113990900,
-    "stop" : 1638113993658,
-    "duration" : 2758
+    "start" : 1639010762281,
+    "stop" : 1639010764914,
+    "duration" : 2633
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "5d79ab6c9d7945ed",
-  "name" : "signup with empty email",
+  "uid" : "29527395d908319e",
+  "name" : "(Quote) Disable Post Button After Clearing",
   "time" : {
-    "start" : 1638113878618,
-    "stop" : 1638113881539,
-    "duration" : 2921
+    "start" : 1639010079953,
+    "stop" : 1639010091749,
+    "duration" : 11796
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "fb683a1cd7b4ccef",
-  "name" : "signup with empty password and blog name",
+  "uid" : "687b497da576a210",
+  "name" : "Check Reset Password Email",
   "time" : {
-    "start" : 1638113891419,
-    "stop" : 1638113893070,
-    "duration" : 1651
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "402a5c0f83347a48",
-  "name" : "signup with empty password",
-  "time" : {
-    "start" : 1638113881565,
-    "stop" : 1638113884919,
-    "duration" : 3354
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "3cdec3d0dd7e4548",
-  "name" : "successfully log in",
-  "time" : {
-    "start" : 1638113710918,
-    "stop" : 1638113710918,
-    "duration" : 0
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "99e7b819cf5d0c9",
-  "name" : "signup with empty email and password",
-  "time" : {
-    "start" : 1638113887254,
-    "stop" : 1638113889573,
-    "duration" : 2319
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "a4c6bac89d839f45",
-  "name" : "Click Reset Button With No Email",
-  "time" : {
-    "start" : 1638113748719,
-    "stop" : 1638113756649,
-    "duration" : 7930
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "61e6cbb350e83859",
-  "name" : "Log In With Old Password Again",
-  "time" : {
-    "start" : 1638113757935,
-    "stop" : 1638113793344,
-    "duration" : 35409
+    "start" : 1639010581563,
+    "stop" : 1639010611858,
+    "duration" : 30295
   },
   "status" : "failed",
   "severity" : "normal"
 }, {
-  "uid" : "e1fa9c8ef0781e21",
-  "name" : "signup invalid email",
+  "uid" : "71dad40ab163c9c3",
+  "name" : "check email has been verified",
   "time" : {
-    "start" : 1638113897161,
-    "stop" : 1638113900256,
-    "duration" : 3095
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "ae7b404342671057",
-  "name" : "log in with empty password",
-  "time" : {
-    "start" : 1638113710911,
-    "stop" : 1638113710911,
-    "duration" : 0
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "f9e1d778618679f1",
-  "name" : "successfully log in with command",
-  "time" : {
-    "start" : 1638113710918,
-    "stop" : 1638113710919,
-    "duration" : 1
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "c597d15f659543c6",
-  "name" : "log in with empty email and password",
-  "time" : {
-    "start" : 1638113661399,
-    "stop" : 1638113664809,
-    "duration" : 3410
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "d54080bd019af60a",
-  "name" : "Post a text post",
-  "time" : {
-    "start" : 1638113395551,
-    "stop" : 1638113427179,
-    "duration" : 31628
+    "start" : 1639010258074,
+    "stop" : 1639010294241,
+    "duration" : 36167
   },
   "status" : "failed",
   "severity" : "normal"
 }, {
-  "uid" : "7c4c2fd227ab747b",
-  "name" : "Reset Password With Same Old Password",
+  "uid" : "4d2909bbf668ab01",
+  "name" : "Reset Password Doesn't Match Confirmation",
   "time" : {
-    "start" : 1638113757619,
-    "stop" : 1638113757722,
+    "start" : 1639010524385,
+    "stop" : 1639010524427,
+    "duration" : 42
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "85627ca074f8c4dd",
+  "name" : "Routing through main login button",
+  "time" : {
+    "start" : 1639010761070,
+    "stop" : 1639010762276,
+    "duration" : 1206
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cd083ae9f9a5b57c",
+  "name" : "Reset Password With Old Password",
+  "time" : {
+    "start" : 1639010611939,
+    "stop" : 1639010612042,
     "duration" : 103
   },
   "status" : "failed",
   "severity" : "normal"
 }, {
-  "uid" : "d67999e5ee604ccb",
+  "uid" : "3cf5ac9f273388c5",
+  "name" : "successfully log in",
+  "time" : {
+    "start" : 1639010410370,
+    "stop" : 1639010416919,
+    "duration" : 6549
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bef5266494510c0a",
+  "name" : "log in with empty email",
+  "time" : {
+    "start" : 1639010423243,
+    "stop" : 1639010423244,
+    "duration" : 1
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "330e1a8d777cebc9",
+  "name" : "Post a text post",
+  "time" : {
+    "start" : 1639009973640,
+    "stop" : 1639010036501,
+    "duration" : 62861
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ba2ec21facea64ad",
+  "name" : "Log In With New Password Again",
+  "time" : {
+    "start" : 1639010528763,
+    "stop" : 1639010562004,
+    "duration" : 33241
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "f3b9a7fa8a17cf44",
+  "name" : "signup with empty password and blog name",
+  "time" : {
+    "start" : 1639010674012,
+    "stop" : 1639010676180,
+    "duration" : 2168
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c6d852a29c6ae29a",
+  "name" : "Render Posts",
+  "time" : {
+    "start" : 1639009967607,
+    "stop" : 1639009973560,
+    "duration" : 5953
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2f9a846350f87623",
+  "name" : "Assert That Post Is Reblogged",
+  "time" : {
+    "start" : 1639010151580,
+    "stop" : 1639010156388,
+    "duration" : 4808
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "3b5ebca26e82fe4d",
+  "name" : "successfully log in with command",
+  "time" : {
+    "start" : 1639010416993,
+    "stop" : 1639010423160,
+    "duration" : 6167
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "90643cf29b2eb53d",
+  "name" : "Check Reset Password Email",
+  "time" : {
+    "start" : 1639010493975,
+    "stop" : 1639010524184,
+    "duration" : 30209
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "eb8dc790626769b0",
+  "name" : "Send Reset Password Email",
+  "time" : {
+    "start" : 1639010562035,
+    "stop" : 1639010581440,
+    "duration" : 19405
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "45bf5e1995bc45d0",
+  "name" : "log in with valid email not valid password",
+  "time" : {
+    "start" : 1639010391529,
+    "stop" : 1639010395941,
+    "duration" : 4412
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c4c9155c00a1fa07",
+  "name" : "(Text) Only Tags Doesn't Enable Post Button",
+  "time" : {
+    "start" : 1639010054644,
+    "stop" : 1639010062457,
+    "duration" : 7813
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bf070dfc16b58b2d",
+  "name" : "signup valid info and age",
+  "time" : {
+    "start" : 1639010714878,
+    "stop" : 1639010750914,
+    "duration" : 36036
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "4f890a3c8dc97418",
+  "name" : "log in with not registered email valid password",
+  "time" : {
+    "start" : 1639010406401,
+    "stop" : 1639010410344,
+    "duration" : 3943
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7353cf6386bf8371",
+  "name" : "(Quote) Only Tags Doesn't Enable Post Button",
+  "time" : {
+    "start" : 1639010091865,
+    "stop" : 1639010102049,
+    "duration" : 10184
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "11c0bfc301c2f6c",
+  "name" : "signup with empty email",
+  "time" : {
+    "start" : 1639010661932,
+    "stop" : 1639010664564,
+    "duration" : 2632
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f4dbe6d826a57862",
+  "name" : "access blog without sign in",
+  "time" : {
+    "start" : 1639010828739,
+    "stop" : 1639010831527,
+    "duration" : 2788
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3bc1fbdccc74c9f5",
+  "name" : "Rouring through main signup button",
+  "time" : {
+    "start" : 1639010766007,
+    "stop" : 1639010767343,
+    "duration" : 1336
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b156aebd41827e55",
+  "name" : "Log In With Old Password Again",
+  "time" : {
+    "start" : 1639010612052,
+    "stop" : 1639010645617,
+    "duration" : 33565
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "4855cdae8854536e",
+  "name" : "log in with not valid email valid password (3)",
+  "time" : {
+    "start" : 1639010402449,
+    "stop" : 1639010406371,
+    "duration" : 3922
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "92d6dc32d53fe2ff",
+  "name" : "Log In With Old Password",
+  "time" : {
+    "start" : 1639010433611,
+    "stop" : 1639010467922,
+    "duration" : 34311
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "b16391c11d42d312",
+  "name" : "log in with empty email",
+  "time" : {
+    "start" : 1639010377285,
+    "stop" : 1639010384102,
+    "duration" : 6817
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "48fedd7cd6cdf3a9",
+  "name" : "signup valid info but invalid age",
+  "time" : {
+    "start" : 1639010682214,
+    "stop" : 1639010714784,
+    "duration" : 32570
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "31c167aaaa9c32b5",
+  "name" : "log in with not valid email valid password (2)",
+  "time" : {
+    "start" : 1639010399194,
+    "stop" : 1639010402425,
+    "duration" : 3231
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2338d63403b66584",
+  "name" : "Render Posts",
+  "time" : {
+    "start" : 1639010111625,
+    "stop" : 1639010114333,
+    "duration" : 2708
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d99803c3b95ae13",
+  "name" : "Verify email",
+  "time" : {
+    "start" : 1639010256025,
+    "stop" : 1639010258028,
+    "duration" : 2003
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "1aa20c201f1bdc00",
+  "name" : "Post a Photo post",
+  "time" : {
+    "start" : 1639010102132,
+    "stop" : 1639010111485,
+    "duration" : 9353
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d30a53293745e642",
+  "name" : "Checking static pages",
+  "time" : {
+    "start" : 1639010304678,
+    "stop" : 1639010366135,
+    "duration" : 61457
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "df1db78d435d5e38",
+  "name" : "Reset Password With New Password",
+  "time" : {
+    "start" : 1639010524439,
+    "stop" : 1639010524488,
+    "duration" : 49
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "fd0ea83b70604d5e",
+  "name" : "Click Reset Button With No Email",
+  "time" : {
+    "start" : 1639010487693,
+    "stop" : 1639010493912,
+    "duration" : 6219
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "17792e80cd442cfb",
+  "name" : "when reload the page the background changes",
+  "time" : {
+    "start" : 1639009940296,
+    "stop" : 1639009947016,
+    "duration" : 6720
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "f4f78176e73ef3ab",
+  "name" : "log in with not valid email valid password (1)",
+  "time" : {
+    "start" : 1639010395974,
+    "stop" : 1639010399163,
+    "duration" : 3189
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1fe000a392313c5f",
+  "name" : "Reblog a Post",
+  "time" : {
+    "start" : 1639010114378,
+    "stop" : 1639010151494,
+    "duration" : 37116
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "b874cfc7ed585b5f",
+  "name" : "signup invalid email",
+  "time" : {
+    "start" : 1639010679656,
+    "stop" : 1639010682201,
+    "duration" : 2545
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "646c63eb3dd96701",
+  "name" : "(Text) Disable Post Button After Clearing",
+  "time" : {
+    "start" : 1639010036671,
+    "stop" : 1639010054581,
+    "duration" : 17910
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4565a6099513b7a8",
+  "name" : "Visit Dashboard",
+  "time" : {
+    "start" : 1639010787610,
+    "stop" : 1639010818930,
+    "duration" : 31320
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "878eef351991a9c9",
   "name" : "Rouring through secondary signup button",
   "time" : {
-    "start" : 1638113999302,
-    "stop" : 1638114000333,
-    "duration" : 1031
+    "start" : 1639010770191,
+    "stop" : 1639010772131,
+    "duration" : 1940
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "681f10081f581634",
+  "name" : "signup with empty blog name",
+  "time" : {
+    "start" : 1639010667436,
+    "stop" : 1639010669937,
+    "duration" : 2501
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "26c456a95558d551",
+  "name" : "Post a Quote post",
+  "time" : {
+    "start" : 1639010062506,
+    "stop" : 1639010079517,
+    "duration" : 17011
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ac9892ac2a75f1f8",
+  "name" : "Log In With Old Password Again",
+  "time" : {
+    "start" : 1639010524497,
+    "stop" : 1639010528705,
+    "duration" : 4208
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8c443b3996483a49",
+  "name" : "signup with empty data",
+  "time" : {
+    "start" : 1639010676195,
+    "stop" : 1639010677419,
+    "duration" : 1224
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "157f48f6995cdfe9",
+  "name" : "signup with empty password",
+  "time" : {
+    "start" : 1639010664592,
+    "stop" : 1639010667418,
+    "duration" : 2826
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "77608ece43dd48c5",
+  "name" : "Reset Password With Same Old Password",
+  "time" : {
+    "start" : 1639010524210,
+    "stop" : 1639010524264,
+    "duration" : 54
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "fd3ff357cd9c90b0",
+  "name" : "sign in and access different blog",
+  "time" : {
+    "start" : 1639010831602,
+    "stop" : 1639010883811,
+    "duration" : 52209
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "1f537a48d56cb980",
+  "name" : "signup taken email",
+  "time" : {
+    "start" : 1639010677440,
+    "stop" : 1639010679637,
+    "duration" : 2197
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cc59ba2ad41305f3",
+  "name" : "Send Reset Password Email",
+  "time" : {
+    "start" : 1639010468020,
+    "stop" : 1639010487633,
+    "duration" : 19613
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "147fb9898a6a6d6e",
+  "name" : "Routing through secondary login button",
+  "time" : {
+    "start" : 1639010764960,
+    "stop" : 1639010766000,
+    "duration" : 1040
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8ec99ee0cae5decd",
+  "name" : "Reset Password With Weak New Password",
+  "time" : {
+    "start" : 1639010524326,
+    "stop" : 1639010524374,
+    "duration" : 48
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "da542e7fe9cf5dc",
+  "name" : "log in with empty password",
+  "time" : {
+    "start" : 1639010384136,
+    "stop" : 1639010388121,
+    "duration" : 3985
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e92d18a5a892d592",
+  "name" : "signup with empty email and password",
+  "time" : {
+    "start" : 1639010669985,
+    "stop" : 1639010671606,
+    "duration" : 1621
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "205d062f965e739c",
+  "name" : "signup with empty email and blog name",
+  "time" : {
+    "start" : 1639010671628,
+    "stop" : 1639010673994,
+    "duration" : 2366
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "42206d8d4eb649b",
+  "name" : "log in with empty email and password",
+  "time" : {
+    "start" : 1639010388154,
+    "stop" : 1639010391498,
+    "duration" : 3344
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3eb0918c1c6ba651",
+  "name" : "Check That Email Is Not Verified",
+  "time" : {
+    "start" : 1639010215962,
+    "stop" : 1639010255913,
+    "duration" : 39951
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "843f35e76388c565",
+  "name" : "Signup New Email To Be Verified",
+  "time" : {
+    "start" : 1639010174109,
+    "stop" : 1639010215921,
+    "duration" : 41812
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "8866798eb9cb6124",
+  "name" : "Rouring through App Bar signup button",
+  "time" : {
+    "start" : 1639010767369,
+    "stop" : 1639010770162,
+    "duration" : 2793
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2ed293d9be47a982",
+  "name" : "Log In With New Password Again",
+  "time" : {
+    "start" : 1639010645631,
+    "stop" : 1639010650249,
+    "duration" : 4618
   },
   "status" : "passed",
   "severity" : "normal"

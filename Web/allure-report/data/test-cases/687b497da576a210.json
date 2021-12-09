@@ -1,0 +1,101 @@
+{
+  "uid" : "687b497da576a210",
+  "name" : "Check Reset Password Email",
+  "fullName" : "Check Reset Password Email",
+  "historyId" : "cfd88b458c55664bad4f1d43012a4efb",
+  "time" : {
+    "start" : 1639010581563,
+    "stop" : 1639010611858,
+    "duration" : 30295
+  },
+  "status" : "failed",
+  "statusMessage" : "`cy.then()` timed out after waiting `30000ms`.\n\nYour callback function returned a promise that never resolved.\n\nThe callback function was:\n\nmailslurp => mailslurp.waitForLatestEmail(password, 30000, false)\n\nhttps://on.cypress.io/then",
+  "statusTrace" : "CypressError: `cy.then()` timed out after waiting `30000ms`.\n\nYour callback function returned a promise that never resolved.\n\nThe callback function was:\n\nmailslurp => mailslurp.waitForLatestEmail(password, 30000, false)\n\nhttps://on.cypress.io/then\n    at https://www.tumblr.com/__cypress/runner/cypress_runner.js:155223:83\n    at tryCatcher (https://www.tumblr.com/__cypress/runner/cypress_runner.js:13212:23)\n    at https://www.tumblr.com/__cypress/runner/cypress_runner.js:8334:41\n    at tryCatcher (https://www.tumblr.com/__cypress/runner/cypress_runner.js:13212:23)\n    at Promise._settlePromiseFromHandler (https://www.tumblr.com/__cypress/runner/cypress_runner.js:11147:31)\n    at Promise._settlePromise (https://www.tumblr.com/__cypress/runner/cypress_runner.js:11204:18)\n    at Promise._settlePromise0 (https://www.tumblr.com/__cypress/runner/cypress_runner.js:11249:10)\n    at Promise._settlePromises (https://www.tumblr.com/__cypress/runner/cypress_runner.js:11325:18)\n    at _drainQueueStep (https://www.tumblr.com/__cypress/runner/cypress_runner.js:7919:12)\n    at _drainQueue (https://www.tumblr.com/__cypress/runner/cypress_runner.js:7912:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.tumblr.com/__cypress/runner/cypress_runner.js:7928:5)\n    at Async.drainQueues (https://www.tumblr.com/__cypress/runner/cypress_runner.js:7798:14)\nFrom Your Spec Code:\n    at Context.eval (https://www.tumblr.com/__cypress/tests?p=cypress\\integration\\Tumbler\\resetpassword.spec.js:517:22)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "`cy.then()` timed out after waiting `30000ms`.\n\nYour callback function returned a promise that never resolved.\n\nThe callback function was:\n\nmailslurp => mailslurp.waitForLatestEmail(password, 30000, false)\n\nhttps://on.cypress.io/then",
+    "statusTrace" : "CypressError: `cy.then()` timed out after waiting `30000ms`.\n\nYour callback function returned a promise that never resolved.\n\nThe callback function was:\n\nmailslurp => mailslurp.waitForLatestEmail(password, 30000, false)\n\nhttps://on.cypress.io/then\n    at https://www.tumblr.com/__cypress/runner/cypress_runner.js:155223:83\n    at tryCatcher (https://www.tumblr.com/__cypress/runner/cypress_runner.js:13212:23)\n    at https://www.tumblr.com/__cypress/runner/cypress_runner.js:8334:41\n    at tryCatcher (https://www.tumblr.com/__cypress/runner/cypress_runner.js:13212:23)\n    at Promise._settlePromiseFromHandler (https://www.tumblr.com/__cypress/runner/cypress_runner.js:11147:31)\n    at Promise._settlePromise (https://www.tumblr.com/__cypress/runner/cypress_runner.js:11204:18)\n    at Promise._settlePromise0 (https://www.tumblr.com/__cypress/runner/cypress_runner.js:11249:10)\n    at Promise._settlePromises (https://www.tumblr.com/__cypress/runner/cypress_runner.js:11325:18)\n    at _drainQueueStep (https://www.tumblr.com/__cypress/runner/cypress_runner.js:7919:12)\n    at _drainQueue (https://www.tumblr.com/__cypress/runner/cypress_runner.js:7912:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.tumblr.com/__cypress/runner/cypress_runner.js:7928:5)\n    at Async.drainQueues (https://www.tumblr.com/__cypress/runner/cypress_runner.js:7798:14)\nFrom Your Spec Code:\n    at Context.eval (https://www.tumblr.com/__cypress/tests?p=cypress\\integration\\Tumbler\\resetpassword.spec.js:517:22)",
+    "steps" : [ {
+      "name" : "mailslurp",
+      "time" : {
+        "start" : 1639010581761,
+        "stop" : 1639010581761,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "then function(){}",
+      "time" : {
+        "start" : 1639010611856,
+        "stop" : 1639010611856,
+        "duration" : 0
+      },
+      "status" : "failed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "GET https://api.mailslurp.com/waitForLatestEmail?inboxId=0f2344f6-eed9-40a3-84de-b646253bca5e&timeout=30000&unreadOnly=false",
+      "time" : {
+        "start" : 1639010611857,
+        "stop" : 1639010611857,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 0,
+    "stepsCount" : 3,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "reset password"
+  }, {
+    "name" : "suite",
+    "value" : "Reset With Old Password"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "687b497da576a210.json",
+  "parameterValues" : [ ]
+}
