@@ -1,0 +1,135 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "Login With Invaild Email",
+    "uid" : "9bc9e4ecf2a5ca67",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1639149225308,
+      "stop" : 1639149238293,
+      "duration" : 12985
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "emulator-5554-9" ]
+  }, {
+    "name" : "Login With Wrong Password",
+    "uid" : "fd61d998331e55c7",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1639149238293,
+      "stop" : 1639149251922,
+      "duration" : 13629
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "emulator-5554-9" ]
+  }, {
+    "name" : "Login With Empty Password",
+    "uid" : "99bdb88796f044d0",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1639149251922,
+      "stop" : 1639149265894,
+      "duration" : 13972
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "emulator-5554-9" ]
+  }, {
+    "name" : "Login With Empty Email",
+    "uid" : "1aa4fdf7bc16a4f7",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1639149265894,
+      "stop" : 1639149278978,
+      "duration" : 13084
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "emulator-5554-9" ]
+  }, {
+    "name" : "Display Password Before Typing it",
+    "uid" : "f839ab2ef3b85ec7",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1639149278979,
+      "stop" : 1639149341362,
+      "duration" : 62383
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "emulator-5554-9" ]
+  }, {
+    "name" : "Successful Login",
+    "uid" : "c125ba123e9bbff1",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1639149341362,
+      "stop" : 1639149403765,
+      "duration" : 62403
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "emulator-5554-9" ]
+  }, {
+    "name" : "Forget Password With Not Registered Email",
+    "uid" : "509b79d45b5bec5e",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1639149416153,
+      "stop" : 1639149452788,
+      "duration" : 36635
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "emulator-5554-9" ]
+  }, {
+    "name" : "Send Reset Password",
+    "uid" : "2c412e0aec8a20d2",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1639149452790,
+      "stop" : 1639149489746,
+      "duration" : 36956
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "emulator-5554-9" ]
+  }, {
+    "name" : "Signup with invalid address1",
+    "uid" : "7de3c8b06aa09ef9",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1639149501461,
+      "stop" : 1639149514423,
+      "duration" : 12962
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "emulator-5554-9" ]
+  }, {
+    "name" : "Full valid test",
+    "uid" : "a15112306a6dfd12",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1639149514423,
+      "stop" : 1639149526438,
+      "duration" : 12015
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "emulator-5554-9" ]
+  } ]
+}

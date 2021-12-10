@@ -4,6 +4,16 @@ const {
     ScreenContains
 } = require('../utils/utils');
 const emails = require('../fixtures/emails.json');
+const {
+    LoginWithEmail,
+    EnterEmailAndPassword,
+    ShowPassword,
+    Log,
+    SuccessfulLog
+} = require('../utils/utilsLogin');
+const {
+    stateAssertion
+} = require('../utils/utils');
 
 
 describe('Reset Password', () => {
@@ -19,25 +29,23 @@ describe('Reset Password', () => {
         await driver.reset();
     });
     it('Forget Password With Not Registered Email', async () => {
-        const LoginButton = await LoginPOM.loginButtonPOM();
-
-        await LoginButton.click();
-
-        const LoginWithEmailButton = await LoginPOM.loginWithEmailButtonPOM();
-        await LoginWithEmailButton.click();
+        await LoginWithEmail();
 
         const ForgetPasswordButton = await ResetPasswordPOM.forgetPasswordPOM();
+        stateAssertion(ForgetPasswordButton);
         await ForgetPasswordButton.click();
 
         await ScreenContains(Titles[0]);
         await ScreenContains(Titles[1]);
 
         const EmailField = await LoginPOM.emailFieldPOM();
+        stateAssertion(EmailField);
         await EmailField.addValue(emails.notRegisteredEmail);
         let email = await EmailField.getText();
         expect(email).toBe(emails.notRegisteredEmail);
 
         const SubmitResetScreenButton = await ResetPasswordPOM.submitButtonPOM();
+        stateAssertion(SubmitResetScreenButton);
         let label = await SubmitResetScreenButton.getText();
         expect(label).toBe("Submit");
         await SubmitResetScreenButton.click();
@@ -48,25 +56,23 @@ describe('Reset Password', () => {
         await ScreenContains(NotRegisteredMessage);
     });
     it('Send Reset Password', async () => {
-        const LoginButton = await LoginPOM.loginButtonPOM();
-
-        await LoginButton.click();
-
-        const LoginWithEmailButton = await LoginPOM.loginWithEmailButtonPOM();
-        await LoginWithEmailButton.click();
+        await LoginWithEmail();
 
         const ForgetPasswordButton = await ResetPasswordPOM.forgetPasswordPOM();
+        stateAssertion(ForgetPasswordButton);
         await ForgetPasswordButton.click();
 
         await ScreenContains(Titles[0]);
         await ScreenContains(Titles[1]);
 
         const EmailField = await LoginPOM.emailFieldPOM();
+        stateAssertion(EmailField);
         await EmailField.addValue(emails.email);
         let email = await EmailField.getText();
         expect(email).toBe(emails.email);
 
         const SubmitResetScreenButton = await ResetPasswordPOM.submitButtonPOM();
+        stateAssertion(SubmitResetScreenButton);
         let label = await SubmitResetScreenButton.getText();
         expect(label).toBe("Submit");
         await SubmitResetScreenButton.click();

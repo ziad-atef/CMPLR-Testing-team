@@ -1,0 +1,201 @@
+{
+  "1cf331a5b3cf061a97db080c0178a916" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "f839ab2ef3b85ec7",
+      "status" : "broken",
+      "statusDetails" : "Timeout of 60000ms exceeded. The execution in the test \"Login Display Password Before Typing it\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (D:\\GitHub\\CMPLR-Technologies.Testing\\Mobile\\test\\specs\\login.spec.js)",
+      "time" : {
+        "start" : 1639149278979,
+        "stop" : 1639149341362,
+        "duration" : 62383
+      }
+    } ]
+  },
+  "905664d97949e9c565d226d4390c4378" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7de3c8b06aa09ef9",
+      "status" : "broken",
+      "statusDetails" : "Can't call click on element with selector \"android=new UiSelector().resourceId(\"com.tumblr:id/sign_up_button\")\" because element wasn't found",
+      "time" : {
+        "start" : 1639149501461,
+        "stop" : 1639149514423,
+        "duration" : 12962
+      }
+    } ]
+  },
+  "499074f949fbf0ca0c1659fb7f549102" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "1aa4fdf7bc16a4f7",
+      "status" : "failed",
+      "statusDetails" : "expect(received).toBe(expected) // Object.is equality\n                \n                Expected: \"please enter a valid email\"\n                Received: \"please enter a valid mail\"",
+      "time" : {
+        "start" : 1639149265894,
+        "stop" : 1639149278978,
+        "duration" : 13084
+      }
+    } ]
+  },
+  "6347c50072a1e5f8692ca54f1758b528" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "fd61d998331e55c7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1639149238293,
+        "stop" : 1639149251922,
+        "duration" : 13629
+      }
+    } ]
+  },
+  "9af4df3080aea7a3666157a0c68aa5ad" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "99bdb88796f044d0",
+      "status" : "failed",
+      "statusDetails" : "expect(received).toBe(expected) // Object.is equality\n                \n                Expected: \"please enter a password\"\n                Received: \"invalid email or password, try again or press on forgot my password\"",
+      "time" : {
+        "start" : 1639149251922,
+        "stop" : 1639149265894,
+        "duration" : 13972
+      }
+    } ]
+  },
+  "da9673e2130688f5adabc186425aa653" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "a15112306a6dfd12",
+      "status" : "broken",
+      "statusDetails" : "Can't call click on element with selector \"android=new UiSelector().resourceId(\"com.tumblr:id/sign_up_button\")\" because element wasn't found",
+      "time" : {
+        "start" : 1639149514423,
+        "stop" : 1639149526438,
+        "duration" : 12015
+      }
+    } ]
+  },
+  "ca00a5b002f81f8e31d720402004db14" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "2c412e0aec8a20d2",
+      "status" : "broken",
+      "statusDetails" : "element (\"android=new UiSelector().textContains(\"Okay, we just sent you a password reset email\")\") still not displayed after 3000ms",
+      "time" : {
+        "start" : 1639149452790,
+        "stop" : 1639149489746,
+        "duration" : 36956
+      }
+    } ]
+  },
+  "e8b3fcf3d9888f9c38cf902442050689" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "509b79d45b5bec5e",
+      "status" : "broken",
+      "statusDetails" : "element (\"android=new UiSelector().textContains(\"please enter an existing email.\")\") still not displayed after 3000ms",
+      "time" : {
+        "start" : 1639149416153,
+        "stop" : 1639149452788,
+        "duration" : 36635
+      }
+    } ]
+  },
+  "bade3e5a5c5321eae95b4c6c37f7a2ea" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "9bc9e4ecf2a5ca67",
+      "status" : "failed",
+      "statusDetails" : "expect(received).toBe(expected) // Object.is equality\n                \n                Expected: \"please enter a valid email\"\n                Received: \"please enter a valid mail\"",
+      "time" : {
+        "start" : 1639149225308,
+        "stop" : 1639149238293,
+        "duration" : 12985
+      }
+    } ]
+  },
+  "ca16eb73d6d5441bec8b412235b759b1" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "c125ba123e9bbff1",
+      "status" : "broken",
+      "statusDetails" : "Timeout of 60000ms exceeded. The execution in the test \"Login Successful Login\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (D:\\GitHub\\CMPLR-Technologies.Testing\\Mobile\\test\\specs\\login.spec.js)",
+      "time" : {
+        "start" : 1639149341362,
+        "stop" : 1639149403765,
+        "duration" : 62403
+      }
+    } ]
+  }
+}

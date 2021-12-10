@@ -1,0 +1,147 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Login",
+    "children" : [ {
+      "name" : "Login With Invaild Email",
+      "uid" : "9bc9e4ecf2a5ca67",
+      "parentUid" : "1a85855463aca3ea10b8fe0fcb3372b8",
+      "status" : "failed",
+      "time" : {
+        "start" : 1639149225308,
+        "stop" : 1639149238293,
+        "duration" : 12985
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "emulator-5554-9" ]
+    }, {
+      "name" : "Login With Wrong Password",
+      "uid" : "fd61d998331e55c7",
+      "parentUid" : "1a85855463aca3ea10b8fe0fcb3372b8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1639149238293,
+        "stop" : 1639149251922,
+        "duration" : 13629
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "emulator-5554-9" ]
+    }, {
+      "name" : "Login With Empty Password",
+      "uid" : "99bdb88796f044d0",
+      "parentUid" : "1a85855463aca3ea10b8fe0fcb3372b8",
+      "status" : "failed",
+      "time" : {
+        "start" : 1639149251922,
+        "stop" : 1639149265894,
+        "duration" : 13972
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "emulator-5554-9" ]
+    }, {
+      "name" : "Login With Empty Email",
+      "uid" : "1aa4fdf7bc16a4f7",
+      "parentUid" : "1a85855463aca3ea10b8fe0fcb3372b8",
+      "status" : "failed",
+      "time" : {
+        "start" : 1639149265894,
+        "stop" : 1639149278978,
+        "duration" : 13084
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "emulator-5554-9" ]
+    }, {
+      "name" : "Display Password Before Typing it",
+      "uid" : "f839ab2ef3b85ec7",
+      "parentUid" : "1a85855463aca3ea10b8fe0fcb3372b8",
+      "status" : "broken",
+      "time" : {
+        "start" : 1639149278979,
+        "stop" : 1639149341362,
+        "duration" : 62383
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "emulator-5554-9" ]
+    }, {
+      "name" : "Successful Login",
+      "uid" : "c125ba123e9bbff1",
+      "parentUid" : "1a85855463aca3ea10b8fe0fcb3372b8",
+      "status" : "broken",
+      "time" : {
+        "start" : 1639149341362,
+        "stop" : 1639149403765,
+        "duration" : 62403
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "emulator-5554-9" ]
+    } ],
+    "uid" : "1a85855463aca3ea10b8fe0fcb3372b8"
+  }, {
+    "name" : "Reset Password",
+    "children" : [ {
+      "name" : "Forget Password With Not Registered Email",
+      "uid" : "509b79d45b5bec5e",
+      "parentUid" : "fe3a52392579468effad5afb57cf39e3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1639149416153,
+        "stop" : 1639149452788,
+        "duration" : 36635
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "emulator-5554-9" ]
+    }, {
+      "name" : "Send Reset Password",
+      "uid" : "2c412e0aec8a20d2",
+      "parentUid" : "fe3a52392579468effad5afb57cf39e3",
+      "status" : "broken",
+      "time" : {
+        "start" : 1639149452790,
+        "stop" : 1639149489746,
+        "duration" : 36956
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "emulator-5554-9" ]
+    } ],
+    "uid" : "fe3a52392579468effad5afb57cf39e3"
+  }, {
+    "name" : "Signup testing",
+    "children" : [ {
+      "name" : "Signup with invalid address1",
+      "uid" : "7de3c8b06aa09ef9",
+      "parentUid" : "f038b60593ae3e1784306eb9c7a0e736",
+      "status" : "broken",
+      "time" : {
+        "start" : 1639149501461,
+        "stop" : 1639149514423,
+        "duration" : 12962
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "emulator-5554-9" ]
+    }, {
+      "name" : "Full valid test",
+      "uid" : "a15112306a6dfd12",
+      "parentUid" : "f038b60593ae3e1784306eb9c7a0e736",
+      "status" : "broken",
+      "time" : {
+        "start" : 1639149514423,
+        "stop" : 1639149526438,
+        "duration" : 12015
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "emulator-5554-9" ]
+    } ],
+    "uid" : "f038b60593ae3e1784306eb9c7a0e736"
+  } ]
+}
