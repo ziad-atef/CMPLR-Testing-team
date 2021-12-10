@@ -1,0 +1,36 @@
+{
+  "uid" : "bef5266494510c0a",
+  "name" : "log in with empty email",
+  "fullName" : "log in with empty email",
+  "historyId" : "e4bc2593dc91598cb2aa95e2b2aa3ffb",
+  "time" : {
+    "start" : 1639010423243,
+    "stop" : 1639010423244,
+    "duration" : 1
+  },
+  "status" : "skipped",
+  "statusMessage" : "Test ignored",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Logging In With Body Button"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "bef5266494510c0a.json",
+  "parameterValues" : [ ]
+}

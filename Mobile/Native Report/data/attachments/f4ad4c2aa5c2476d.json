@@ -1,0 +1,4 @@
+{
+  "using": "-android uiautomator",
+  "value": "new UiSelector().resourceId(\"com.cmp.cmplr:id/forgot_submit_button\")"
+}

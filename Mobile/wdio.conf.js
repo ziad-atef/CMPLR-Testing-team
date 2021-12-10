@@ -1,26 +1,44 @@
 /* eslint-disable */
+/* 
+    Tumblr Package and MainActivity if needed.
+    'appium:appPackage': "com.tumblr",
+    'appium:appActivity': "com.tumblr.ui.activity.JumpoffActivity",
+*/
+const isNative = true;
+const specFiles = isNative ? './test/specs/**/*.js' : './Flutter/specs/**/*.js';
+const AllureOutputDir = isNative ? 'NativeResults' : 'FlutterResults';
+const desiredCapabilities = isNative ? {
+    //  Android Native
+    "appium:appPackage": "com.cmp.cmplr",
+    "appium:appActivity": "com.cmp.cmplr.View.Activities.SplashActivity",
+    "appium:automationName": "UiAutomator2",
+} : {
+    // Flutter
+    "appium:appPackage": "com.example.cmplr",
+    "appium:appActivity": "com.example.cmplr.MainActivity",
+    "appium:automationName": "Flutter",
+    "appium:retryBackoffTime": 500
+};
+
 exports.config = {
     port: 4723,
     path: '/wd/hub/',
 
     runner: 'local',
     specs: [
-        './test/specs/**/*.js'
+        specFiles
     ],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
     ],
-    maxInstances: 10,
+    maxInstances: 1,
     capabilities: [{
-        maxInstances: 5,
         platformName: "Android",
         'appium:platformVersion': "11",
         'appium:avd': "Pixel",
-        'appium:appPackage': "com.tumblr",
-        'appium:appActivity': "com.tumblr.ui.activity.JumpoffActivity",
-        'appium:automationName': "UiAutomator2",
-        'appium:udid': "emulator-5554"
+        'appium:udid': "emulator-5554",
+        ...desiredCapabilities
     }],
     logLevel: 'info',
     bail: 0,
@@ -32,7 +50,7 @@ exports.config = {
     reporters: [
         'spec',
         ['allure', {
-            outputDir: 'allure-results'
+            outputDir: AllureOutputDir
         }]
     ],
 

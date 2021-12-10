@@ -1,0 +1,158 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "expect(received).toBe(expected) // Object.is equality\n                \n                Expected: \"please enter a valid email\"\n                Received: \"please enter a valid mail\"",
+      "children" : [ {
+        "name" : "Login With Invaild Email",
+        "uid" : "9bc9e4ecf2a5ca67",
+        "parentUid" : "db9fee3802308b4656fdf48667740a7c",
+        "status" : "failed",
+        "time" : {
+          "start" : 1639149225308,
+          "stop" : 1639149238293,
+          "duration" : 12985
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "emulator-5554-9" ]
+      }, {
+        "name" : "Login With Empty Email",
+        "uid" : "1aa4fdf7bc16a4f7",
+        "parentUid" : "db9fee3802308b4656fdf48667740a7c",
+        "status" : "failed",
+        "time" : {
+          "start" : 1639149265894,
+          "stop" : 1639149278978,
+          "duration" : 13084
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "emulator-5554-9" ]
+      } ],
+      "uid" : "db9fee3802308b4656fdf48667740a7c"
+    }, {
+      "name" : "expect(received).toBe(expected) // Object.is equality\n                \n                Expected: \"please enter a password\"\n                Received: \"invalid email or password, try again or press on forgot my password\"",
+      "children" : [ {
+        "name" : "Login With Empty Password",
+        "uid" : "99bdb88796f044d0",
+        "parentUid" : "b209b8993be5f92b9b15349a28074d2f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1639149251922,
+          "stop" : 1639149265894,
+          "duration" : 13972
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "emulator-5554-9" ]
+      } ],
+      "uid" : "b209b8993be5f92b9b15349a28074d2f"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "Timeout of 60000ms exceeded. The execution in the test \"Login Display Password Before Typing it\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (D:\\GitHub\\CMPLR-Technologies.Testing\\Mobile\\test\\specs\\login.spec.js)",
+      "children" : [ {
+        "name" : "Display Password Before Typing it",
+        "uid" : "f839ab2ef3b85ec7",
+        "parentUid" : "e29ccba9d0c926cb6d0be4e790e19637",
+        "status" : "broken",
+        "time" : {
+          "start" : 1639149278979,
+          "stop" : 1639149341362,
+          "duration" : 62383
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "emulator-5554-9" ]
+      } ],
+      "uid" : "e29ccba9d0c926cb6d0be4e790e19637"
+    }, {
+      "name" : "Timeout of 60000ms exceeded. The execution in the test \"Login Successful Login\" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (D:\\GitHub\\CMPLR-Technologies.Testing\\Mobile\\test\\specs\\login.spec.js)",
+      "children" : [ {
+        "name" : "Successful Login",
+        "uid" : "c125ba123e9bbff1",
+        "parentUid" : "dc30ed157433c2e1c6468630e7f4062b",
+        "status" : "broken",
+        "time" : {
+          "start" : 1639149341362,
+          "stop" : 1639149403765,
+          "duration" : 62403
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "emulator-5554-9" ]
+      } ],
+      "uid" : "dc30ed157433c2e1c6468630e7f4062b"
+    }, {
+      "name" : "element (\"android=new UiSelector().textContains(\"please enter an existing email.\")\") still not displayed after 3000ms",
+      "children" : [ {
+        "name" : "Forget Password With Not Registered Email",
+        "uid" : "509b79d45b5bec5e",
+        "parentUid" : "e2dc15b81652838be29ded6f19d266ff",
+        "status" : "broken",
+        "time" : {
+          "start" : 1639149416153,
+          "stop" : 1639149452788,
+          "duration" : 36635
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "emulator-5554-9" ]
+      } ],
+      "uid" : "e2dc15b81652838be29ded6f19d266ff"
+    }, {
+      "name" : "element (\"android=new UiSelector().textContains(\"Okay, we just sent you a password reset email\")\") still not displayed after 3000ms",
+      "children" : [ {
+        "name" : "Send Reset Password",
+        "uid" : "2c412e0aec8a20d2",
+        "parentUid" : "e6a3909c8db5769bf6f9e6e602411eea",
+        "status" : "broken",
+        "time" : {
+          "start" : 1639149452790,
+          "stop" : 1639149489746,
+          "duration" : 36956
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "emulator-5554-9" ]
+      } ],
+      "uid" : "e6a3909c8db5769bf6f9e6e602411eea"
+    }, {
+      "name" : "Can't call click on element with selector \"android=new UiSelector().resourceId(\"com.tumblr:id/sign_up_button\")\" because element wasn't found",
+      "children" : [ {
+        "name" : "Signup with invalid address1",
+        "uid" : "7de3c8b06aa09ef9",
+        "parentUid" : "7e9feb17b4b8d54fa8e18605165a2155",
+        "status" : "broken",
+        "time" : {
+          "start" : 1639149501461,
+          "stop" : 1639149514423,
+          "duration" : 12962
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "emulator-5554-9" ]
+      }, {
+        "name" : "Full valid test",
+        "uid" : "a15112306a6dfd12",
+        "parentUid" : "7e9feb17b4b8d54fa8e18605165a2155",
+        "status" : "broken",
+        "time" : {
+          "start" : 1639149514423,
+          "stop" : 1639149526438,
+          "duration" : 12015
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "emulator-5554-9" ]
+      } ],
+      "uid" : "7e9feb17b4b8d54fa8e18605165a2155"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}

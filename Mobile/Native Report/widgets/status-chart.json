@@ -1,0 +1,101 @@
+[ {
+  "uid" : "1aa4fdf7bc16a4f7",
+  "name" : "Login With Empty Email",
+  "time" : {
+    "start" : 1639149265894,
+    "stop" : 1639149278978,
+    "duration" : 13084
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "fd61d998331e55c7",
+  "name" : "Login With Wrong Password",
+  "time" : {
+    "start" : 1639149238293,
+    "stop" : 1639149251922,
+    "duration" : 13629
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a15112306a6dfd12",
+  "name" : "Full valid test",
+  "time" : {
+    "start" : 1639149514423,
+    "stop" : 1639149526438,
+    "duration" : 12015
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "509b79d45b5bec5e",
+  "name" : "Forget Password With Not Registered Email",
+  "time" : {
+    "start" : 1639149416153,
+    "stop" : 1639149452788,
+    "duration" : 36635
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "c125ba123e9bbff1",
+  "name" : "Successful Login",
+  "time" : {
+    "start" : 1639149341362,
+    "stop" : 1639149403765,
+    "duration" : 62403
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "2c412e0aec8a20d2",
+  "name" : "Send Reset Password",
+  "time" : {
+    "start" : 1639149452790,
+    "stop" : 1639149489746,
+    "duration" : 36956
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "7de3c8b06aa09ef9",
+  "name" : "Signup with invalid address1",
+  "time" : {
+    "start" : 1639149501461,
+    "stop" : 1639149514423,
+    "duration" : 12962
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "f839ab2ef3b85ec7",
+  "name" : "Display Password Before Typing it",
+  "time" : {
+    "start" : 1639149278979,
+    "stop" : 1639149341362,
+    "duration" : 62383
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "9bc9e4ecf2a5ca67",
+  "name" : "Login With Invaild Email",
+  "time" : {
+    "start" : 1639149225308,
+    "stop" : 1639149238293,
+    "duration" : 12985
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "99bdb88796f044d0",
+  "name" : "Login With Empty Password",
+  "time" : {
+    "start" : 1639149251922,
+    "stop" : 1639149265894,
+    "duration" : 13972
+  },
+  "status" : "failed",
+  "severity" : "normal"
+} ]
