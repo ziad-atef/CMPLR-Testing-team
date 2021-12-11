@@ -1,10 +1,16 @@
 const expect = require('chai').expect;
 const Signup = require('../pageobjects/Signup');
 
+const faker = require('faker/locale/en');
 
-
+const { 
+  ScreenContains,
+  stateAssertion
+ } = require('../utils/utils');
 describe('Signup testing', () => {
+
   const SignupPOM = new Signup();
+  
   afterEach(async () => {
     await driver.reset();
   });
@@ -22,8 +28,8 @@ describe('Signup testing', () => {
     selector = await SignupPOM.ageNextButtonPOM()
     await selector.click()    
 
-    expect(selector).exist("Next")
-    await driver.resetApp();
+    const assertion = await ScreenContains("next")
+    driver.waitUntil (()=>assertion)
   })
 
   it('Signup with invalid email', async () => {
@@ -52,12 +58,10 @@ describe('Signup testing', () => {
     selector = await SignupPOM.signupDoneButtonPOM()
     await selector.click()
 
-
-    selector = await SignupPOM.signupErrorPOM()
-    expect(selector).exist("∘ Please enter a valid email")
-    await driver.resetApp();
-
-    driver.waitUntil (()=>selector)
+    await stateAssertion( await SignupPOM.emailTextBoxPOM());
+    await stateAssertion( await SignupPOM.passwordTextBoxPOM());
+    await stateAssertion( await SignupPOM.nameTextBoxPOM());
+    await stateAssertion( await SignupPOM.signupDoneButtonPOM());
   })
 
   it('Signup with invalid blog name', async () => {
@@ -83,11 +87,10 @@ describe('Signup testing', () => {
     selector = await SignupPOM.signupDoneButtonPOM()
     await selector.click()
 
-    selector = await SignupPOM.signupErrorPOM()
-    expect(selector).exist("∘ Please enter a blog name")
-    await driver.resetApp();
-
-    driver.waitUntil (()=>selector)
+    await stateAssertion( await SignupPOM.emailTextBoxPOM());
+    await stateAssertion( await SignupPOM.passwordTextBoxPOM());
+    await stateAssertion( await SignupPOM.nameTextBoxPOM());
+    await stateAssertion( await SignupPOM.signupDoneButtonPOM());
   })
 
   it('Signup with invalid blog name', async () => {
@@ -117,11 +120,10 @@ describe('Signup testing', () => {
     await selector.click()
 
 
-    selector = await SignupPOM.signupErrorPOM()
-    expect(selector).exist("∘ Password must be more than 6 characters")
-    await driver.resetApp();
-
-    driver.waitUntil (()=>selector)
+    await stateAssertion( await SignupPOM.emailTextBoxPOM());
+    await stateAssertion( await SignupPOM.passwordTextBoxPOM());
+    await stateAssertion( await SignupPOM.nameTextBoxPOM());
+    await stateAssertion( await SignupPOM.signupDoneButtonPOM());
   })
 
   it('Full valid test', async () => {
