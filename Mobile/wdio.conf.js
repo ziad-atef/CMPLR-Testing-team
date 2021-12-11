@@ -17,8 +17,8 @@ exports.config = {
         platformName: "Android",
         'appium:platformVersion': "11",
         'appium:avd': "Pixel",
-        'appium:appPackage': "com.tumblr",
-        'appium:appActivity': "com.tumblr.ui.activity.JumpoffActivity",
+        'appium:appPackage': "com.cmp.cmplr",
+        'appium:appActivity': "com.cmp.cmplr.View.Activities.SplashActivity",
         'appium:automationName': "UiAutomator2",
         'appium:udid': "emulator-5554"
     }],

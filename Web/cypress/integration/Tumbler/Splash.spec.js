@@ -6,22 +6,22 @@ let SignupPOM;
 
 const loginAssertions = () => {
     //Check that email area is visible and editable
-    cy.get('input[name = "email"]').should('be.enabled').and('be.visible')
+    LoginPOM.emailField().should('be.enabled').and('be.visible')
     //Check that password area is visible and editable
-    cy.get('input[name = "password"]').should('be.enabled').and('be.visible')
+    LoginPOM.passwordField().should('be.enabled').and('be.visible')
     //Check button is enabled
-    cy.get('button').should('be.enabled')
+    LoginPOM.loginButtoninside().should('be.enabled').and('be.visible')
 }
 
 const signupAssertions = () => {
     //Check that email area is visible and editable
-    cy.get('input[name = "email"]').should('be.enabled').and('be.visible')
+    SignupPOM.emailField().should('be.enabled').and('be.visible')
     //Check that password area is visible and editable
-    cy.get('input[name = "password"]').should('be.enabled').and('be.visible')
+    SignupPOM.passwordField().should('be.enabled').and('be.visible')
     //Check that blogName area is visible and editable
-    cy.get('input[name = "blogName"]').should('be.enabled').and('be.visible')
+    SignupPOM.blogNameField().should('be.enabled').and('be.visible')
     //Check button is enabled
-    cy.get('button').should('be.enabled')
+    SignupPOM.signupButtoninside().should('be.enabled')
 }
 describe('Splash',function(){
     beforeEach(() => {
@@ -29,7 +29,7 @@ describe('Splash',function(){
             first you have to pass the url of the website, or the page you want
             to start your test with, you want to test
         */
-        cy.visit('https://www.tumblr.com/');
+        cy.visit('/');
 
         /*
             POM refers to Page Object Model so we wrap all the Doms we will
