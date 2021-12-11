@@ -11,12 +11,14 @@ const {
     CreatePasswordDots,
     stateAssertion
 } = require('../utils/utils');
+const faker = require('faker/locale/en');
+
+const LoginPOM = new Login();
 
 describe('Login', () => {
-    const LoginPOM = new Login();
-    const InvalidLoginMessage = 'please enter a valid email';
-    const IncorrectLoginMessage = 'invalid email or password, try again or press on forgot my password';
-    const EmptyPasswordMessage = 'please enter a password';
+    const InvalidLoginMessage = '∘ Please enter a valid email\n';
+    const IncorrectLoginMessage = '∘ invalid email or password, try again or press on forgot my password';
+    const EmptyPasswordMessage = '∘ please enter a password';
     afterEach(async () => {
         await driver.reset();
     });
@@ -24,7 +26,7 @@ describe('Login', () => {
     it('Login With Invaild Email', async () => {
         await LoginWithEmail();
 
-        await EnterEmailAndPassword(emails.notRegisteredEmail, emails.password);
+        await EnterEmailAndPassword(faker.internet.email(), emails.password);
 
         await ShowPassword(emails.password);
 
@@ -37,11 +39,12 @@ describe('Login', () => {
     });
 
     it('Login With Wrong Password', async () => {
+        const randomPassword = faker.internet.password();
         await LoginWithEmail();
 
-        await EnterEmailAndPassword(emails.email, emails.wrongPassword);
+        await EnterEmailAndPassword(emails.email, randomPassword);
 
-        await ShowPassword(emails.wrongPassword);
+        await ShowPassword(randomPassword);
 
         await Log();
 
@@ -50,7 +53,7 @@ describe('Login', () => {
         expect(errorMessage).toBe(IncorrectLoginMessage);
     });
 
-    it('Login With Empty Password', async () => {
+    it.only('Login With Empty Password', async () => {
         await LoginWithEmail();
 
         await EnterEmailAndPassword(emails.email, '');
@@ -78,7 +81,7 @@ describe('Login', () => {
         const errorMessage = await ErrorMessage.getText();
         expect(errorMessage).toBe(InvalidLoginMessage);
     });
-   
+
 
     it('Display Password Before Typing it', async () => {
         await LoginWithEmail();

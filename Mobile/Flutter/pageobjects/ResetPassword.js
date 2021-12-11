@@ -2,9 +2,9 @@ const {
     byValueKey
 } = require('appium-flutter-finder');
 module.exports = class Resetpassword {
-     forgetPasswordPOM() {
-        return undefined;
-    };
+    forgetPasswordPOM() {
+        return byValueKey('getEmailPassword_forgotPassword');
+    }
      errorMessagePOM() {
         return undefined;
     };

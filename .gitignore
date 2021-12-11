@@ -133,3 +133,4 @@ Mobile/NativeResults
 Mobile/FlutterResults
 Web/cypress.env.json
 Mobile/Flutter/fixtures/emails.json
+Mobile/index.js
