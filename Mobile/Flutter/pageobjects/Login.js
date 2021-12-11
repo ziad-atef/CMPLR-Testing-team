@@ -3,27 +3,42 @@ const {
 } = require('appium-flutter-finder');
 module.exports = class Login {
     loginButtonPOM() {
-        return byValueKey('LoginButton');
+        return byValueKey('introScreen_logIn');
     }
     loginWithEmailButtonPOM() {
-        return undefined;
+        return byValueKey('login_withEmail');
     }
     emailFieldPOM() {
-        return undefined;
+        return byValueKey('getEmail1_getEmail');
+    }
+    ContinueButtonPOM() {
+        return byValueKey('getEmail1_getPassword');
+    }
+    email2FieldPOM() {
+        return byValueKey('getEmail2_getEmail');
+    }
+    email2FieldClearPOM() {
+        return byValueKey('email_clear');
+    }
+    EnterPasswordButtonPOM() {
+        return byValueKey('getEmail2_getPassword');
+    }
+    email3FieldPOM() {
+        return byValueKey('getEmailPassword_getEmail');
+    }
+    email3FieldClearPOM() {
+        return byValueKey('email_clear');
     }
     passwordFieldPOM() {
-        return undefined;
+        return byValueKey('getEmailPassword_getPassword');
     }
-    showPasswordCheckBoxPOM() {
-        return undefined;
-    }
-    forgetPasswordPOM() {
-        return undefined;
-    }
-    errorMessagePOM() {
-        return undefined;
+    showPasswordButtonPOM() {
+        return byValueKey('password_visibility');
     }
     logButtonPOM() {
-        return undefined;
+        return byValueKey('getEmailPassword_login');
     }
+    // errorMessagePOM() {
+    //     return byValueKey(undefined);
+    // }
 }

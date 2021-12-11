@@ -8,8 +8,8 @@ let LoginPOM = new Login();
 let email;
 let password;
 
-const emptyEmailMessage = "You forgot to enter your email!";
-const emptyPasswordMessage = "You forgot to enter your password!";
+const emptyEmailMessage = "please enter your email";
+const emptyPasswordMessage = "please enter your password";
 const emptyEmailAndPasswordMessage = "You do have to fill this stuff out, you know.";
 const inCorrectMessage = "Your email or password were incorrect.";
 const pressAppBarLoginButton = () => {
@@ -40,7 +40,7 @@ const fillEmailAndPassword = (passEmail, passPassword) => {
 
 describe('Logging In With App Bar Button', () => {
     beforeEach(() => {
-        cy.visit('https://www.tumblr.com/');
+        cy.visit('http://13.68.206.72/');
 
         cy.fixture('PersonalData').then((user) => {
             email = user.email;
@@ -69,7 +69,7 @@ describe('Logging In With App Bar Button', () => {
 
         fillEmailAndPassword("", "");
 
-        fail(emptyEmailAndPasswordMessage);
+        fail(emptyEmailMessage);
     });
 
     it('log in with valid email not valid password', () => {
@@ -135,10 +135,10 @@ describe('Logging In With App Bar Button', () => {
     // });
 });
 
-describe.skip('Logging In With Body Button', () => {
+describe.only('Logging In With Body Button', () => {
 
     beforeEach(() => {
-        cy.visit('https://www.tumblr.com/');
+        cy.visit('http://13.68.206.72/');
         
 
         cy.fixture('userLoginData').then((user) => {
