@@ -1,12 +1,7 @@
-const linux = true;
 module.exports.success = () => {
-  if (linux) {
-    cy.get("div.j8ha0").should("exist");
-    cy.get("div.e1knl").should("exist");
-  } else {
-    // cy.get('div.JmReO').should('exist');
-    // cy.get('div._SeDR').should('exist');
-  }
+  cy.get("div.Radar").should("exist");
+  cy.get("div.dashboard-sidebar").should("exist");
+
   cy.contains("Text").should("exist");
   cy.contains("Photo").should("exist");
   cy.contains("Quote").should("exist");
@@ -21,13 +16,9 @@ module.exports.success = () => {
 };
 
 module.exports.fail = (failMessage) => {
-    if (linux) {
-        cy.get("div.j8ha0").should("have.length", 0).and("not.exist");
-        cy.get("div.e1knl").should("have.length", 0).and("not.exist");
-      } else {
-        // cy.get('div.JmReO').should('have.length', 0).and('not.exist');
-        // cy.get('div._SeDR').should('have.length', 0).and('not.exist');
-      }
+  cy.get("div.Radar").should("have.length", 0).and("not.exist");
+  cy.get("div.dashboard-sidebar").should("have.length", 0).and("not.exist");
+
   cy.contains("Text").should("have.length", 0).and("not.exist");
   cy.contains("Photo").should("have.length", 0).and("not.exist");
   cy.contains("Quote").should("have.length", 0).and("not.exist");

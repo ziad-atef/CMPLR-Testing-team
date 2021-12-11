@@ -3,6 +3,7 @@ import {
     fail
 } from '../Utils/log in/pageassertion'
 import 'cypress-file-upload';
+import "cypress-localstorage-commands"
 
 // ***********************************************
 // This example commands.js shows you how to
@@ -41,13 +42,23 @@ Cypress.Commands.add('login', (POM, email, password, successfulLogin = true, fai
     else
         fail(failMessage);
 });
-Cypress.Commands.add('authorize', () => {
-    cy.fixture('PersonalData').then((user) => {
-        let Accesstoken = user.token;
-        cy.setCookie('sid', `${Accesstoken}`);
-    });
-    cy.visit("https://www.tumblr.com");
-    cy.url().should('not.include', "login?redirect_to");
+Cypress.Commands.add('authorize', (email, password) => {
+    cy.request('POST', 'http://13.68.206.72/api/login', {
+        email,
+        password
+    }).then(async (response) => {
+        expect(response.body).to.have.property('token');
+        expect(response.body).to.have.property('user');
+        expect(response.body.user).to.have.property('email', email);
+
+        const token = await response.body.token;
+        const user = await response.body.user;
+        cy.setLocalStorage('user',
+            JSON.stringify({
+                token: token,
+                userData: user
+            }));
+    })
 });
 
 Cypress.Commands.add('forceVisit', url => {
