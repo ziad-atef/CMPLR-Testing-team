@@ -174,7 +174,7 @@ describe("Dashboard Rebloging", () => {
 
             PostboardPOM.reblogBodyDom();
             PostboardPOM.reblogTagsDom();
-            PostboardPOM.reblogCloseButtonDom();
+            // PostboardPOM.reblogCloseButtonDom();
             PostboardPOM.reblogReblogButtonDom().click({
                 force: true
             });

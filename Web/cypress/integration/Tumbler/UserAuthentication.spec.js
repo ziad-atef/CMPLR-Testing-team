@@ -1,15 +1,18 @@
+import {
+    success
+} from '../../Utils/log in/pageassertion';
+
 describe('User Authorizations', () => {
     before(() => {
         cy.fixture('PersonalData').then((user) => {
-            let Accesstoken = user.token;
-            cy.setCookie('sid', `${Accesstoken}`);
+            cy.authorize(user.email, user.password);
+            cy.visit("http://13.68.206.72/dashboard");
         });
-        cy.visit("https://www.tumblr.com");
-        cy.url().should('not.include', "login?redirect_to");
+        cy.url().should('not.include', "login");
     });
 
     it("Visit Dashboard", () => {
-        cy.visit("https://www.tumblr.com/dashboard");
+        cy.visit("http://13.68.206.72/dashboard");
         cy.url().should('not.include', "login?redirect_to");
     });
 });

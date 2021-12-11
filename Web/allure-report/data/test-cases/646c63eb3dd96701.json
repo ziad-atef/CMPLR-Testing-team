@@ -1,0 +1,2419 @@
+{
+  "uid" : "646c63eb3dd96701",
+  "name" : "(Text) Disable Post Button After Clearing",
+  "fullName" : "(Text) Disable Post Button After Clearing",
+  "historyId" : "3bcba8be4690f6f7813be840a4aebbe0",
+  "time" : {
+    "start" : 1639010036671,
+    "stop" : 1639010054581,
+    "duration" : 17910
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "\"before each\" hook",
+      "time" : {
+        "start" : 1639010036672,
+        "stop" : 1639010040128,
+        "duration" : 3456
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "authorize",
+        "time" : {
+          "start" : 1639010036940
+        },
+        "status" : "unknown",
+        "steps" : [ {
+          "name" : "fixture (\"PersonalData\")",
+          "time" : {
+            "start" : 1639010036940,
+            "stop" : 1639010036940,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0,
+          "stepsCount" : 0,
+          "hasContent" : false
+        }, {
+          "name" : "setCookie sid, aqq7dj5WNiVP4W0RJ6MDay48makT4GoNi2sKPD0LvvvysRW3hP.aFLelZEgN2P34BU2utYgtm8JB9G3rMHnH5tRC9WIn6WnANo8mc",
+          "time" : {
+            "start" : 1639010036941,
+            "stop" : 1639010036950,
+            "duration" : 9
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0,
+          "stepsCount" : 0,
+          "hasContent" : false
+        }, {
+          "name" : "visit https://www.tumblr.com -> 302: https://www.tumblr.com/dashboard",
+          "time" : {
+            "start" : 1639010036950,
+            "stop" : 1639010039365,
+            "duration" : 2415
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0,
+          "stepsCount" : 0,
+          "hasContent" : false
+        }, {
+          "name" : "POST /svc/pop/exceptions",
+          "time" : {
+            "start" : 1639010039365,
+            "stop" : 1639010039365,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0,
+          "stepsCount" : 0,
+          "hasContent" : false
+        }, {
+          "name" : "POST /services/bblog",
+          "time" : {
+            "start" : 1639010039365,
+            "stop" : 1639010039365,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0,
+          "stepsCount" : 0,
+          "hasContent" : false
+        }, {
+          "name" : "POST https://o248881.ingest.sentry.io/api/5720031/envelope/?sentry_key=b93ddebac1c34cc393134ffa692bca07&sentry_version=7",
+          "time" : {
+            "start" : 1639010039365,
+            "stop" : 1639010039365,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0,
+          "stepsCount" : 0,
+          "hasContent" : false
+        }, {
+          "name" : "GET /api/v2/radar?fields%5Bblogs%5D=name%2Cavatar%2Cdescription%2Ctheme%2Ctitle%2Curl%2Cuuid%2Ccan_message%2Ccan_be_followed%2Cis_adult&limit=5",
+          "time" : {
+            "start" : 1639010039365,
+            "stop" : 1639010039365,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0,
+          "stepsCount" : 0,
+          "hasContent" : false
+        }, {
+          "name" : "url",
+          "time" : {
+            "start" : 1639010039365,
+            "stop" : 1639010039369,
+            "duration" : 4
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0,
+          "stepsCount" : 0,
+          "hasContent" : false
+        }, {
+          "name" : "assert expected **https://www.tumblr.com/dashboard** to not include **login?redirect_to**",
+          "time" : {
+            "start" : 1639010039369,
+            "stop" : 1639010039369,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "actual",
+            "value" : "https://www.tumblr.com/dashboard"
+          } ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0,
+          "stepsCount" : 0,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 9,
+        "hasContent" : true
+      }, {
+        "name" : "url",
+        "time" : {
+          "start" : 1639010039369,
+          "stop" : 1639010039372,
+          "duration" : 3
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "assert expected **https://www.tumblr.com/dashboard** to include **dashboard**",
+        "time" : {
+          "start" : 1639010039371,
+          "stop" : 1639010039371,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "actual",
+          "value" : "https://www.tumblr.com/dashboard"
+        } ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "get ul[aria-label=\"Check out these blogs\"]",
+        "time" : {
+          "start" : 1639010039372,
+          "stop" : 1639010040054,
+          "duration" : 682
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "assert expected **<ul.PwJi6>** to be **visible**",
+        "time" : {
+          "start" : 1639010040054,
+          "stop" : 1639010040054,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "POST 200 /services/bblog",
+        "time" : {
+          "start" : 1639010040054,
+          "stop" : 1639010040054,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "get ul[aria-label=\"Check out these blogs\"]",
+        "time" : {
+          "start" : 1639010040054,
+          "stop" : 1639010040061,
+          "duration" : 7
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "children",
+        "time" : {
+          "start" : 1639010040061,
+          "stop" : 1639010040094,
+          "duration" : 33
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "assert expected **[ <li.kqme1>, 3 more... ]** to have a length above **1**",
+        "time" : {
+          "start" : 1639010040094,
+          "stop" : 1639010040094,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "get h1.hF8Wr",
+        "time" : {
+          "start" : 1639010040094,
+          "stop" : 1639010040105,
+          "duration" : 11
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "eq 1",
+        "time" : {
+          "start" : 1639010040105,
+          "stop" : 1639010040127,
+          "duration" : 22
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "assert expected **<h1.hF8Wr>** to have text **Radar**",
+        "time" : {
+          "start" : 1639010040127,
+          "stop" : 1639010040127,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "actual",
+          "value" : "Radar"
+        }, {
+          "name" : "expected",
+          "value" : "Radar"
+        } ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "assert expected **<h1.hF8Wr>** to be **visible**",
+        "time" : {
+          "start" : 1639010040127,
+          "stop" : 1639010040127,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 22,
+      "hasContent" : true
+    }, {
+      "name" : "get button.FOqaP[aria-label=\"Text\"]",
+      "time" : {
+        "start" : 1639010040135,
+        "stop" : 1639010040145,
+        "duration" : 10
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "click",
+      "time" : {
+        "start" : 1639010040145,
+        "stop" : 1639010040438,
+        "duration" : 293
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "new url https://www.tumblr.com/new/text",
+      "time" : {
+        "start" : 1639010040438,
+        "stop" : 1639010040438,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "visit https://www.tumblr.com/new/text",
+      "time" : {
+        "start" : 1639010040438,
+        "stop" : 1639010045757,
+        "duration" : 5319
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "POST /services/bblog",
+      "time" : {
+        "start" : 1639010045757,
+        "stop" : 1639010045757,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "POST 200 https://o248881.ingest.sentry.io/api/5720031/envelope/?sentry_key=b93ddebac1c34cc393134ffa692bca07&sentry_version=7",
+      "time" : {
+        "start" : 1639010045757,
+        "stop" : 1639010045757,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "GET 200 /api/v2/timeline/dashboard?fields%5Bblogs%5D=name%2Cavatar%2Ctitle%2Curl%2Cis_adult%2C%3Fis_member%2Cdescription_npf%2Cuuid%2Ccan_be_followed%2C%3Ffollowed%2C%3Fadvertiser_name%2Ctheme%2C%3Fprimary%2C%3Fis_paywall_on%2C%3Fpaywall_access%2C%3Fsubscription_plan&reblog_info=true",
+      "time" : {
+        "start" : 1639010045757,
+        "stop" : 1639010045757,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "GET 200 /api/v2/recommended/blogs?limit=8&fields%5Bblogs%5D=name%2Ctitle%2Curl%2Cavatar%2Ccan_be_followed%2C%3Ffollowed%2Ctheme",
+      "time" : {
+        "start" : 1639010045757,
+        "stop" : 1639010045757,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "GET 200 /api/v2/radar?fields%5Bblogs%5D=name%2Cavatar%2Cdescription%2Ctheme%2Ctitle%2Curl%2Cuuid%2Ccan_message%2Ccan_be_followed%2Cis_adult&limit=5",
+      "time" : {
+        "start" : 1639010045757,
+        "stop" : 1639010045757,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "GET 200 /api/v2/redpop_ads/mrec_waterfall",
+      "time" : {
+        "start" : 1639010045757,
+        "stop" : 1639010045757,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "GET 200 /api/v2/user/counts?unread=true&inbox=true&unread_messages=true&blog_notification_counts=true&private_group_blog_unread_post_counts=true&legacy_inbox_unread=true&blog_post_counts=true",
+      "time" : {
+        "start" : 1639010045757,
+        "stop" : 1639010045757,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "POST /svc/post/get_post_form_builder_data",
+      "time" : {
+        "start" : 1639010045757,
+        "stop" : 1639010045757,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "POST /svc/search/inline_gif",
+      "time" : {
+        "start" : 1639010045757,
+        "stop" : 1639010045757,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "get iframe.vP3g8",
+      "time" : {
+        "start" : 1639010045757,
+        "stop" : 1639010045774,
+        "duration" : 17
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "its .0.contentDocument",
+      "time" : {
+        "start" : 1639010045774,
+        "stop" : 1639010045780,
+        "duration" : 6
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<document>** to exist",
+      "time" : {
+        "start" : 1639010045780,
+        "stop" : 1639010045780,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"location\": {\n    \"ancestorOrigins\": {\n      \"0\": \"https://www.tumblr.com\",\n      \"1\": \"https://www.tumblr.com\"\n    },\n    \"href\": \"https://www.tumblr.com/neue_web/iframe/new/text\",\n    \"origin\": \"https://www.tumblr.com\",\n    \"protocol\": \"https:\",\n    \"host\": \"www.tumblr.com\",\n    \"hostname\": \"www.tumblr.com\",\n    \"port\": \"\",\n    \"pathname\": \"/neue_web/iframe/new/text\",\n    \"search\": \"\",\n    \"hash\": \"\"\n  },\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"keydown\": [\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 1,\n          \"namespace\": \"\"\n        },\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ],\n      \"keyup\": [\n        {\n          \"type\": \"keyup\",\n          \"origType\": \"keyup\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "its .body",
+      "time" : {
+        "start" : 1639010045780,
+        "stop" : 1639010045785,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>** not to be undefined",
+      "time" : {
+        "start" : 1639010045785,
+        "stop" : 1639010045785,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"click\": [\n        {\n          \"type\": \"click\",\n          \"origType\": \"click\",\n          \"guid\": 20,\n          \"selector\": \"[data-peepr]\",\n          \"needsContext\": false,\n          \"namespace\": \"\"\n        }\n      ],\n      \"dragenter\": [\n        {\n          \"type\": \"dragenter\",\n          \"origType\": \"dragenter\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragover\": [\n        {\n          \"type\": \"dragover\",\n          \"origType\": \"dragover\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragleave\": [\n        {\n          \"type\": \"dragleave\",\n          \"origType\": \"dragleave\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragend\": [\n        {\n          \"type\": \"dragend\",\n          \"origType\": \"dragend\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"drop\": [\n        {\n          \"type\": \"drop\",\n          \"origType\": \"drop\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "wrap <body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>",
+      "time" : {
+        "start" : 1639010045785,
+        "stop" : 1639010045788,
+        "duration" : 3
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "find button.button-area",
+      "time" : {
+        "start" : 1639010045788,
+        "stop" : 1639010045848,
+        "duration" : 60
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<button.button-area.create_post_button.disabled>** to have text **Post**",
+      "time" : {
+        "start" : 1639010045848,
+        "stop" : 1639010045848,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "Post"
+      }, {
+        "name" : "expected",
+        "value" : "Post"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "assert expected **<button.button-area.create_post_button.disabled>** to be **disabled**",
+      "time" : {
+        "start" : 1639010045848,
+        "stop" : 1639010045848,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<button.button-area.create_post_button.disabled>** to have text **Post**",
+      "time" : {
+        "start" : 1639010045848,
+        "stop" : 1639010045848,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "Post"
+      }, {
+        "name" : "expected",
+        "value" : "Post"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "get iframe.vP3g8",
+      "time" : {
+        "start" : 1639010045848,
+        "stop" : 1639010045866,
+        "duration" : 18
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "its .0.contentDocument",
+      "time" : {
+        "start" : 1639010045866,
+        "stop" : 1639010045870,
+        "duration" : 4
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<document>** to exist",
+      "time" : {
+        "start" : 1639010045870,
+        "stop" : 1639010045870,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"location\": {\n    \"ancestorOrigins\": {\n      \"0\": \"https://www.tumblr.com\",\n      \"1\": \"https://www.tumblr.com\"\n    },\n    \"href\": \"https://www.tumblr.com/neue_web/iframe/new/text\",\n    \"origin\": \"https://www.tumblr.com\",\n    \"protocol\": \"https:\",\n    \"host\": \"www.tumblr.com\",\n    \"hostname\": \"www.tumblr.com\",\n    \"port\": \"\",\n    \"pathname\": \"/neue_web/iframe/new/text\",\n    \"search\": \"\",\n    \"hash\": \"\"\n  },\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"keydown\": [\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 1,\n          \"namespace\": \"\"\n        },\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ],\n      \"keyup\": [\n        {\n          \"type\": \"keyup\",\n          \"origType\": \"keyup\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "its .body",
+      "time" : {
+        "start" : 1639010045870,
+        "stop" : 1639010045874,
+        "duration" : 4
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>** not to be undefined",
+      "time" : {
+        "start" : 1639010045874,
+        "stop" : 1639010045874,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"click\": [\n        {\n          \"type\": \"click\",\n          \"origType\": \"click\",\n          \"guid\": 20,\n          \"selector\": \"[data-peepr]\",\n          \"needsContext\": false,\n          \"namespace\": \"\"\n        }\n      ],\n      \"dragenter\": [\n        {\n          \"type\": \"dragenter\",\n          \"origType\": \"dragenter\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragover\": [\n        {\n          \"type\": \"dragover\",\n          \"origType\": \"dragover\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragleave\": [\n        {\n          \"type\": \"dragleave\",\n          \"origType\": \"dragleave\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragend\": [\n        {\n          \"type\": \"dragend\",\n          \"origType\": \"dragend\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"drop\": [\n        {\n          \"type\": \"drop\",\n          \"origType\": \"drop\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "wrap <body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>",
+      "time" : {
+        "start" : 1639010045874,
+        "stop" : 1639010045876,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "find div.editor.editor-plaintext[aria-label=\"Post title\"]",
+      "time" : {
+        "start" : 1639010045876,
+        "stop" : 1639010045893,
+        "duration" : 17
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "type Explicabo distinctio eum.",
+      "time" : {
+        "start" : 1639010045893,
+        "stop" : 1639010046591,
+        "duration" : 698
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "POST 200 /services/bblog",
+      "time" : {
+        "start" : 1639010046590,
+        "stop" : 1639010046590,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "get iframe.vP3g8",
+      "time" : {
+        "start" : 1639010046591,
+        "stop" : 1639010046612,
+        "duration" : 21
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "its .0.contentDocument",
+      "time" : {
+        "start" : 1639010046612,
+        "stop" : 1639010046617,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<document>** to exist",
+      "time" : {
+        "start" : 1639010046617,
+        "stop" : 1639010046617,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"location\": {\n    \"ancestorOrigins\": {\n      \"0\": \"https://www.tumblr.com\",\n      \"1\": \"https://www.tumblr.com\"\n    },\n    \"href\": \"https://www.tumblr.com/neue_web/iframe/new/text\",\n    \"origin\": \"https://www.tumblr.com\",\n    \"protocol\": \"https:\",\n    \"host\": \"www.tumblr.com\",\n    \"hostname\": \"www.tumblr.com\",\n    \"port\": \"\",\n    \"pathname\": \"/neue_web/iframe/new/text\",\n    \"search\": \"\",\n    \"hash\": \"\"\n  },\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"keydown\": [\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 1,\n          \"namespace\": \"\"\n        },\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ],\n      \"keyup\": [\n        {\n          \"type\": \"keyup\",\n          \"origType\": \"keyup\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "its .body",
+      "time" : {
+        "start" : 1639010046617,
+        "stop" : 1639010046622,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>** not to be undefined",
+      "time" : {
+        "start" : 1639010046621,
+        "stop" : 1639010046621,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"click\": [\n        {\n          \"type\": \"click\",\n          \"origType\": \"click\",\n          \"guid\": 20,\n          \"selector\": \"[data-peepr]\",\n          \"needsContext\": false,\n          \"namespace\": \"\"\n        }\n      ],\n      \"dragenter\": [\n        {\n          \"type\": \"dragenter\",\n          \"origType\": \"dragenter\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragover\": [\n        {\n          \"type\": \"dragover\",\n          \"origType\": \"dragover\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragleave\": [\n        {\n          \"type\": \"dragleave\",\n          \"origType\": \"dragleave\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragend\": [\n        {\n          \"type\": \"dragend\",\n          \"origType\": \"dragend\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"drop\": [\n        {\n          \"type\": \"drop\",\n          \"origType\": \"drop\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "wrap <body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>",
+      "time" : {
+        "start" : 1639010046622,
+        "stop" : 1639010046624,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "find div.editor.editor-plaintext[aria-label=\"Post title\"]",
+      "time" : {
+        "start" : 1639010046624,
+        "stop" : 1639010046650,
+        "duration" : 26
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<div.editor.editor-plaintext.has-text>** to have text **Explicabo distinctio eum.**",
+      "time" : {
+        "start" : 1639010046650,
+        "stop" : 1639010046650,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "Explicabo distinctio eum."
+      }, {
+        "name" : "expected",
+        "value" : "Explicabo distinctio eum."
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "get iframe.vP3g8",
+      "time" : {
+        "start" : 1639010046650,
+        "stop" : 1639010046669,
+        "duration" : 19
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "its .0.contentDocument",
+      "time" : {
+        "start" : 1639010046669,
+        "stop" : 1639010046674,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<document>** to exist",
+      "time" : {
+        "start" : 1639010046674,
+        "stop" : 1639010046674,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"location\": {\n    \"ancestorOrigins\": {\n      \"0\": \"https://www.tumblr.com\",\n      \"1\": \"https://www.tumblr.com\"\n    },\n    \"href\": \"https://www.tumblr.com/neue_web/iframe/new/text\",\n    \"origin\": \"https://www.tumblr.com\",\n    \"protocol\": \"https:\",\n    \"host\": \"www.tumblr.com\",\n    \"hostname\": \"www.tumblr.com\",\n    \"port\": \"\",\n    \"pathname\": \"/neue_web/iframe/new/text\",\n    \"search\": \"\",\n    \"hash\": \"\"\n  },\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"keydown\": [\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 1,\n          \"namespace\": \"\"\n        },\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ],\n      \"keyup\": [\n        {\n          \"type\": \"keyup\",\n          \"origType\": \"keyup\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "its .body",
+      "time" : {
+        "start" : 1639010046674,
+        "stop" : 1639010046679,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>** not to be undefined",
+      "time" : {
+        "start" : 1639010046678,
+        "stop" : 1639010046679,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"click\": [\n        {\n          \"type\": \"click\",\n          \"origType\": \"click\",\n          \"guid\": 20,\n          \"selector\": \"[data-peepr]\",\n          \"needsContext\": false,\n          \"namespace\": \"\"\n        }\n      ],\n      \"dragenter\": [\n        {\n          \"type\": \"dragenter\",\n          \"origType\": \"dragenter\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragover\": [\n        {\n          \"type\": \"dragover\",\n          \"origType\": \"dragover\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragleave\": [\n        {\n          \"type\": \"dragleave\",\n          \"origType\": \"dragleave\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragend\": [\n        {\n          \"type\": \"dragend\",\n          \"origType\": \"dragend\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"drop\": [\n        {\n          \"type\": \"drop\",\n          \"origType\": \"drop\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "wrap <body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>",
+      "time" : {
+        "start" : 1639010046679,
+        "stop" : 1639010046682,
+        "duration" : 3
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "find div.editor-richtext[aria-label=\"Post body\"]",
+      "time" : {
+        "start" : 1639010046682,
+        "stop" : 1639010046706,
+        "duration" : 24
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "type Quaerat magnam doloribus fugit expedita. Rerum molestiae reprehenderit nam ea voluptatem fugit aut. Qui exercitationem numquam est cumque commodi. Vero itaque beatae eius corporis rerum. Sunt officia laboriosam.",
+      "time" : {
+        "start" : 1639010046706,
+        "stop" : 1639010051604,
+        "duration" : 4898
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "get iframe.vP3g8",
+      "time" : {
+        "start" : 1639010051604,
+        "stop" : 1639010051629,
+        "duration" : 25
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "its .0.contentDocument",
+      "time" : {
+        "start" : 1639010051629,
+        "stop" : 1639010051634,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<document>** to exist",
+      "time" : {
+        "start" : 1639010051634,
+        "stop" : 1639010051634,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"location\": {\n    \"ancestorOrigins\": {\n      \"0\": \"https://www.tumblr.com\",\n      \"1\": \"https://www.tumblr.com\"\n    },\n    \"href\": \"https://www.tumblr.com/neue_web/iframe/new/text\",\n    \"origin\": \"https://www.tumblr.com\",\n    \"protocol\": \"https:\",\n    \"host\": \"www.tumblr.com\",\n    \"hostname\": \"www.tumblr.com\",\n    \"port\": \"\",\n    \"pathname\": \"/neue_web/iframe/new/text\",\n    \"search\": \"\",\n    \"hash\": \"\"\n  },\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"keydown\": [\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 1,\n          \"namespace\": \"\"\n        },\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ],\n      \"keyup\": [\n        {\n          \"type\": \"keyup\",\n          \"origType\": \"keyup\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "its .body",
+      "time" : {
+        "start" : 1639010051634,
+        "stop" : 1639010051642,
+        "duration" : 8
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>** not to be undefined",
+      "time" : {
+        "start" : 1639010051642,
+        "stop" : 1639010051642,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"click\": [\n        {\n          \"type\": \"click\",\n          \"origType\": \"click\",\n          \"guid\": 20,\n          \"selector\": \"[data-peepr]\",\n          \"needsContext\": false,\n          \"namespace\": \"\"\n        }\n      ],\n      \"dragenter\": [\n        {\n          \"type\": \"dragenter\",\n          \"origType\": \"dragenter\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragover\": [\n        {\n          \"type\": \"dragover\",\n          \"origType\": \"dragover\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragleave\": [\n        {\n          \"type\": \"dragleave\",\n          \"origType\": \"dragleave\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragend\": [\n        {\n          \"type\": \"dragend\",\n          \"origType\": \"dragend\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"drop\": [\n        {\n          \"type\": \"drop\",\n          \"origType\": \"drop\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "wrap <body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>",
+      "time" : {
+        "start" : 1639010051643,
+        "stop" : 1639010051645,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "find div.editor-richtext[aria-label=\"Post body\"]",
+      "time" : {
+        "start" : 1639010051645,
+        "stop" : 1639010051675,
+        "duration" : 30
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<div.editor.editor-richtext>** to have text **Quaerat magnam doloribus fugit expedita. Rerum molestiae reprehenderit nam ea voluptatem fugit aut. Qui exercitationem numquam est cumque commodi. Vero itaque beatae eius corporis rerum. Sunt officia laboriosam.**",
+      "time" : {
+        "start" : 1639010051675,
+        "stop" : 1639010051675,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "Quaerat magnam doloribus fugit expedita. Rerum molestiae reprehenderit nam ea voluptatem fugit aut. Qui exercitationem numquam est cumque commodi. Vero itaque beatae eius corporis rerum. Sunt officia laboriosam."
+      }, {
+        "name" : "expected",
+        "value" : "Quaerat magnam doloribus fugit expedita. Rerum molestiae reprehenderit nam ea voluptatem fugit aut. Qui exercitationem numquam est cumque commodi. Vero itaque beatae eius corporis rerum. Sunt officia laboriosam."
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "get iframe.vP3g8",
+      "time" : {
+        "start" : 1639010051675,
+        "stop" : 1639010051700,
+        "duration" : 25
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "its .0.contentDocument",
+      "time" : {
+        "start" : 1639010051700,
+        "stop" : 1639010051707,
+        "duration" : 7
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<document>** to exist",
+      "time" : {
+        "start" : 1639010051707,
+        "stop" : 1639010051707,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"location\": {\n    \"ancestorOrigins\": {\n      \"0\": \"https://www.tumblr.com\",\n      \"1\": \"https://www.tumblr.com\"\n    },\n    \"href\": \"https://www.tumblr.com/neue_web/iframe/new/text\",\n    \"origin\": \"https://www.tumblr.com\",\n    \"protocol\": \"https:\",\n    \"host\": \"www.tumblr.com\",\n    \"hostname\": \"www.tumblr.com\",\n    \"port\": \"\",\n    \"pathname\": \"/neue_web/iframe/new/text\",\n    \"search\": \"\",\n    \"hash\": \"\"\n  },\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"keydown\": [\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 1,\n          \"namespace\": \"\"\n        },\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ],\n      \"keyup\": [\n        {\n          \"type\": \"keyup\",\n          \"origType\": \"keyup\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "its .body",
+      "time" : {
+        "start" : 1639010051707,
+        "stop" : 1639010051714,
+        "duration" : 7
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>** not to be undefined",
+      "time" : {
+        "start" : 1639010051714,
+        "stop" : 1639010051714,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"click\": [\n        {\n          \"type\": \"click\",\n          \"origType\": \"click\",\n          \"guid\": 20,\n          \"selector\": \"[data-peepr]\",\n          \"needsContext\": false,\n          \"namespace\": \"\"\n        }\n      ],\n      \"dragenter\": [\n        {\n          \"type\": \"dragenter\",\n          \"origType\": \"dragenter\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragover\": [\n        {\n          \"type\": \"dragover\",\n          \"origType\": \"dragover\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragleave\": [\n        {\n          \"type\": \"dragleave\",\n          \"origType\": \"dragleave\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragend\": [\n        {\n          \"type\": \"dragend\",\n          \"origType\": \"dragend\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"drop\": [\n        {\n          \"type\": \"drop\",\n          \"origType\": \"drop\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "wrap <body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>",
+      "time" : {
+        "start" : 1639010051715,
+        "stop" : 1639010051717,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "find div.editor-plaintext[aria-label=\"Post tags\"]",
+      "time" : {
+        "start" : 1639010051717,
+        "stop" : 1639010051748,
+        "duration" : 31
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "type non {enter}",
+      "time" : {
+        "start" : 1639010051748,
+        "stop" : 1639010052085,
+        "duration" : 337
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "get iframe.vP3g8",
+      "time" : {
+        "start" : 1639010052085,
+        "stop" : 1639010052107,
+        "duration" : 22
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "its .0.contentDocument",
+      "time" : {
+        "start" : 1639010052107,
+        "stop" : 1639010052112,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<document>** to exist",
+      "time" : {
+        "start" : 1639010052112,
+        "stop" : 1639010052112,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"location\": {\n    \"ancestorOrigins\": {\n      \"0\": \"https://www.tumblr.com\",\n      \"1\": \"https://www.tumblr.com\"\n    },\n    \"href\": \"https://www.tumblr.com/neue_web/iframe/new/text\",\n    \"origin\": \"https://www.tumblr.com\",\n    \"protocol\": \"https:\",\n    \"host\": \"www.tumblr.com\",\n    \"hostname\": \"www.tumblr.com\",\n    \"port\": \"\",\n    \"pathname\": \"/neue_web/iframe/new/text\",\n    \"search\": \"\",\n    \"hash\": \"\"\n  },\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"keydown\": [\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 1,\n          \"namespace\": \"\"\n        },\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ],\n      \"keyup\": [\n        {\n          \"type\": \"keyup\",\n          \"origType\": \"keyup\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "its .body",
+      "time" : {
+        "start" : 1639010052112,
+        "stop" : 1639010052116,
+        "duration" : 4
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>** not to be undefined",
+      "time" : {
+        "start" : 1639010052116,
+        "stop" : 1639010052116,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"click\": [\n        {\n          \"type\": \"click\",\n          \"origType\": \"click\",\n          \"guid\": 20,\n          \"selector\": \"[data-peepr]\",\n          \"needsContext\": false,\n          \"namespace\": \"\"\n        }\n      ],\n      \"dragenter\": [\n        {\n          \"type\": \"dragenter\",\n          \"origType\": \"dragenter\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragover\": [\n        {\n          \"type\": \"dragover\",\n          \"origType\": \"dragover\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragleave\": [\n        {\n          \"type\": \"dragleave\",\n          \"origType\": \"dragleave\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragend\": [\n        {\n          \"type\": \"dragend\",\n          \"origType\": \"dragend\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"drop\": [\n        {\n          \"type\": \"drop\",\n          \"origType\": \"drop\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "wrap <body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>",
+      "time" : {
+        "start" : 1639010052116,
+        "stop" : 1639010052118,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "find div.editor-plaintext[aria-label=\"Post tags\"]",
+      "time" : {
+        "start" : 1639010052118,
+        "stop" : 1639010052142,
+        "duration" : 24
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "type pariatur {enter}",
+      "time" : {
+        "start" : 1639010052142,
+        "stop" : 1639010052428,
+        "duration" : 286
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "GET /svc/tag_suggest?q=non",
+      "time" : {
+        "start" : 1639010052428,
+        "stop" : 1639010052428,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "get iframe.vP3g8",
+      "time" : {
+        "start" : 1639010052428,
+        "stop" : 1639010052450,
+        "duration" : 22
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "its .0.contentDocument",
+      "time" : {
+        "start" : 1639010052450,
+        "stop" : 1639010052455,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<document>** to exist",
+      "time" : {
+        "start" : 1639010052455,
+        "stop" : 1639010052455,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"location\": {\n    \"ancestorOrigins\": {\n      \"0\": \"https://www.tumblr.com\",\n      \"1\": \"https://www.tumblr.com\"\n    },\n    \"href\": \"https://www.tumblr.com/neue_web/iframe/new/text\",\n    \"origin\": \"https://www.tumblr.com\",\n    \"protocol\": \"https:\",\n    \"host\": \"www.tumblr.com\",\n    \"hostname\": \"www.tumblr.com\",\n    \"port\": \"\",\n    \"pathname\": \"/neue_web/iframe/new/text\",\n    \"search\": \"\",\n    \"hash\": \"\"\n  },\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"keydown\": [\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 1,\n          \"namespace\": \"\"\n        },\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ],\n      \"keyup\": [\n        {\n          \"type\": \"keyup\",\n          \"origType\": \"keyup\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "its .body",
+      "time" : {
+        "start" : 1639010052455,
+        "stop" : 1639010052459,
+        "duration" : 4
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>** not to be undefined",
+      "time" : {
+        "start" : 1639010052459,
+        "stop" : 1639010052459,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"click\": [\n        {\n          \"type\": \"click\",\n          \"origType\": \"click\",\n          \"guid\": 20,\n          \"selector\": \"[data-peepr]\",\n          \"needsContext\": false,\n          \"namespace\": \"\"\n        }\n      ],\n      \"dragenter\": [\n        {\n          \"type\": \"dragenter\",\n          \"origType\": \"dragenter\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragover\": [\n        {\n          \"type\": \"dragover\",\n          \"origType\": \"dragover\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragleave\": [\n        {\n          \"type\": \"dragleave\",\n          \"origType\": \"dragleave\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragend\": [\n        {\n          \"type\": \"dragend\",\n          \"origType\": \"dragend\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"drop\": [\n        {\n          \"type\": \"drop\",\n          \"origType\": \"drop\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "wrap <body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>",
+      "time" : {
+        "start" : 1639010052460,
+        "stop" : 1639010052461,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "find div.editor-plaintext[aria-label=\"Post tags\"]",
+      "time" : {
+        "start" : 1639010052461,
+        "stop" : 1639010052489,
+        "duration" : 28
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "type facilis {enter}",
+      "time" : {
+        "start" : 1639010052489,
+        "stop" : 1639010052811,
+        "duration" : 322
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "GET /svc/tag_suggest?q=pariatur",
+      "time" : {
+        "start" : 1639010052810,
+        "stop" : 1639010052810,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "get iframe.vP3g8",
+      "time" : {
+        "start" : 1639010052811,
+        "stop" : 1639010052852,
+        "duration" : 41
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "its .0.contentDocument",
+      "time" : {
+        "start" : 1639010052852,
+        "stop" : 1639010052857,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<document>** to exist",
+      "time" : {
+        "start" : 1639010052857,
+        "stop" : 1639010052857,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"location\": {\n    \"ancestorOrigins\": {\n      \"0\": \"https://www.tumblr.com\",\n      \"1\": \"https://www.tumblr.com\"\n    },\n    \"href\": \"https://www.tumblr.com/neue_web/iframe/new/text\",\n    \"origin\": \"https://www.tumblr.com\",\n    \"protocol\": \"https:\",\n    \"host\": \"www.tumblr.com\",\n    \"hostname\": \"www.tumblr.com\",\n    \"port\": \"\",\n    \"pathname\": \"/neue_web/iframe/new/text\",\n    \"search\": \"\",\n    \"hash\": \"\"\n  },\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"keydown\": [\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 1,\n          \"namespace\": \"\"\n        },\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ],\n      \"keyup\": [\n        {\n          \"type\": \"keyup\",\n          \"origType\": \"keyup\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "its .body",
+      "time" : {
+        "start" : 1639010052857,
+        "stop" : 1639010052862,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>** not to be undefined",
+      "time" : {
+        "start" : 1639010052861,
+        "stop" : 1639010052861,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"click\": [\n        {\n          \"type\": \"click\",\n          \"origType\": \"click\",\n          \"guid\": 20,\n          \"selector\": \"[data-peepr]\",\n          \"needsContext\": false,\n          \"namespace\": \"\"\n        }\n      ],\n      \"dragenter\": [\n        {\n          \"type\": \"dragenter\",\n          \"origType\": \"dragenter\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragover\": [\n        {\n          \"type\": \"dragover\",\n          \"origType\": \"dragover\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragleave\": [\n        {\n          \"type\": \"dragleave\",\n          \"origType\": \"dragleave\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragend\": [\n        {\n          \"type\": \"dragend\",\n          \"origType\": \"dragend\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"drop\": [\n        {\n          \"type\": \"drop\",\n          \"origType\": \"drop\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "wrap <body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>",
+      "time" : {
+        "start" : 1639010052862,
+        "stop" : 1639010052864,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "find div.editor-plaintext[aria-label=\"Post tags\"]",
+      "time" : {
+        "start" : 1639010052864,
+        "stop" : 1639010052889,
+        "duration" : 25
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "type recusandae {enter}",
+      "time" : {
+        "start" : 1639010052889,
+        "stop" : 1639010053224,
+        "duration" : 335
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "GET 200 /svc/tag_suggest?q=facilis",
+      "time" : {
+        "start" : 1639010053224,
+        "stop" : 1639010053224,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "get iframe.vP3g8",
+      "time" : {
+        "start" : 1639010053224,
+        "stop" : 1639010053266,
+        "duration" : 42
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "its .0.contentDocument",
+      "time" : {
+        "start" : 1639010053266,
+        "stop" : 1639010053275,
+        "duration" : 9
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<document>** to exist",
+      "time" : {
+        "start" : 1639010053274,
+        "stop" : 1639010053274,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"location\": {\n    \"ancestorOrigins\": {\n      \"0\": \"https://www.tumblr.com\",\n      \"1\": \"https://www.tumblr.com\"\n    },\n    \"href\": \"https://www.tumblr.com/neue_web/iframe/new/text\",\n    \"origin\": \"https://www.tumblr.com\",\n    \"protocol\": \"https:\",\n    \"host\": \"www.tumblr.com\",\n    \"hostname\": \"www.tumblr.com\",\n    \"port\": \"\",\n    \"pathname\": \"/neue_web/iframe/new/text\",\n    \"search\": \"\",\n    \"hash\": \"\"\n  },\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"keydown\": [\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 1,\n          \"namespace\": \"\"\n        },\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ],\n      \"keyup\": [\n        {\n          \"type\": \"keyup\",\n          \"origType\": \"keyup\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "its .body",
+      "time" : {
+        "start" : 1639010053275,
+        "stop" : 1639010053281,
+        "duration" : 6
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>** not to be undefined",
+      "time" : {
+        "start" : 1639010053281,
+        "stop" : 1639010053281,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"click\": [\n        {\n          \"type\": \"click\",\n          \"origType\": \"click\",\n          \"guid\": 20,\n          \"selector\": \"[data-peepr]\",\n          \"needsContext\": false,\n          \"namespace\": \"\"\n        }\n      ],\n      \"dragenter\": [\n        {\n          \"type\": \"dragenter\",\n          \"origType\": \"dragenter\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragover\": [\n        {\n          \"type\": \"dragover\",\n          \"origType\": \"dragover\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragleave\": [\n        {\n          \"type\": \"dragleave\",\n          \"origType\": \"dragleave\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragend\": [\n        {\n          \"type\": \"dragend\",\n          \"origType\": \"dragend\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"drop\": [\n        {\n          \"type\": \"drop\",\n          \"origType\": \"drop\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "wrap <body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>",
+      "time" : {
+        "start" : 1639010053281,
+        "stop" : 1639010053283,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "find div.editor-plaintext[aria-label=\"Post tags\"]",
+      "time" : {
+        "start" : 1639010053283,
+        "stop" : 1639010053313,
+        "duration" : 30
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "type dolorem {enter}",
+      "time" : {
+        "start" : 1639010053313,
+        "stop" : 1639010053650,
+        "duration" : 337
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "GET 200 /svc/tag_suggest?q=recusandae",
+      "time" : {
+        "start" : 1639010053650,
+        "stop" : 1639010053650,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "get iframe.vP3g8",
+      "time" : {
+        "start" : 1639010053650,
+        "stop" : 1639010053687,
+        "duration" : 37
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "its .0.contentDocument",
+      "time" : {
+        "start" : 1639010053687,
+        "stop" : 1639010053694,
+        "duration" : 7
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<document>** to exist",
+      "time" : {
+        "start" : 1639010053694,
+        "stop" : 1639010053694,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"location\": {\n    \"ancestorOrigins\": {\n      \"0\": \"https://www.tumblr.com\",\n      \"1\": \"https://www.tumblr.com\"\n    },\n    \"href\": \"https://www.tumblr.com/neue_web/iframe/new/text\",\n    \"origin\": \"https://www.tumblr.com\",\n    \"protocol\": \"https:\",\n    \"host\": \"www.tumblr.com\",\n    \"hostname\": \"www.tumblr.com\",\n    \"port\": \"\",\n    \"pathname\": \"/neue_web/iframe/new/text\",\n    \"search\": \"\",\n    \"hash\": \"\"\n  },\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"keydown\": [\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 1,\n          \"namespace\": \"\"\n        },\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ],\n      \"keyup\": [\n        {\n          \"type\": \"keyup\",\n          \"origType\": \"keyup\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "its .body",
+      "time" : {
+        "start" : 1639010053694,
+        "stop" : 1639010053701,
+        "duration" : 7
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>** not to be undefined",
+      "time" : {
+        "start" : 1639010053701,
+        "stop" : 1639010053701,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"click\": [\n        {\n          \"type\": \"click\",\n          \"origType\": \"click\",\n          \"guid\": 20,\n          \"selector\": \"[data-peepr]\",\n          \"needsContext\": false,\n          \"namespace\": \"\"\n        }\n      ],\n      \"dragenter\": [\n        {\n          \"type\": \"dragenter\",\n          \"origType\": \"dragenter\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragover\": [\n        {\n          \"type\": \"dragover\",\n          \"origType\": \"dragover\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragleave\": [\n        {\n          \"type\": \"dragleave\",\n          \"origType\": \"dragleave\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragend\": [\n        {\n          \"type\": \"dragend\",\n          \"origType\": \"dragend\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"drop\": [\n        {\n          \"type\": \"drop\",\n          \"origType\": \"drop\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "wrap <body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>",
+      "time" : {
+        "start" : 1639010053702,
+        "stop" : 1639010053707,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "find div.editor.editor-plaintext[aria-label=\"Post title\"]",
+      "time" : {
+        "start" : 1639010053707,
+        "stop" : 1639010053746,
+        "duration" : 39
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "clear",
+      "time" : {
+        "start" : 1639010053746,
+        "stop" : 1639010054059,
+        "duration" : 313
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "GET 200 /svc/tag_suggest?q=dolorem",
+      "time" : {
+        "start" : 1639010054059,
+        "stop" : 1639010054059,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "get iframe.vP3g8",
+      "time" : {
+        "start" : 1639010054059,
+        "stop" : 1639010054093,
+        "duration" : 34
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "its .0.contentDocument",
+      "time" : {
+        "start" : 1639010054093,
+        "stop" : 1639010054098,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<document>** to exist",
+      "time" : {
+        "start" : 1639010054098,
+        "stop" : 1639010054098,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"location\": {\n    \"ancestorOrigins\": {\n      \"0\": \"https://www.tumblr.com\",\n      \"1\": \"https://www.tumblr.com\"\n    },\n    \"href\": \"https://www.tumblr.com/neue_web/iframe/new/text\",\n    \"origin\": \"https://www.tumblr.com\",\n    \"protocol\": \"https:\",\n    \"host\": \"www.tumblr.com\",\n    \"hostname\": \"www.tumblr.com\",\n    \"port\": \"\",\n    \"pathname\": \"/neue_web/iframe/new/text\",\n    \"search\": \"\",\n    \"hash\": \"\"\n  },\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"keydown\": [\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 1,\n          \"namespace\": \"\"\n        },\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ],\n      \"keyup\": [\n        {\n          \"type\": \"keyup\",\n          \"origType\": \"keyup\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "its .body",
+      "time" : {
+        "start" : 1639010054098,
+        "stop" : 1639010054107,
+        "duration" : 9
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>** not to be undefined",
+      "time" : {
+        "start" : 1639010054107,
+        "stop" : 1639010054107,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"click\": [\n        {\n          \"type\": \"click\",\n          \"origType\": \"click\",\n          \"guid\": 20,\n          \"selector\": \"[data-peepr]\",\n          \"needsContext\": false,\n          \"namespace\": \"\"\n        }\n      ],\n      \"dragenter\": [\n        {\n          \"type\": \"dragenter\",\n          \"origType\": \"dragenter\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragover\": [\n        {\n          \"type\": \"dragover\",\n          \"origType\": \"dragover\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragleave\": [\n        {\n          \"type\": \"dragleave\",\n          \"origType\": \"dragleave\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragend\": [\n        {\n          \"type\": \"dragend\",\n          \"origType\": \"dragend\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"drop\": [\n        {\n          \"type\": \"drop\",\n          \"origType\": \"drop\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "wrap <body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>",
+      "time" : {
+        "start" : 1639010054107,
+        "stop" : 1639010054109,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "find div.editor-richtext[aria-label=\"Post body\"]",
+      "time" : {
+        "start" : 1639010054109,
+        "stop" : 1639010054143,
+        "duration" : 34
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "clear",
+      "time" : {
+        "start" : 1639010054144,
+        "stop" : 1639010054419,
+        "duration" : 275
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "get iframe.vP3g8",
+      "time" : {
+        "start" : 1639010054419,
+        "stop" : 1639010054458,
+        "duration" : 39
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "its .0.contentDocument",
+      "time" : {
+        "start" : 1639010054458,
+        "stop" : 1639010054463,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<document>** to exist",
+      "time" : {
+        "start" : 1639010054463,
+        "stop" : 1639010054463,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"location\": {\n    \"ancestorOrigins\": {\n      \"0\": \"https://www.tumblr.com\",\n      \"1\": \"https://www.tumblr.com\"\n    },\n    \"href\": \"https://www.tumblr.com/neue_web/iframe/new/text\",\n    \"origin\": \"https://www.tumblr.com\",\n    \"protocol\": \"https:\",\n    \"host\": \"www.tumblr.com\",\n    \"hostname\": \"www.tumblr.com\",\n    \"port\": \"\",\n    \"pathname\": \"/neue_web/iframe/new/text\",\n    \"search\": \"\",\n    \"hash\": \"\"\n  },\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"keydown\": [\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 1,\n          \"namespace\": \"\"\n        },\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ],\n      \"keyup\": [\n        {\n          \"type\": \"keyup\",\n          \"origType\": \"keyup\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "its .body",
+      "time" : {
+        "start" : 1639010054463,
+        "stop" : 1639010054469,
+        "duration" : 6
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>** not to be undefined",
+      "time" : {
+        "start" : 1639010054469,
+        "stop" : 1639010054469,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"jQuery2240192717508525534381\": {\n    \"events\": {\n      \"click\": [\n        {\n          \"type\": \"click\",\n          \"origType\": \"click\",\n          \"guid\": 20,\n          \"selector\": \"[data-peepr]\",\n          \"needsContext\": false,\n          \"namespace\": \"\"\n        }\n      ],\n      \"dragenter\": [\n        {\n          \"type\": \"dragenter\",\n          \"origType\": \"dragenter\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragover\": [\n        {\n          \"type\": \"dragover\",\n          \"origType\": \"dragover\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragleave\": [\n        {\n          \"type\": \"dragleave\",\n          \"origType\": \"dragleave\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragend\": [\n        {\n          \"type\": \"dragend\",\n          \"origType\": \"dragend\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"drop\": [\n        {\n          \"type\": \"drop\",\n          \"origType\": \"drop\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "wrap <body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>",
+      "time" : {
+        "start" : 1639010054470,
+        "stop" : 1639010054473,
+        "duration" : 3
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "find button.button-area",
+      "time" : {
+        "start" : 1639010054473,
+        "stop" : 1639010054581,
+        "duration" : 108
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<button.button-area.create_post_button.disabled>** to have text **Post**",
+      "time" : {
+        "start" : 1639010054581,
+        "stop" : 1639010054581,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "Post"
+      }, {
+        "name" : "expected",
+        "value" : "Post"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "assert expected **<button.button-area.create_post_button.disabled>** to be **disabled**",
+      "time" : {
+        "start" : 1639010054581,
+        "stop" : 1639010054581,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<button.button-area.create_post_button.disabled>** to have text **Post**",
+      "time" : {
+        "start" : 1639010054581,
+        "stop" : 1639010054581,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "Post"
+      }, {
+        "name" : "expected",
+        "value" : "Post"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 150,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Dashboard Posting"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "646c63eb3dd96701.json",
+  "parameterValues" : [ ]
+}

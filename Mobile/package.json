@@ -5,11 +5,11 @@
   "scripts": {
     "emu-appium": "start /b emulator @Pixel -no-boot-anim -gpu on && Appium",
     "test": "wdio",
-    "wdio": "npm run pretest && wdio run wdio.conf.js",
+    "wdio": "wdio run wdio.conf.js",
     "clean:reports": "rmdir /S /Q allure-results",
-    "pretest": "npm run clean:reports",
-    "test-report":"allure generate allure-results --clean",
-    "allure-open":"allure open"
+    "test-report-native": "allure generate NativeResults --clean",
+    "test-report-flutter": "allure generate FlutterResults --clean",
+    "allure-open": "allure open"
   },
   "keywords": [],
   "author": "We'am and Ziad",
@@ -30,5 +30,10 @@
   "directories": {
     "test": "tests"
   },
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "appium-flutter-driver": "^0.0.33",
+    "appium-flutter-finder": "^0.1.0",
+    "faker": "^5.5.3"
+  }
 }

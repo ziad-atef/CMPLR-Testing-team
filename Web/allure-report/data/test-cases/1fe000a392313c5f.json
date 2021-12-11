@@ -1,0 +1,1607 @@
+{
+  "uid" : "1fe000a392313c5f",
+  "name" : "Reblog a Post",
+  "fullName" : "Reblog a Post",
+  "historyId" : "4d683cff56584610e22a035c257c401f",
+  "time" : {
+    "start" : 1639010114378,
+    "stop" : 1639010151494,
+    "duration" : 37116
+  },
+  "status" : "failed",
+  "statusMessage" : "Timed out retrying after 30000ms: expected '<div.editor.editor-plaintext>' to be 'visible'\n\nThis element `<div.editor.editor-plaintext>` is not visible because it has CSS property: `position: fixed` and it's being covered by another element:\n\n`<div class=\"post-forms-modal\" style=\"opacity: 1; display: block;\">...</div>`",
+  "statusTrace" : "AssertionError: Timed out retrying after 30000ms: expected '<div.editor.editor-plaintext>' to be 'visible'\n\nThis element `<div.editor.editor-plaintext>` is not visible because it has CSS property: `position: fixed` and it's being covered by another element:\n\n`<div class=\"post-forms-modal\" style=\"opacity: 1; display: block;\">...</div>`\n    at Postboard.reblogTagsDom (https://www.tumblr.com/__cypress/tests?p=cypress\\integration\\Tumbler\\Dashboard.spec.js:232:97)\n    at Context.eval (https://www.tumblr.com/__cypress/tests?p=cypress\\integration\\Tumbler\\Dashboard.spec.js:545:20)",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "Timed out retrying after 30000ms: expected '<div.editor.editor-plaintext>' to be 'visible'\n\nThis element `<div.editor.editor-plaintext>` is not visible because it has CSS property: `position: fixed` and it's being covered by another element:\n\n`<div class=\"post-forms-modal\" style=\"opacity: 1; display: block;\">...</div>`",
+    "statusTrace" : "AssertionError: Timed out retrying after 30000ms: expected '<div.editor.editor-plaintext>' to be 'visible'\n\nThis element `<div.editor.editor-plaintext>` is not visible because it has CSS property: `position: fixed` and it's being covered by another element:\n\n`<div class=\"post-forms-modal\" style=\"opacity: 1; display: block;\">...</div>`\n    at Postboard.reblogTagsDom (https://www.tumblr.com/__cypress/tests?p=cypress\\integration\\Tumbler\\Dashboard.spec.js:232:97)\n    at Context.eval (https://www.tumblr.com/__cypress/tests?p=cypress\\integration\\Tumbler\\Dashboard.spec.js:545:20)",
+    "steps" : [ {
+      "name" : "\"before each\" hook",
+      "time" : {
+        "start" : 1639010114378,
+        "stop" : 1639010116938,
+        "duration" : 2560
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "authorize",
+        "time" : {
+          "start" : 1639010114536,
+          "stop" : 1639010151493,
+          "duration" : 36957
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "fixture (\"PersonalData\")",
+          "time" : {
+            "start" : 1639010114536,
+            "stop" : 1639010114536,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0,
+          "stepsCount" : 0,
+          "hasContent" : false
+        }, {
+          "name" : "setCookie sid, aqq7dj5WNiVP4W0RJ6MDay48makT4GoNi2sKPD0LvvvysRW3hP.aFLelZEgN2P34BU2utYgtm8JB9G3rMHnH5tRC9WIn6WnANo8mc",
+          "time" : {
+            "start" : 1639010114537,
+            "stop" : 1639010114543,
+            "duration" : 6
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0,
+          "stepsCount" : 0,
+          "hasContent" : false
+        }, {
+          "name" : "visit https://www.tumblr.com -> 302: https://www.tumblr.com/dashboard",
+          "time" : {
+            "start" : 1639010114543,
+            "stop" : 1639010116363,
+            "duration" : 1820
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0,
+          "stepsCount" : 0,
+          "hasContent" : false
+        }, {
+          "name" : "new url https://www.tumblr.com/dashboard",
+          "time" : {
+            "start" : 1639010116363,
+            "stop" : 1639010116363,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0,
+          "stepsCount" : 0,
+          "hasContent" : false
+        }, {
+          "name" : "POST /services/bblog",
+          "time" : {
+            "start" : 1639010116363,
+            "stop" : 1639010116363,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0,
+          "stepsCount" : 0,
+          "hasContent" : false
+        }, {
+          "name" : "POST https://o248881.ingest.sentry.io/api/5720031/envelope/?sentry_key=b93ddebac1c34cc393134ffa692bca07&sentry_version=7",
+          "time" : {
+            "start" : 1639010116363,
+            "stop" : 1639010116363,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0,
+          "stepsCount" : 0,
+          "hasContent" : false
+        }, {
+          "name" : "GET /api/v2/radar?fields%5Bblogs%5D=name%2Cavatar%2Cdescription%2Ctheme%2Ctitle%2Curl%2Cuuid%2Ccan_message%2Ccan_be_followed%2Cis_adult&limit=5",
+          "time" : {
+            "start" : 1639010116363,
+            "stop" : 1639010116363,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0,
+          "stepsCount" : 0,
+          "hasContent" : false
+        }, {
+          "name" : "url",
+          "time" : {
+            "start" : 1639010116363,
+            "stop" : 1639010116369,
+            "duration" : 6
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0,
+          "stepsCount" : 0,
+          "hasContent" : false
+        }, {
+          "name" : "assert expected **https://www.tumblr.com/dashboard** to not include **login?redirect_to**",
+          "time" : {
+            "start" : 1639010116369,
+            "stop" : 1639010116369,
+            "duration" : 0
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "actual",
+            "value" : "https://www.tumblr.com/dashboard"
+          } ],
+          "shouldDisplayMessage" : false,
+          "attachmentsCount" : 0,
+          "stepsCount" : 0,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 9,
+        "hasContent" : true
+      }, {
+        "name" : "url",
+        "time" : {
+          "start" : 1639010116369,
+          "stop" : 1639010116371,
+          "duration" : 2
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "assert expected **https://www.tumblr.com/dashboard** to include **dashboard**",
+        "time" : {
+          "start" : 1639010116371,
+          "stop" : 1639010116371,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "actual",
+          "value" : "https://www.tumblr.com/dashboard"
+        } ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "get ul[aria-label=\"Check out these blogs\"]",
+        "time" : {
+          "start" : 1639010116371,
+          "stop" : 1639010116862,
+          "duration" : 491
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "assert expected **<ul.PwJi6>** to be **visible**",
+        "time" : {
+          "start" : 1639010116862,
+          "stop" : 1639010116862,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "POST 200 /services/bblog",
+        "time" : {
+          "start" : 1639010116862,
+          "stop" : 1639010116862,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "get ul[aria-label=\"Check out these blogs\"]",
+        "time" : {
+          "start" : 1639010116862,
+          "stop" : 1639010116873,
+          "duration" : 11
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "children",
+        "time" : {
+          "start" : 1639010116873,
+          "stop" : 1639010116904,
+          "duration" : 31
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "assert expected **[ <li.kqme1>, 3 more... ]** to have a length above **1**",
+        "time" : {
+          "start" : 1639010116904,
+          "stop" : 1639010116904,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "get h1.hF8Wr",
+        "time" : {
+          "start" : 1639010116904,
+          "stop" : 1639010116914,
+          "duration" : 10
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "eq 1",
+        "time" : {
+          "start" : 1639010116914,
+          "stop" : 1639010116938,
+          "duration" : 24
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "assert expected **<h1.hF8Wr>** to have text **Radar**",
+        "time" : {
+          "start" : 1639010116938,
+          "stop" : 1639010116938,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "actual",
+          "value" : "Radar"
+        }, {
+          "name" : "expected",
+          "value" : "Radar"
+        } ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "assert expected **<h1.hF8Wr>** to be **visible**",
+        "time" : {
+          "start" : 1639010116938,
+          "stop" : 1639010116938,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "shouldDisplayMessage" : false,
+        "attachmentsCount" : 0,
+        "stepsCount" : 0,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 22,
+      "hasContent" : true
+    }, {
+      "name" : "get div.j8ha0",
+      "time" : {
+        "start" : 1639010116941,
+        "stop" : 1639010116951,
+        "duration" : 10
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "children",
+      "time" : {
+        "start" : 1639010116951,
+        "stop" : 1639010116959,
+        "duration" : 8
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "eq 1",
+      "time" : {
+        "start" : 1639010116959,
+        "stop" : 1639010116973,
+        "duration" : 14
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<div>** to be **visible**",
+      "time" : {
+        "start" : 1639010116973,
+        "stop" : 1639010116973,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "children",
+      "time" : {
+        "start" : 1639010116973,
+        "stop" : 1639010117004,
+        "duration" : 31
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **[ <div.So6RQ>, 4 more... ]** to have a length above **1**",
+      "time" : {
+        "start" : 1639010117004,
+        "stop" : 1639010117004,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "get div.j8ha0",
+      "time" : {
+        "start" : 1639010117004,
+        "stop" : 1639010117014,
+        "duration" : 10
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "children",
+      "time" : {
+        "start" : 1639010117014,
+        "stop" : 1639010117023,
+        "duration" : 9
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "eq 1",
+      "time" : {
+        "start" : 1639010117023,
+        "stop" : 1639010117038,
+        "duration" : 15
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<div>** to be **visible**",
+      "time" : {
+        "start" : 1639010117038,
+        "stop" : 1639010117038,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "children",
+      "time" : {
+        "start" : 1639010117038,
+        "stop" : 1639010117050,
+        "duration" : 12
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "eq 0",
+      "time" : {
+        "start" : 1639010117050,
+        "stop" : 1639010117059,
+        "duration" : 9
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "find div.GzjsW",
+      "time" : {
+        "start" : 1639010117059,
+        "stop" : 1639010117072,
+        "duration" : 13
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "children",
+      "time" : {
+        "start" : 1639010117072,
+        "stop" : 1639010117085,
+        "duration" : 13
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "within",
+      "time" : {
+        "start" : 1639010117089,
+        "stop" : 1639010117089,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "get div.j8ha0",
+      "time" : {
+        "start" : 1639010117090,
+        "stop" : 1639010117102,
+        "duration" : 12
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "children",
+      "time" : {
+        "start" : 1639010117102,
+        "stop" : 1639010117112,
+        "duration" : 10
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "eq 1",
+      "time" : {
+        "start" : 1639010117112,
+        "stop" : 1639010117126,
+        "duration" : 14
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<div>** to be **visible**",
+      "time" : {
+        "start" : 1639010117126,
+        "stop" : 1639010117126,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "children",
+      "time" : {
+        "start" : 1639010117126,
+        "stop" : 1639010117140,
+        "duration" : 14
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "eq 0",
+      "time" : {
+        "start" : 1639010117140,
+        "stop" : 1639010117151,
+        "duration" : 11
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "find div.hAFp3",
+      "time" : {
+        "start" : 1639010117151,
+        "stop" : 1639010117162,
+        "duration" : 11
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "find a",
+      "time" : {
+        "start" : 1639010117162,
+        "stop" : 1639010117176,
+        "duration" : 14
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "within",
+      "time" : {
+        "start" : 1639010117180,
+        "stop" : 1639010117180,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "get div.j8ha0",
+      "time" : {
+        "start" : 1639010117180,
+        "stop" : 1639010117191,
+        "duration" : 11
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "children",
+      "time" : {
+        "start" : 1639010117191,
+        "stop" : 1639010117204,
+        "duration" : 13
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "eq 1",
+      "time" : {
+        "start" : 1639010117204,
+        "stop" : 1639010117219,
+        "duration" : 15
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<div>** to be **visible**",
+      "time" : {
+        "start" : 1639010117219,
+        "stop" : 1639010117219,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "children",
+      "time" : {
+        "start" : 1639010117219,
+        "stop" : 1639010117236,
+        "duration" : 17
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "eq 0",
+      "time" : {
+        "start" : 1639010117236,
+        "stop" : 1639010117249,
+        "duration" : 13
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "find a.BSUG4[role=\"link\"]",
+      "time" : {
+        "start" : 1639010117249,
+        "stop" : 1639010117269,
+        "duration" : 20
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "eq 1",
+      "time" : {
+        "start" : 1639010117269,
+        "stop" : 1639010117283,
+        "duration" : 14
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "within",
+      "time" : {
+        "start" : 1639010117290,
+        "stop" : 1639010117290,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "get div.j8ha0",
+      "time" : {
+        "start" : 1639010117293,
+        "stop" : 1639010117307,
+        "duration" : 14
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "children",
+      "time" : {
+        "start" : 1639010117307,
+        "stop" : 1639010117321,
+        "duration" : 14
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "eq 1",
+      "time" : {
+        "start" : 1639010117321,
+        "stop" : 1639010117340,
+        "duration" : 19
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<div>** to be **visible**",
+      "time" : {
+        "start" : 1639010117340,
+        "stop" : 1639010117340,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "children",
+      "time" : {
+        "start" : 1639010117340,
+        "stop" : 1639010117356,
+        "duration" : 16
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "eq 0",
+      "time" : {
+        "start" : 1639010117356,
+        "stop" : 1639010117371,
+        "duration" : 15
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "find div.MCavR",
+      "time" : {
+        "start" : 1639010117371,
+        "stop" : 1639010117385,
+        "duration" : 14
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "find a[aria-label=\"Reblog\"]",
+      "time" : {
+        "start" : 1639010117385,
+        "stop" : 1639010117401,
+        "duration" : 16
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "click",
+      "time" : {
+        "start" : 1639010117401,
+        "stop" : 1639010117747,
+        "duration" : 346
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "new url https://www.tumblr.com/reblog/gyaleri/642930348540477440/TdwsPHCz",
+      "time" : {
+        "start" : 1639010117747,
+        "stop" : 1639010117747,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "uncaught exception SafeframeLoadError: Could not load the Safeframe Library with error: TypeError: Cannot read properties of undefined (reading 'Config')",
+      "time" : {
+        "start" : 1639010117747,
+        "stop" : 1639010117747,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "get iframe.vP3g8",
+      "time" : {
+        "start" : 1639010117747,
+        "stop" : 1639010118550,
+        "duration" : 803
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "POST 200 https://s.pubmine.com/adconf?pvid=f778e458-4ffb-4aa4-a908-31cc3ca26e31&rid=8336385428102",
+      "time" : {
+        "start" : 1639010118550,
+        "stop" : 1639010118550,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "POST https://a.teads.tv/hb/bid-request",
+      "time" : {
+        "start" : 1639010118550,
+        "stop" : 1639010118550,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "POST https://prebid.media.net/rtb/prebid?cid=8CU8HDVRS",
+      "time" : {
+        "start" : 1639010118550,
+        "stop" : 1639010118550,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "visit https://www.tumblr.com/reblog/gyaleri/642930348540477440/TdwsPHCz",
+      "time" : {
+        "start" : 1639010118553,
+        "stop" : 1639010121381,
+        "duration" : 2828
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "POST /services/bblog",
+      "time" : {
+        "start" : 1639010121381,
+        "stop" : 1639010121381,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "POST /svc/pop/exceptions",
+      "time" : {
+        "start" : 1639010121381,
+        "stop" : 1639010121381,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "POST 200 https://o248881.ingest.sentry.io/api/5720031/envelope/?sentry_key=b93ddebac1c34cc393134ffa692bca07&sentry_version=7",
+      "time" : {
+        "start" : 1639010121381,
+        "stop" : 1639010121381,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "GET 200 /api/v2/timeline/dashboard?fields%5Bblogs%5D=name%2Cavatar%2Ctitle%2Curl%2Cis_adult%2C%3Fis_member%2Cdescription_npf%2Cuuid%2Ccan_be_followed%2C%3Ffollowed%2C%3Fadvertiser_name%2Ctheme%2C%3Fprimary%2C%3Fis_paywall_on%2C%3Fpaywall_access%2C%3Fsubscription_plan&reblog_info=true",
+      "time" : {
+        "start" : 1639010121381,
+        "stop" : 1639010121381,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "GET 200 /api/v2/radar?fields%5Bblogs%5D=name%2Cavatar%2Cdescription%2Ctheme%2Ctitle%2Curl%2Cuuid%2Ccan_message%2Ccan_be_followed%2Cis_adult&limit=5",
+      "time" : {
+        "start" : 1639010121381,
+        "stop" : 1639010121381,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "GET 200 /api/v2/recommended/blogs?limit=8&fields%5Bblogs%5D=name%2Ctitle%2Curl%2Cavatar%2Ccan_be_followed%2C%3Ffollowed%2Ctheme",
+      "time" : {
+        "start" : 1639010121381,
+        "stop" : 1639010121381,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "GET 200 /api/v2/redpop_ads/mrec_waterfall",
+      "time" : {
+        "start" : 1639010121381,
+        "stop" : 1639010121381,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "POST 200 /svc/post/get_post_form_builder_data",
+      "time" : {
+        "start" : 1639010121381,
+        "stop" : 1639010121381,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "GET 200 /svc/post/fetch?reblog_id=642930348540477440&reblog_key=TdwsPHCz&reblog_blog_name=",
+      "time" : {
+        "start" : 1639010121381,
+        "stop" : 1639010121381,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "GET 200 /api/v2/user/counts?unread=true&inbox=true&unread_messages=true&blog_notification_counts=true&private_group_blog_unread_post_counts=true&legacy_inbox_unread=true&blog_post_counts=true",
+      "time" : {
+        "start" : 1639010121381,
+        "stop" : 1639010121381,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "POST 200 /svc/search/inline_gif",
+      "time" : {
+        "start" : 1639010121381,
+        "stop" : 1639010121381,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "get iframe.vP3g8",
+      "time" : {
+        "start" : 1639010121381,
+        "stop" : 1639010121398,
+        "duration" : 17
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "its .0.contentDocument",
+      "time" : {
+        "start" : 1639010121398,
+        "stop" : 1639010121401,
+        "duration" : 3
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<document>** to exist",
+      "time" : {
+        "start" : 1639010121401,
+        "stop" : 1639010121401,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"location\": {\n    \"ancestorOrigins\": {\n      \"0\": \"https://www.tumblr.com\",\n      \"1\": \"https://www.tumblr.com\"\n    },\n    \"href\": \"https://www.tumblr.com/neue_web/iframe/reblog/642930348540477440/TdwsPHCz\",\n    \"origin\": \"https://www.tumblr.com\",\n    \"protocol\": \"https:\",\n    \"host\": \"www.tumblr.com\",\n    \"hostname\": \"www.tumblr.com\",\n    \"port\": \"\",\n    \"pathname\": \"/neue_web/iframe/reblog/642930348540477440/TdwsPHCz\",\n    \"search\": \"\",\n    \"hash\": \"\"\n  },\n  \"jQuery224069621990038940031\": {\n    \"events\": {\n      \"keydown\": [\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 1,\n          \"namespace\": \"\"\n        },\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ],\n      \"keyup\": [\n        {\n          \"type\": \"keyup\",\n          \"origType\": \"keyup\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ]\n    },\n    \"focusin\": 1\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "its .body",
+      "time" : {
+        "start" : 1639010121401,
+        "stop" : 1639010121404,
+        "duration" : 3
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>** not to be undefined",
+      "time" : {
+        "start" : 1639010121404,
+        "stop" : 1639010121404,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"jQuery224069621990038940031\": {\n    \"events\": {\n      \"click\": [\n        {\n          \"type\": \"click\",\n          \"origType\": \"click\",\n          \"guid\": 20,\n          \"selector\": \"[data-peepr]\",\n          \"needsContext\": false,\n          \"namespace\": \"\"\n        }\n      ],\n      \"dragenter\": [\n        {\n          \"type\": \"dragenter\",\n          \"origType\": \"dragenter\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragover\": [\n        {\n          \"type\": \"dragover\",\n          \"origType\": \"dragover\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragleave\": [\n        {\n          \"type\": \"dragleave\",\n          \"origType\": \"dragleave\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragend\": [\n        {\n          \"type\": \"dragend\",\n          \"origType\": \"dragend\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"drop\": [\n        {\n          \"type\": \"drop\",\n          \"origType\": \"drop\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "wrap <body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>",
+      "time" : {
+        "start" : 1639010121404,
+        "stop" : 1639010121405,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "find div.editor[aria-label=\"Post body\"]",
+      "time" : {
+        "start" : 1639010121405,
+        "stop" : 1639010121426,
+        "duration" : 21
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<div.editor.editor-richtext>** to be **visible**",
+      "time" : {
+        "start" : 1639010121426,
+        "stop" : 1639010121426,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "get iframe.vP3g8",
+      "time" : {
+        "start" : 1639010121426,
+        "stop" : 1639010121441,
+        "duration" : 15
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "its .0.contentDocument",
+      "time" : {
+        "start" : 1639010121441,
+        "stop" : 1639010121447,
+        "duration" : 6
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<document>** to exist",
+      "time" : {
+        "start" : 1639010121447,
+        "stop" : 1639010121447,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"location\": {\n    \"ancestorOrigins\": {\n      \"0\": \"https://www.tumblr.com\",\n      \"1\": \"https://www.tumblr.com\"\n    },\n    \"href\": \"https://www.tumblr.com/neue_web/iframe/reblog/642930348540477440/TdwsPHCz\",\n    \"origin\": \"https://www.tumblr.com\",\n    \"protocol\": \"https:\",\n    \"host\": \"www.tumblr.com\",\n    \"hostname\": \"www.tumblr.com\",\n    \"port\": \"\",\n    \"pathname\": \"/neue_web/iframe/reblog/642930348540477440/TdwsPHCz\",\n    \"search\": \"\",\n    \"hash\": \"\"\n  },\n  \"jQuery224069621990038940031\": {\n    \"events\": {\n      \"keydown\": [\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 1,\n          \"namespace\": \"\"\n        },\n        {\n          \"type\": \"keydown\",\n          \"origType\": \"keydown\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ],\n      \"keyup\": [\n        {\n          \"type\": \"keyup\",\n          \"origType\": \"keyup\",\n          \"guid\": 7,\n          \"namespace\": \"DOMEventor\"\n        }\n      ]\n    },\n    \"focusin\": 1\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "its .body",
+      "time" : {
+        "start" : 1639010121447,
+        "stop" : 1639010121450,
+        "duration" : 3
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>** not to be undefined",
+      "time" : {
+        "start" : 1639010121450,
+        "stop" : 1639010121450,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "actual",
+        "value" : "{\n  \"jQuery224069621990038940031\": {\n    \"events\": {\n      \"click\": [\n        {\n          \"type\": \"click\",\n          \"origType\": \"click\",\n          \"guid\": 20,\n          \"selector\": \"[data-peepr]\",\n          \"needsContext\": false,\n          \"namespace\": \"\"\n        }\n      ],\n      \"dragenter\": [\n        {\n          \"type\": \"dragenter\",\n          \"origType\": \"dragenter\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragover\": [\n        {\n          \"type\": \"dragover\",\n          \"origType\": \"dragover\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragleave\": [\n        {\n          \"type\": \"dragleave\",\n          \"origType\": \"dragleave\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"dragend\": [\n        {\n          \"type\": \"dragend\",\n          \"origType\": \"dragend\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ],\n      \"drop\": [\n        {\n          \"type\": \"drop\",\n          \"origType\": \"drop\",\n          \"guid\": 31,\n          \"namespace\": \"drag_eventor_0\"\n        }\n      ]\n    }\n  }\n}"
+      } ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "wrap <body#redpop_iframePostForms.flag--reblog-ui-refresh.flag--messaging-new-empty-inbox.flag--npf-text-web-styles.flag--npf-text-colors.identity.base.identity-refresh.redpop_iframePostForms.logged_in.without_auto_paginate.layout_modular.postforms-open>",
+      "time" : {
+        "start" : 1639010121450,
+        "stop" : 1639010121451,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "find div.editor[aria-label=\"Post tags\"]",
+      "time" : {
+        "start" : 1639010121451,
+        "stop" : 1639010151492,
+        "duration" : 30041
+      },
+      "status" : "failed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "assert expected **<div.editor.editor-plaintext>** to be **visible**",
+      "time" : {
+        "start" : 1639010151492,
+        "stop" : 1639010151492,
+        "duration" : 0
+      },
+      "status" : "failed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "POST 200 /services/bblog",
+      "time" : {
+        "start" : 1639010151492,
+        "stop" : 1639010151492,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "GET 200 /api/v2/user/counts?unread=true&inbox=true&unread_messages=true&blog_notification_counts=true&private_group_blog_unread_post_counts=true&legacy_inbox_unread=true&blog_post_counts=true",
+      "time" : {
+        "start" : 1639010151492,
+        "stop" : 1639010151492,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "within",
+      "time" : {
+        "start" : 1639010151493,
+        "stop" : 1639010151493,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 0,
+      "stepsCount" : 0,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : true,
+    "attachmentsCount" : 0,
+    "stepsCount" : 102,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Dashboard Rebloging"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "1fe000a392313c5f.json",
+  "parameterValues" : [ ]
+}

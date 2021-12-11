@@ -129,4 +129,8 @@ Web/cypress/fixtures/PersonalData.json
 Mobile/test/fixtures/emails.json
 Mobile/allure-results
 Mobile/allure-report
+Mobile/NativeResults
+Mobile/FlutterResults
 Web/cypress.env.json
+Mobile/Flutter/fixtures/emails.json
+Mobile/index.js

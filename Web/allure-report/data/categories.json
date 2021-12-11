@@ -1,82 +1,87 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
   "children" : [ {
     "name" : "Product defects",
     "children" : [ {
-      "name" : "Timed out retrying after 30000ms: Expected to find element: `button.FOqaP[aria-label=\"Text\"]`, but never found it.",
+      "name" : "expected 'https://64.media.tumblr.com/cc5f2ec8a5fbfb5ee66b7a2469cddc2a/f510213332fe6503-29/s2048x3072/7a5c039b1686f855306bc37bc67413451c9865ea.jpg 1606w' to not equal 'https://64.media.tumblr.com/cc5f2ec8a5fbfb5ee66b7a2469cddc2a/f510213332fe6503-29/s2048x3072/7a5c039b1686f855306bc37bc67413451c9865ea.jpg 1606w'",
       "children" : [ {
-        "name" : "Post a text post",
-        "uid" : "d54080bd019af60a",
-        "parentUid" : "93a6e7cdef03f7935a364ae61e96f3ad",
+        "name" : "when reload the page the background changes",
+        "uid" : "17792e80cd442cfb",
+        "parentUid" : "613c0a804e24a56ca686fdfcdf0ba9af",
         "status" : "failed",
         "time" : {
-          "start" : 1638113395551,
-          "stop" : 1638113427179,
-          "duration" : 31628
+          "start" : 1639009940296,
+          "stop" : 1639009947016,
+          "duration" : 6720
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "93a6e7cdef03f7935a364ae61e96f3ad"
+      "uid" : "613c0a804e24a56ca686fdfcdf0ba9af"
     }, {
-      "name" : "Timed out retrying after 30000ms: Expected to find element: `button.FOqaP[aria-label=\"Quote\"]`, but never found it.",
+      "name" : "Timed out retrying after 30000ms: expected '<div.editor.editor-plaintext>' to be 'visible'\n\nThis element `<div.editor.editor-plaintext>` is not visible because it has CSS property: `position: fixed` and it's being covered by another element:\n\n`<div class=\"post-forms-modal\" style=\"opacity: 1; display: block;\">...</div>`",
       "children" : [ {
-        "name" : "Post a Quote post",
-        "uid" : "9585ba6643e5f4dd",
-        "parentUid" : "820720ed6278df41f738e2307f3f7c48",
+        "name" : "Reblog a Post",
+        "uid" : "1fe000a392313c5f",
+        "parentUid" : "6c26d6b8397adcb994fbe5bdd7934e95",
         "status" : "failed",
         "time" : {
-          "start" : 1638113427241,
-          "stop" : 1638113458912,
-          "duration" : 31671
+          "start" : 1639010114378,
+          "stop" : 1639010151494,
+          "duration" : 37116
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "820720ed6278df41f738e2307f3f7c48"
+      "uid" : "6c26d6b8397adcb994fbe5bdd7934e95"
     }, {
-      "name" : "Timed out retrying after 30000ms: Expected to find element: `button.FOqaP[aria-label=\"Photo\"]`, but never found it.",
+      "name" : "expected 'Posted by cmplr23' to equal 'cmplr23 reblogged a post from gyaleri'",
       "children" : [ {
-        "name" : "Post a Photo post",
-        "uid" : "a078e94e1b3e71b5",
-        "parentUid" : "595db3f36177a2ef548b1c79a24ea975",
+        "name" : "Assert That Post Is Reblogged",
+        "uid" : "2f9a846350f87623",
+        "parentUid" : "dc5daee1223e8f290dc1bf29073e5983",
         "status" : "failed",
         "time" : {
-          "start" : 1638113458926,
-          "stop" : 1638113490501,
-          "duration" : 31575
+          "start" : 1639010151580,
+          "stop" : 1639010156388,
+          "duration" : 4808
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "595db3f36177a2ef548b1c79a24ea975"
+      "uid" : "dc5daee1223e8f290dc1bf29073e5983"
+    }, {
+      "name" : "Timed out retrying after 30000ms: Expected to find element: `input[placeholder=\"How old are you?\"]`, but never found it.",
+      "children" : [ {
+        "name" : "Signup New Email To Be Verified",
+        "uid" : "843f35e76388c565",
+        "parentUid" : "fdb5ada27ff5b0f30cad169162bf3ac2",
+        "status" : "failed",
+        "time" : {
+          "start" : 1639010174109,
+          "stop" : 1639010215921,
+          "duration" : 41812
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "fdb5ada27ff5b0f30cad169162bf3ac2"
     }, {
       "name" : "Inbox ID e1eacd8b-b5ca-4cbc-8e6a-88702b2c4f64 does not exist",
       "children" : [ {
-        "name" : "Signup New Email To Be Verified",
-        "uid" : "336c68c4218ac9c8",
-        "parentUid" : "d90bafc9a61a7e1a9ff3a55c287af28a",
-        "status" : "failed",
-        "time" : {
-          "start" : 1638113505880,
-          "stop" : 1638113527499,
-          "duration" : 21619
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
         "name" : "Verify email",
-        "uid" : "b98b1a448de544db",
+        "uid" : "d99803c3b95ae13",
         "parentUid" : "d90bafc9a61a7e1a9ff3a55c287af28a",
         "status" : "failed",
         "time" : {
-          "start" : 1638113533945,
-          "stop" : 1638113534518,
-          "duration" : 573
+          "start" : 1639010256025,
+          "stop" : 1639010258028,
+          "duration" : 2003
         },
         "flaky" : false,
         "newFailed" : false,
@@ -87,13 +92,13 @@
       "name" : "Timed out retrying after 30000ms: Expected <h3.RUFdS> not to exist in the DOM, but it was continuously found.",
       "children" : [ {
         "name" : "check email has been verified",
-        "uid" : "817f85e2220f714b",
+        "uid" : "71dad40ab163c9c3",
         "parentUid" : "745d1a975582fd26d1e5b5b4a4d3becd",
         "status" : "failed",
         "time" : {
-          "start" : 1638113534563,
-          "stop" : 1638113569883,
-          "duration" : 35320
+          "start" : 1639010258074,
+          "stop" : 1639010294241,
+          "duration" : 36167
         },
         "flaky" : false,
         "newFailed" : false,
@@ -104,13 +109,13 @@
       "name" : "Timed out retrying after 30000ms: Expected to find element: `a[class=\"article-list-link\"]`, but never found it.",
       "children" : [ {
         "name" : "Checking static pages",
-        "uid" : "f7e1488884145715",
+        "uid" : "d30a53293745e642",
         "parentUid" : "a14d00f227f9f0e015dd045fa6f8725a",
         "status" : "failed",
         "time" : {
-          "start" : 1638113582936,
-          "stop" : 1638113640179,
-          "duration" : 57243
+          "start" : 1639010304678,
+          "stop" : 1639010366135,
+          "duration" : 61457
         },
         "flaky" : false,
         "newFailed" : false,
@@ -118,162 +123,42 @@
       } ],
       "uid" : "a14d00f227f9f0e015dd045fa6f8725a"
     }, {
-      "name" : "expected 'false' to equal 'true'",
-      "children" : [ {
-        "name" : "Send Reset Password Email",
-        "uid" : "a0fd8cf90df89d93",
-        "parentUid" : "71e1dc4245344bd0c86767ba388f7021",
-        "status" : "failed",
-        "time" : {
-          "start" : 1638113730924,
-          "stop" : 1638113748632,
-          "duration" : 17708
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Send Reset Password Email",
-        "uid" : "45bf8653ec777568",
-        "parentUid" : "71e1dc4245344bd0c86767ba388f7021",
-        "status" : "failed",
-        "time" : {
-          "start" : 1638113829339,
-          "stop" : 1638113847086,
-          "duration" : 17747
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "71e1dc4245344bd0c86767ba388f7021"
-    }, {
-      "name" : "expected 'Your account has been logged into.' to include 'Tumblr Password'",
-      "children" : [ {
-        "name" : "Check Reset Password Email",
-        "uid" : "a683298482ef2dd7",
-        "parentUid" : "71061683964c13507f948f0ed34b1267",
-        "status" : "failed",
-        "time" : {
-          "start" : 1638113756723,
-          "stop" : 1638113757574,
-          "duration" : 851
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Check Reset Password Email",
-        "uid" : "1d80c0c8ca91435b",
-        "parentUid" : "71061683964c13507f948f0ed34b1267",
-        "status" : "failed",
-        "time" : {
-          "start" : 1638113847205,
-          "stop" : 1638113848164,
-          "duration" : 959
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "71061683964c13507f948f0ed34b1267"
-    }, {
-      "name" : "`cy.visit()` must be called with a `url` or an `options` object containing a `url` as its 1st argument\n\nhttps://on.cypress.io/visit",
-      "children" : [ {
-        "name" : "Reset Password With Same Old Password",
-        "uid" : "7c4c2fd227ab747b",
-        "parentUid" : "a39813cf542923edf1fa8119821aba7a",
-        "status" : "failed",
-        "time" : {
-          "start" : 1638113757619,
-          "stop" : 1638113757722,
-          "duration" : 103
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Reset Password With Weak New Password",
-        "uid" : "9bd07af74fdfdff3",
-        "parentUid" : "a39813cf542923edf1fa8119821aba7a",
-        "status" : "failed",
-        "time" : {
-          "start" : 1638113757796,
-          "stop" : 1638113757830,
-          "duration" : 34
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Reset Password Doesn't Match Confirmation",
-        "uid" : "f552bbf532eb0364",
-        "parentUid" : "a39813cf542923edf1fa8119821aba7a",
-        "status" : "failed",
-        "time" : {
-          "start" : 1638113757842,
-          "stop" : 1638113757878,
-          "duration" : 36
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Reset Password With New Password",
-        "uid" : "cffa9a9c3c8d50ca",
-        "parentUid" : "a39813cf542923edf1fa8119821aba7a",
-        "status" : "failed",
-        "time" : {
-          "start" : 1638113757886,
-          "stop" : 1638113757925,
-          "duration" : 39
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "Reset Password With Old Password",
-        "uid" : "71d909560c5cf0fe",
-        "parentUid" : "a39813cf542923edf1fa8119821aba7a",
-        "status" : "failed",
-        "time" : {
-          "start" : 1638113848177,
-          "stop" : 1638113848254,
-          "duration" : 77
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "a39813cf542923edf1fa8119821aba7a"
-    }, {
-      "name" : "Timed out retrying after 30000ms: Expected to find content: 'Your email or password were incorrect.' but never did.",
-      "children" : [ {
-        "name" : "Log In With Old Password Again",
-        "uid" : "61e6cbb350e83859",
-        "parentUid" : "7731db639bf3996e0419b822186338f1",
-        "status" : "failed",
-        "time" : {
-          "start" : 1638113757935,
-          "stop" : 1638113793344,
-          "duration" : 35409
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "7731db639bf3996e0419b822186338f1"
-    }, {
       "name" : "Timed out retrying after 30000ms: Expected to find element: `div.j8ha0`, but never found it.",
       "children" : [ {
-        "name" : "Log In With New Password Again",
-        "uid" : "437aea8f90861ddd",
+        "name" : "Log In With Old Password",
+        "uid" : "92d6dc32d53fe2ff",
         "parentUid" : "4cdd20622526657cce16f859114748a5",
         "status" : "failed",
         "time" : {
-          "start" : 1638113793381,
-          "stop" : 1638113829294,
-          "duration" : 35913
+          "start" : 1639010433611,
+          "stop" : 1639010467922,
+          "duration" : 34311
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Log In With New Password Again",
+        "uid" : "ba2ec21facea64ad",
+        "parentUid" : "4cdd20622526657cce16f859114748a5",
+        "status" : "failed",
+        "time" : {
+          "start" : 1639010528763,
+          "stop" : 1639010562004,
+          "duration" : 33241
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Log In With Old Password Again",
+        "uid" : "b156aebd41827e55",
+        "parentUid" : "4cdd20622526657cce16f859114748a5",
+        "status" : "failed",
+        "time" : {
+          "start" : 1639010612052,
+          "stop" : 1639010645617,
+          "duration" : 33565
         },
         "flaky" : false,
         "newFailed" : false,
@@ -281,29 +166,158 @@
       } ],
       "uid" : "4cdd20622526657cce16f859114748a5"
     }, {
+      "name" : "expected 'false' to equal 'true'",
+      "children" : [ {
+        "name" : "Send Reset Password Email",
+        "uid" : "cc59ba2ad41305f3",
+        "parentUid" : "71e1dc4245344bd0c86767ba388f7021",
+        "status" : "failed",
+        "time" : {
+          "start" : 1639010468020,
+          "stop" : 1639010487633,
+          "duration" : 19613
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Send Reset Password Email",
+        "uid" : "eb8dc790626769b0",
+        "parentUid" : "71e1dc4245344bd0c86767ba388f7021",
+        "status" : "failed",
+        "time" : {
+          "start" : 1639010562035,
+          "stop" : 1639010581440,
+          "duration" : 19405
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "71e1dc4245344bd0c86767ba388f7021"
+    }, {
+      "name" : "`cy.then()` timed out after waiting `30000ms`.\n\nYour callback function returned a promise that never resolved.\n\nThe callback function was:\n\nmailslurp => mailslurp.waitForLatestEmail(password, 30000, false)\n\nhttps://on.cypress.io/then",
+      "children" : [ {
+        "name" : "Check Reset Password Email",
+        "uid" : "90643cf29b2eb53d",
+        "parentUid" : "d52ad31a6c5aa3b2fd9eaf136352d3b7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1639010493975,
+          "stop" : 1639010524184,
+          "duration" : 30209
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Check Reset Password Email",
+        "uid" : "687b497da576a210",
+        "parentUid" : "d52ad31a6c5aa3b2fd9eaf136352d3b7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1639010581563,
+          "stop" : 1639010611858,
+          "duration" : 30295
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d52ad31a6c5aa3b2fd9eaf136352d3b7"
+    }, {
+      "name" : "`cy.visit()` must be called with a `url` or an `options` object containing a `url` as its 1st argument\n\nhttps://on.cypress.io/visit",
+      "children" : [ {
+        "name" : "Reset Password With Same Old Password",
+        "uid" : "77608ece43dd48c5",
+        "parentUid" : "a39813cf542923edf1fa8119821aba7a",
+        "status" : "failed",
+        "time" : {
+          "start" : 1639010524210,
+          "stop" : 1639010524264,
+          "duration" : 54
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Reset Password With Weak New Password",
+        "uid" : "8ec99ee0cae5decd",
+        "parentUid" : "a39813cf542923edf1fa8119821aba7a",
+        "status" : "failed",
+        "time" : {
+          "start" : 1639010524326,
+          "stop" : 1639010524374,
+          "duration" : 48
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Reset Password Doesn't Match Confirmation",
+        "uid" : "4d2909bbf668ab01",
+        "parentUid" : "a39813cf542923edf1fa8119821aba7a",
+        "status" : "failed",
+        "time" : {
+          "start" : 1639010524385,
+          "stop" : 1639010524427,
+          "duration" : 42
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Reset Password With New Password",
+        "uid" : "df1db78d435d5e38",
+        "parentUid" : "a39813cf542923edf1fa8119821aba7a",
+        "status" : "failed",
+        "time" : {
+          "start" : 1639010524439,
+          "stop" : 1639010524488,
+          "duration" : 49
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Reset Password With Old Password",
+        "uid" : "cd083ae9f9a5b57c",
+        "parentUid" : "a39813cf542923edf1fa8119821aba7a",
+        "status" : "failed",
+        "time" : {
+          "start" : 1639010611939,
+          "stop" : 1639010612042,
+          "duration" : 103
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a39813cf542923edf1fa8119821aba7a"
+    }, {
       "name" : "Timed out retrying after 30000ms: Expected not to find content: 'Sign up' but continuously found it.",
       "children" : [ {
         "name" : "signup valid info but invalid age",
-        "uid" : "c81719029b7766a",
+        "uid" : "48fedd7cd6cdf3a9",
         "parentUid" : "8d906dfefb64affcdd21ee0ca8e1ec4e",
         "status" : "failed",
         "time" : {
-          "start" : 1638113900278,
-          "stop" : 1638113932866,
-          "duration" : 32588
+          "start" : 1639010682214,
+          "stop" : 1639010714784,
+          "duration" : 32570
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "signup valid info and age",
-        "uid" : "43140a1e40dbd0c3",
+        "uid" : "bf070dfc16b58b2d",
         "parentUid" : "8d906dfefb64affcdd21ee0ca8e1ec4e",
         "status" : "failed",
         "time" : {
-          "start" : 1638113932923,
-          "stop" : 1638113974664,
-          "duration" : 41741
+          "start" : 1639010714878,
+          "stop" : 1639010750914,
+          "duration" : 36036
         },
         "flaky" : false,
         "newFailed" : false,
@@ -311,16 +325,33 @@
       } ],
       "uid" : "8d906dfefb64affcdd21ee0ca8e1ec4e"
     }, {
+      "name" : "Timed out retrying after 30000ms: expected 'https://www.tumblr.com/login?redirect_to=%2Fdashboard' to not include 'login?redirect_to'",
+      "children" : [ {
+        "name" : "Visit Dashboard",
+        "uid" : "4565a6099513b7a8",
+        "parentUid" : "8bd0aae61a5627c6ba9859fb27ce25b7",
+        "status" : "failed",
+        "time" : {
+          "start" : 1639010787610,
+          "stop" : 1639010818930,
+          "duration" : 31320
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8bd0aae61a5627c6ba9859fb27ce25b7"
+    }, {
       "name" : "Timed out retrying after 30000ms: Too many elements found. Found '1', expected '0'.",
       "children" : [ {
         "name" : "sign in and access different blog",
-        "uid" : "45d886f50c6af298",
+        "uid" : "fd3ff357cd9c90b0",
         "parentUid" : "b2d13fca43a85d15474cb94f6a3a25b9",
         "status" : "failed",
         "time" : {
-          "start" : 1638114016825,
-          "stop" : 1638114072816,
-          "duration" : 55991
+          "start" : 1639010831602,
+          "stop" : 1639010883811,
+          "duration" : 52209
         },
         "flaky" : false,
         "newFailed" : false,
@@ -329,6 +360,5 @@
       "uid" : "b2d13fca43a85d15474cb94f6a3a25b9"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
-  } ],
-  "name" : "categories"
+  } ]
 }
