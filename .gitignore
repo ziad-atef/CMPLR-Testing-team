@@ -130,6 +130,8 @@ Mobile/test/fixtures/emails.json
 Mobile/allure-results
 Mobile/allure-report
 Mobile/NativeResults
+# Mobile/Native Report
+# Mobile/Flutter Report
 Mobile/FlutterResults
 Web/cypress.env.json
 Mobile/Flutter/fixtures/emails.json

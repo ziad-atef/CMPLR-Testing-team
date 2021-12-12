@@ -1,14 +1,17 @@
 const Login = require('../pageobjects/Login');
 const Signup = require('../pageobjects/Signup');
-// const Home = require('../pageobjects/Home');
+const Home = require('../pageobjects/Home');
 
 const {
     CreatePasswordDots,
-    stateAssertion
+    stateAssertion,
+    ScreenContains
 } = require('./utils');
 
 const LoginPOM = new Login();
 const SignupPOM = new Signup();
+const HomePOM = new Home();
+
 // const HomePOM = new Home();
 
 module.exports.LoginWithEmail = async () => {
@@ -20,7 +23,7 @@ module.exports.LoginWithEmail = async () => {
     await driver.elementClick(LoginWithEmailButton);
 }
 module.exports.EnterEmail = async (inputEmail = '') => {
-    inputEmail = inputEmail === '' ? 'email' : inputEmail;
+    // inputEmail = inputEmail === '' ? 'email' : inputEmail;
 
     let EmailField = LoginPOM.emailFieldPOM();
     let ContinueButton = LoginPOM.ContinueButtonPOM();
@@ -34,16 +37,16 @@ module.exports.EnterEmail = async (inputEmail = '') => {
     ContinueButton = LoginPOM.EnterPasswordButtonPOM();
     let EmailClear = LoginPOM.email2FieldClearPOM();
 
-     email = await driver.getElementText(EmailField);
+    email = await driver.getElementText(EmailField);
     expect(email).toBe(inputEmail);
     await driver.elementClick(ContinueButton);
 }
 module.exports.EnterPassword = async (inputEmail = '', inputPassword = '') => {
-    inputEmail = inputEmail === '' ? 'email' : inputEmail;
-    inputPassword = inputPassword === '' ? 'password' : inputPassword;
+    // inputEmail = inputEmail === '' ? 'email' : inputEmail;
+    // inputPassword = inputPassword === '' ? 'password' : inputPassword;
 
-    let EmailField =  LoginPOM.email3FieldPOM();
-    let PasswordField =  LoginPOM.passwordFieldPOM();
+    let EmailField = LoginPOM.email3FieldPOM();
+    let PasswordField = LoginPOM.passwordFieldPOM();
     let EmailClear = LoginPOM.email3FieldClearPOM();
     let PasswordShow = LoginPOM.showPasswordButtonPOM();
 
@@ -55,31 +58,24 @@ module.exports.EnterPassword = async (inputEmail = '', inputPassword = '') => {
     await driver.elementClick(PasswordShow);
     await driver.elementClick(PasswordShow);
     await driver.elementClick(PasswordShow);
-    
+
     let password = await driver.getElementText(PasswordField);
     expect(password).toBe(inputPassword);
     // expect(password).not.toBe(inputPassword);
 }
-// module.exports.ShowPassword = async (inputPassword = '') => {
-//     inputPassword = inputPassword === '' ? 'password' : inputPassword;
-//     const showPasswordCheckBox = await LoginPOM.showPasswordCheckBoxPOM();
-//     await stateAssertion(showPasswordCheckBox);
-//     const PasswordField = await LoginPOM.passwordFieldPOM();
+module.exports.EmptyEmailPasswordAssertion = async (email, password) => {
+    const emailText = await driver.getElementText(LoginPOM.email3FieldPOM());
+    const passwordText = await driver.getElementText(LoginPOM.passwordFieldPOM());
 
-//     await showPasswordCheckBox.click();
-//     password = await PasswordField.getText();
-//     expect(password).not.toBe(CreatePasswordDots(password));
-//     expect(password).toBe(inputPassword);
-// }
-// module.exports.Log = async () => {
-//     const LogButton = await LoginPOM.logButtonPOM();
-//     await stateAssertion(LogButton);
-//     await LogButton.click();
-// }
-// module.exports.SuccessfulLog = async () => {
-//     await stateAssertion(await HomePOM.WritePostButton());
-//     await stateAssertion(await HomePOM.HomeScreenButton());
-//     await stateAssertion(await HomePOM.SearchScreenButton());
-//     await stateAssertion(await HomePOM.MessageScreenButton());
-//     await stateAssertion(await HomePOM.ProfileScreenButton());
-// }
+    expect(emailText.toString()).toBe(email);
+    expect(passwordText.toString()).toBe(password);
+}
+module.exports.SuccessLoginAssertion = async (email, password) => {
+    await driver.elementClick(HomePOM.HomeScreenButton());
+
+    await driver.elementClick(HomePOM.SearchScreenButton());
+
+    await driver.elementClick(HomePOM.MessageScreenButton());
+
+    await driver.elementClick(HomePOM.ProfileScreenButton());
+}
