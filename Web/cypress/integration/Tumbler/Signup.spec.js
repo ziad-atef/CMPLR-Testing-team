@@ -2,17 +2,20 @@ import Signup from "../../Page Objects/signup";
 
 let SignupPOM;
 let email;
-let takenEmail = "sfd@gmail.com"
+let takenEmail = "testEmail@gmail.com";
+let takenBlogName = "testBlog";
 let password;
 let blogName;
 let inbox;
 
-const emptyEmailMessage = "You forgot to enter your email!";
-const emptyPasswordMessage = "You forgot to enter your password!";
-const emptyBlogNameMessage = "You forgot to enter your blog name!";
-const emptyEmailPasswordAndBlogNameMessage = "You do have to fill this stuff out, you know.";
-const takenEmailMessage = "This email address is already in use.";
-const invalidEmailMessage = "That's not a valid email address. Please try again.";
+const emptyEmailMessage = "Email is required";
+const emptyPasswordMessage = "Password must contain at least 8 char";
+const emptyBlogNameMessage = "Blog name is required";
+const emptyEmailPasswordAndBlogNameMessage = "Email is required";
+const takenEmailMessage = "The email has already been taken.";
+const invalidEmailMessage = "The email must be a valid email address.";
+const invalidPasswordMessage = "Password must contain at least 8 char";
+const takenBlogNameMessage = "The blog name has already been taken.";
 
 const fillSignupData = function(email, password, blogName) {
     if (email === '')
@@ -33,11 +36,11 @@ const fillSignupData = function(email, password, blogName) {
     SignupPOM.signupButtoninside().click();
 }
 
-const ageEntry = (age) =>{
-    SignupPOM.ageField().type(age);
+const ageEntry = function (age) {
+    SignupPOM.ageField().type(age,{ force: true });
     SignupPOM.ageButton().click({ force: true });
 
-    if(age<13){
+    if(age<16 || age>120){
         ageFail();
     }
     else{
@@ -48,19 +51,18 @@ const ageEntry = (age) =>{
 const failAssertions = (failMessage) =>{
 
     cy.contains(failMessage);
-    cy.url().should("include", "register?source=login_register_center")
+    cy.url().should("include", "register")
 }
 
 const successAssertions = () =>{
 
-    cy.contains("Sign up").should("not.exist");
     SignupPOM.ageField().should("be.enabled").and("be.visible");
-    SignupPOM.ageButton().should("be.enabled").and("be.visible");
+    SignupPOM.ageButton().and("be.visible");
+
 }
 
 const ageFail = () =>{
-    cy.contains("Sorry");
-    cy.contains("We could not complete your registration at this time");
+    cy.contains("Age must be between 16-120");
 }
 
 const ageSucess = () =>{
@@ -74,7 +76,7 @@ describe('Signup', () => {
             first you have to pass the url of the website, or the page you want
             to start your test with, you want to test
         */
-        cy.visit('https://www.tumblr.com/');
+        cy.visit('/');
 
         /*
             POM refers to Page Object Model so we wrap all the Doms we will
@@ -184,7 +186,25 @@ describe('Signup', () => {
         failAssertions(invalidEmailMessage);
     });
 
-    describe('Signup', () => {
+    it('signup invalid password', () => {
+
+        SignupPOM.signupButton().click({ force: true });
+
+        fillSignupData(email, "1234", blogName);
+
+        failAssertions(invalidPasswordMessage);
+    });
+
+    it('signup taken blog name', () => {
+
+        SignupPOM.signupButton().click({ force: true });
+
+        fillSignupData(email, password, takenBlogName);
+
+        failAssertions(takenBlogNameMessage);
+    });
+
+    describe('Signup2', () => {
         before(function () {
             return cy.mailslurp()
                 .then(mailslurp => mailslurp.createInbox())
@@ -210,13 +230,11 @@ describe('Signup', () => {
 
             SignupPOM.signupButton().click({ force: true });
 
-            fillSignupData(email, password, blogName);
+            fillSignupData(this.newEmailAddress, password, this.newInboxId);
 
             successAssertions();
 
             ageEntry(18);
-
-            cy.get('button[class = "onboarding-skip-button"]').click({ force: true });
         });
     });
 });

@@ -58,8 +58,4 @@ module.exports = class Login {
         return returnPOM(selector);
     }
     
-    async signupErrorPOM() {
-        const selector = await 'new UiSelector().resourceId("com.cmp.cmplr:id/error_text_signup")';
-        return returnPOM(selector);
-    }
 }
