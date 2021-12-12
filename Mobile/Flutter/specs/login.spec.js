@@ -8,7 +8,9 @@ const {
 const {
     LoginWithEmail,
     EnterEmail,
-    EnterPassword
+    EnterPassword,
+    EmptyEmailPasswordAssertion,
+    SuccessLoginAssertion
 } = require('../utils/utilsLogin');
 const {
     byText
@@ -20,8 +22,9 @@ const SignupPOM = new Signup();
 
 describe('Login', () => {
     // const InvalidLoginMessage = 'please enter a valid email';
-    const InvalidLoginMessage = 'UnAuthorized';
-    const IncorrectLoginMessage = 'invalid email or password, try again or press on forgot my password';
+    const InvalidLoginMessage = 'UnAuthorized\n';
+    const InvalidEmailMessage = 'Invalid Email\n';
+    const IncorrectLoginMessage = 'email or password is not valid\n';
     beforeEach(async () => {
         await driver.switchContext('FLUTTER');
     });
@@ -29,21 +32,8 @@ describe('Login', () => {
     afterEach(async () => {
         await driver.reset();
     });
+    
 
-    it.only('Login With Not Registered Email', async () => {
-        const fakeEmail = faker.internet.email();
-        await LoginWithEmail();
-
-        await EnterEmail(fakeEmail);
-
-        await EnterPassword(fakeEmail, emails.password);
-
-        await driver.elementClick(LoginPOM.logButtonPOM());
-        
-        const errorMessage = await driver.getElementText(ScreenContains('Log in'));
-        console.log(errorMessage);
-        expect(errorMessage.toString()).toBe(InvalidLoginMessage);
-    });
 
     it('Login With Wrong Password', async () => {
         const fakePassword = faker.internet.password();
@@ -56,9 +46,9 @@ describe('Login', () => {
         await driver.elementClick(LoginPOM.logButtonPOM());
 
 
-        const errorMessage = await driver.getElementText(byText(InvalidLoginMessage))
-        console.log(errorMessage)
-        expect(errorMessage.toString()).toBe(InvalidLoginMessage);
+        const errorMessage = await driver.getElementText(ScreenContains(IncorrectLoginMessage));
+        console.log(errorMessage);
+        expect(errorMessage.toString()).toBe(IncorrectLoginMessage);
     });
 
     it('Login With Empty Password', async () => {
@@ -70,9 +60,8 @@ describe('Login', () => {
 
         await driver.elementClick(LoginPOM.logButtonPOM());
 
-        const errorMessage = await driver.getElementText(byText(IncorrectLoginMessage))
-        console.log(errorMessage)
-        expect(errorMessage.toString()).toBe(IncorrectLoginMessage);
+
+        await EmptyEmailPasswordAssertion(emails.email, '');
     });
 
 
@@ -81,26 +70,114 @@ describe('Login', () => {
 
         await EnterEmail('');
 
-        // await EnterPassword('', fakePassword);
 
-        // await driver.elementClick(LoginPOM.logButtonPOM());
-
-
-        const errorMessage = await driver.getElementText(byText(IncorrectLoginMessage))
-        console.log(errorMessage)
-        expect(errorMessage.toString()).toBe(IncorrectLoginMessage);
+        const emailText = await driver.getElementText(LoginPOM.email2FieldPOM());
+        expect(emailText.toString()).toBe('');
     });
 
-    it('Successful Login', async () => {
+    it('Login With Empty Email In Email Password View', async () => {
         const fakePassword = faker.internet.password();
         await LoginWithEmail();
 
-        await EnterEmail(fakeEmail);
+        await EnterEmail('to be removed');
 
-        await EnterPassword(emails.email, fakePassword);
+        await EnterPassword('to be removed', fakePassword);
+
+        await driver.elementClick(LoginPOM.email3FieldClearPOM());
+
+        await EmptyEmailPasswordAssertion('', fakePassword);
+    });
+
+    it('Login With Empty Email and Password In Email Password View', async () => {
+        await LoginWithEmail();
+
+        await EnterEmail('to be removed');
+
+
+        await driver.elementClick(LoginPOM.email3FieldClearPOM());
+
+        await EmptyEmailPasswordAssertion('', '');
+    });
+
+    it('Login With Spaced Email', async () => {
+        await LoginWithEmail();
+
+        await EnterEmail(emails.spacedEmail);
+
+        await EnterPassword(emails.spacedEmail, emails.password);
 
         await driver.elementClick(LoginPOM.logButtonPOM());
 
-        ScreenContains(InvalidLoginMessage);
+        const errorMessage = await driver.getElementText(ScreenContains(InvalidEmailMessage));
+        console.log(errorMessage);
+        expect(errorMessage.toString()).toBe(InvalidEmailMessage);
+    });
+
+    it('Login With Invalid Email (1)', async () => {
+        await LoginWithEmail();
+
+        await EnterEmail('TEST.EMAIL');
+
+        await EnterPassword('TEST.EMAIL', emails.password);
+
+        await driver.elementClick(LoginPOM.logButtonPOM());
+
+        const errorMessage = await driver.getElementText(ScreenContains(InvalidEmailMessage));
+        console.log(errorMessage);
+        expect(errorMessage.toString()).toBe(InvalidEmailMessage);
+    });
+
+    it('Login With Invalid Email (2)', async () => {
+        await LoginWithEmail();
+
+        await EnterEmail('TEST.EMAIL@gmail');
+
+        await EnterPassword('TEST.EMAIL@gmail', emails.password);
+
+        await driver.elementClick(LoginPOM.logButtonPOM());
+
+        const errorMessage = await driver.getElementText(ScreenContains(InvalidEmailMessage));
+        console.log(errorMessage);
+        expect(errorMessage.toString()).toBe(InvalidEmailMessage);
+    });
+
+    it('Login With Invalid Email (3)', async () => {
+        await LoginWithEmail();
+
+        await EnterEmail('TEST.EMAIL.com');
+
+        await EnterPassword('TEST.EMAIL.com', emails.password);
+
+        await driver.elementClick(LoginPOM.logButtonPOM());
+
+        const errorMessage = await driver.getElementText(ScreenContains(InvalidEmailMessage));
+        console.log(errorMessage);
+        expect(errorMessage.toString()).toBe(InvalidEmailMessage);
+    });
+
+    it('Login With Semi Spaced Email', async () => {
+        await LoginWithEmail();
+
+        await EnterEmail(emails.semiSpacedEmail);
+
+        await EnterPassword(emails.semiSpacedEmail, emails.password);
+
+        await driver.elementClick(LoginPOM.logButtonPOM());
+
+        const errorMessage = await driver.getElementText(ScreenContains(InvalidEmailMessage));
+        console.log(errorMessage);
+        expect(errorMessage.toString()).toBe(InvalidEmailMessage);
+    });
+
+    it('Successful Login', async () => {
+        await LoginWithEmail();
+
+        await EnterEmail(emails.email);
+
+        await EnterPassword(emails.email, emails.password);
+
+        await driver.elementClick(LoginPOM.logButtonPOM());
+
+        await SuccessLoginAssertion();
     });
 });

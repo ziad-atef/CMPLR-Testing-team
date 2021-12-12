@@ -1,0 +1,111 @@
+[ {
+  "uid" : "6576fe33271cbe12",
+  "name" : "Login With Invalid Email (3)",
+  "time" : {
+    "start" : 1639259914288,
+    "stop" : 1639259944032,
+    "duration" : 29744
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9e5e02c77c939ca0",
+  "name" : "Login With Semi Spaced Email",
+  "time" : {
+    "start" : 1639259944032,
+    "stop" : 1639259995279,
+    "duration" : 51247
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5055d0428cb6a4cc",
+  "name" : "Login With Spaced Email",
+  "time" : {
+    "start" : 1639259812164,
+    "stop" : 1639259847098,
+    "duration" : 34934
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "af9feca7ba69c0c5",
+  "name" : "Login With Invalid Email (1)",
+  "time" : {
+    "start" : 1639259847098,
+    "stop" : 1639259876656,
+    "duration" : 29558
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "dafc3867bedeecb9",
+  "name" : "Login With Invalid Email (2)",
+  "time" : {
+    "start" : 1639259876656,
+    "stop" : 1639259914288,
+    "duration" : 37632
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cecbd77b49190038",
+  "name" : "Login With Empty Password",
+  "time" : {
+    "start" : 1639259688973,
+    "stop" : 1639259728569,
+    "duration" : 39596
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2cf6d5038d93b207",
+  "name" : "Login With Empty Email In Email Password View",
+  "time" : {
+    "start" : 1639259752843,
+    "stop" : 1639259782662,
+    "duration" : 29819
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9f3c6f01a4906af4",
+  "name" : "Login With Wrong Password",
+  "time" : {
+    "start" : 1639259653268,
+    "stop" : 1639259688973,
+    "duration" : 35705
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5609752cc30ea0a9",
+  "name" : "Login With Empty Email",
+  "time" : {
+    "start" : 1639259728569,
+    "stop" : 1639259752843,
+    "duration" : 24274
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e24f12e18c147a6e",
+  "name" : "Login With Empty Email and Password In Email Password View",
+  "time" : {
+    "start" : 1639259782662,
+    "stop" : 1639259812164,
+    "duration" : 29502
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b3d2a19ab0b6b0a5",
+  "name" : "Successful Login",
+  "time" : {
+    "start" : 1639259995280,
+    "stop" : 1639260039330,
+    "duration" : 44050
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

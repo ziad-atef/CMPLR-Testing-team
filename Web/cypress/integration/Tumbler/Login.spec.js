@@ -147,7 +147,7 @@ describe('Logging In With App Bar Button', () => {
         cy.login(LoginPOM, semiSpacedEmail, password, false, InvalidEmailMessage);
     });
 
-    it('Login With Registerd Invalid Email', () => {
+    it('Login With Registered Invalid Email', () => {
         pressAppBarLoginButton();
         cy.login(LoginPOM, email.slice(0, 19), password, false, InvalidEmailMessage);
     });

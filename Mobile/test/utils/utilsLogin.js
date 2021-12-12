@@ -25,23 +25,23 @@ module.exports.LoginWithEmail = async () => {
     await LoginWithEmailButton.click();
 }
 module.exports.EnterEmailAndPassword = async (inputEmail = '', inputPassword = '') => {
-    inputEmail = inputEmail === ''? 'email':inputEmail;
-    inputPassword = inputPassword === ''? 'password':inputPassword;
+    // inputEmail = inputEmail === ''? 'email':inputEmail;
+    // inputPassword = inputPassword === ''? 'password':inputPassword;
     const EmailField = await LoginPOM.emailFieldPOM();
     await stateAssertion(EmailField);
     await EmailField.addValue(inputEmail);
     const email = await EmailField.getText();
-    expect(email).toBe(inputEmail);
+    expect(email).toBe(inputEmail === '' ? 'email' : inputEmail);
 
     const PasswordField = await LoginPOM.passwordFieldPOM();
     await stateAssertion(PasswordField);
     await PasswordField.addValue(inputPassword);
     const password = await PasswordField.getText();
-    expect(password).toBe(CreatePasswordDots(password));
+    expect(password).toBe(inputPassword === '' ? 'password' : CreatePasswordDots(password));
     expect(password).not.toBe(inputPassword);
 }
 module.exports.ShowPassword = async (inputPassword = '') => {
-    inputPassword = inputPassword === ''? 'password':inputPassword;
+    // inputPassword = inputPassword === ''? 'password':inputPassword;
     const showPasswordCheckBox = await LoginPOM.showPasswordCheckBoxPOM();
     await stateAssertion(showPasswordCheckBox);
     const PasswordField = await LoginPOM.passwordFieldPOM();
@@ -49,7 +49,7 @@ module.exports.ShowPassword = async (inputPassword = '') => {
     await showPasswordCheckBox.click();
     password = await PasswordField.getText();
     expect(password).not.toBe(CreatePasswordDots(password));
-    expect(password).toBe(inputPassword);
+    expect(password).toBe(inputPassword === '' ? 'password' : inputPassword);
 }
 module.exports.Log = async () => {
     const LogButton = await LoginPOM.logButtonPOM();
@@ -62,4 +62,16 @@ module.exports.SuccessfulLog = async () => {
     await stateAssertion(await HomePOM.SearchScreenButton());
     await stateAssertion(await HomePOM.MessageScreenButton());
     await stateAssertion(await HomePOM.ProfileScreenButton());
+}
+module.exports.AssertEmailOrPasswordEmpty = async () => {
+    stateAssertion(await LoginPOM.emailFieldPOM());
+    stateAssertion(await LoginPOM.passwordFieldPOM());
+    const ErrorMessage = await LoginPOM.errorMessagePOM();
+    const errorMessage = await ErrorMessage.getText();
+    expect(errorMessage).toBe('');
+}
+module.exports.AssertErrorMessage = async (message) => {
+    const ErrorMessage = await LoginPOM.errorMessagePOM();
+    const errorMessage = await ErrorMessage.getText();
+    expect(errorMessage).toBe(message);
 }

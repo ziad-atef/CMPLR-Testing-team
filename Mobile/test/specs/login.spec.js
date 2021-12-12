@@ -5,20 +5,27 @@ const {
     EnterEmailAndPassword,
     ShowPassword,
     Log,
-    SuccessfulLog
+    SuccessfulLog,
+    AssertEmailOrPasswordEmpty,
+    AssertErrorMessage
 } = require('../utils/utilsLogin');
 const {
     CreatePasswordDots,
-    stateAssertion
+    stateAssertion,
+    ScreenContains
 } = require('../utils/utils');
 const faker = require('faker/locale/en');
 
 const LoginPOM = new Login();
 
 describe('Login', () => {
-    const InvalidLoginMessage = '∘ Please enter a valid email\n';
-    const IncorrectLoginMessage = '∘ invalid email or password, try again or press on forgot my password';
-    const EmptyPasswordMessage = '∘ please enter a password';
+
+    const emptyEmailMessage = "please enter your email";
+    const emptyPasswordMessage = "please enter your password";
+    const InvalidEmailMessage = "The email must be a valid email address.";
+    const InvalidLoginMessage = "Either your login email or password is incorrect";
+    const IncorrectLoginMessage = 'invalid email or password, try again or press on forgot my password';
+
     afterEach(async () => {
         await driver.reset();
     });
@@ -32,9 +39,20 @@ describe('Login', () => {
 
         await Log();
 
-        const ErrorMessage = await LoginPOM.errorMessagePOM();
-        const errorMessage = await ErrorMessage.getText();
-        expect(errorMessage).toBe(InvalidLoginMessage);
+        await AssertErrorMessage(InvalidLoginMessage);
+
+    });
+
+    it('Login With Invaild Email (2)', async () => {
+        await LoginWithEmail();
+
+        await EnterEmailAndPassword(emails.email.slice(0, 19), emails.password);
+
+        await ShowPassword(emails.password);
+
+        await Log();
+
+        await AssertEmailOrPasswordEmpty();
 
     });
 
@@ -48,12 +66,11 @@ describe('Login', () => {
 
         await Log();
 
-        const ErrorMessage = await LoginPOM.errorMessagePOM();
-        const errorMessage = await ErrorMessage.getText();
-        expect(errorMessage).toBe(IncorrectLoginMessage);
+        
+        await AssertErrorMessage(InvalidLoginMessage);
     });
 
-    it.only('Login With Empty Password', async () => {
+    it('Login With Empty Password', async () => {
         await LoginWithEmail();
 
         await EnterEmailAndPassword(emails.email, '');
@@ -62,9 +79,7 @@ describe('Login', () => {
 
         await Log();
 
-        const ErrorMessage = await LoginPOM.errorMessagePOM();
-        const errorMessage = await ErrorMessage.getText();
-        expect(errorMessage).toBe(EmptyPasswordMessage);
+        await AssertEmailOrPasswordEmpty();
     });
 
 
@@ -77,13 +92,47 @@ describe('Login', () => {
 
         await Log();
 
-        const ErrorMessage = await LoginPOM.errorMessagePOM();
-        const errorMessage = await ErrorMessage.getText();
-        expect(errorMessage).toBe(InvalidLoginMessage);
+        await AssertEmailOrPasswordEmpty();
+    });
+
+    it('Login With Empty Email And Password', async () => {
+        await LoginWithEmail();
+
+        await EnterEmailAndPassword('', '');
+
+        await ShowPassword();
+
+        await Log();
+
+        await AssertEmailOrPasswordEmpty();
+    });
+
+    it('Login With Spaced Email  Should Error Message', async () => {
+        await LoginWithEmail();
+
+        await EnterEmailAndPassword(emails.spacedEmail, emails.password);
+
+        await ShowPassword(emails.password);
+
+        await Log();
+
+        await AssertEmailOrPasswordEmpty();
+    });
+
+    it('Login With Semi Spaced Email Should Error Message', async () => {
+        await LoginWithEmail();
+
+        await EnterEmailAndPassword(emails.semiSpacedEmail, emails.password);
+
+        await ShowPassword(emails.password);
+
+        await Log();
+
+        await AssertEmailOrPasswordEmpty();
     });
 
 
-    it('Display Password Before Typing it', async () => {
+    it.only('Display Password Before Typing it', async () => {
         await LoginWithEmail();
 
         const EmailField = await LoginPOM.emailFieldPOM();
@@ -116,7 +165,7 @@ describe('Login', () => {
         await SuccessfulLog();
     });
 
-    it('Successful Login', async () => {
+    it.only('Successful Login', async () => {
         await LoginWithEmail();
 
         await EnterEmailAndPassword(emails.email, emails.password);
