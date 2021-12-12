@@ -1,179 +1,115 @@
 const Login = require('../pageobjects/Login');
+const Signup = require('../pageobjects/Signup');
 const emails = require('../fixtures/emails.json');
 const {
-    LoginWithEmail,
-    EnterEmailAndPassword,
-    ShowPassword,
-    Log,
-    SuccessfulLog,
-    AssertEmailOrPasswordEmpty,
-    AssertErrorMessage
-} = require('../utils/utilsLogin');
-const {
-    CreatePasswordDots,
-    stateAssertion,
-    ScreenContains
+    CreatePasswordDots
 } = require('../utils/utils');
-const faker = require('faker/locale/en');
-
-const LoginPOM = new Login();
 
 describe('Login', () => {
-
-    const emptyEmailMessage = "please enter your email";
-    const emptyPasswordMessage = "please enter your password";
-    const InvalidEmailMessage = "The email must be a valid email address.";
-    const InvalidLoginMessage = "Either your login email or password is incorrect";
+    const LoginPOM = new Login();
+    const SignupPOM = new Signup();
+    const InvalidLoginMessage = 'please enter a valid email';
     const IncorrectLoginMessage = 'invalid email or password, try again or press on forgot my password';
-
     afterEach(async () => {
         await driver.reset();
     });
 
-    it('Login With Invaild Email', async () => {
-        await LoginWithEmail();
+    it('Login With Not Registered Email', async () => {
+        const LoginButton = await LoginPOM.loginButtonPOM();
 
-        await EnterEmailAndPassword(faker.internet.email(), emails.password);
+        const SignupButton = await SignupPOM.signupButtonPOM();
 
-        await ShowPassword(emails.password);
+        await LoginButton.click();
 
-        await Log();
+        const LoginWithEmailButton = await LoginPOM.loginWithEmailButtonPOM();
+        await LoginWithEmailButton.click();
 
-        await AssertErrorMessage(InvalidLoginMessage);
 
-    });
+        const EmailField = await LoginPOM.emailFieldPOM();
+        await EmailField.addValue(emails.notRegisteredEmail);
+        const email = await EmailField.getText();
+        expect(email).toBe(emails.notRegisteredEmail);
 
-    it('Login With Invaild Email (2)', async () => {
-        await LoginWithEmail();
+        const PasswordField = await LoginPOM.passwordFieldPOM();
+        await PasswordField.addValue(emails.password);
+        const password = await PasswordField.getText();
+        expect(password).toBe(CreatePasswordDots(password));
+        expect(password).not.toBe(emails.password);
 
-        await EnterEmailAndPassword(emails.email.slice(0, 19), emails.password);
+        const LogButton = await LoginPOM.logButtonPOM();
+        await LogButton.click();
 
-        await ShowPassword(emails.password);
-
-        await Log();
-
-        await AssertEmailOrPasswordEmpty();
+        const ErrorMessage = await LoginPOM.errorMessagePOM();
+        const errorMessage = await ErrorMessage.getText();
+        expect(errorMessage).toBe(InvalidLoginMessage);
 
     });
 
     it('Login With Wrong Password', async () => {
-        const randomPassword = faker.internet.password();
-        await LoginWithEmail();
+        const LoginButton = await LoginPOM.loginButtonPOM();
 
-        await EnterEmailAndPassword(emails.email, randomPassword);
+        const SignupButton = await SignupPOM.signupButtonPOM();
 
-        await ShowPassword(randomPassword);
+        await LoginButton.click();
 
-        await Log();
+        const LoginWithEmailButton = await LoginPOM.loginWithEmailButtonPOM();
+        await LoginWithEmailButton.click();
 
-        
-        await AssertErrorMessage(InvalidLoginMessage);
-    });
-
-    it('Login With Empty Password', async () => {
-        await LoginWithEmail();
-
-        await EnterEmailAndPassword(emails.email, '');
-
-        await ShowPassword('');
-
-        await Log();
-
-        await AssertEmailOrPasswordEmpty();
-    });
-
-
-    it('Login With Empty Email', async () => {
-        await LoginWithEmail();
-
-        await EnterEmailAndPassword('', emails.password);
-
-        await ShowPassword(emails.password);
-
-        await Log();
-
-        await AssertEmailOrPasswordEmpty();
-    });
-
-    it('Login With Empty Email And Password', async () => {
-        await LoginWithEmail();
-
-        await EnterEmailAndPassword('', '');
-
-        await ShowPassword();
-
-        await Log();
-
-        await AssertEmailOrPasswordEmpty();
-    });
-
-    it('Login With Spaced Email  Should Error Message', async () => {
-        await LoginWithEmail();
-
-        await EnterEmailAndPassword(emails.spacedEmail, emails.password);
-
-        await ShowPassword(emails.password);
-
-        await Log();
-
-        await AssertEmailOrPasswordEmpty();
-    });
-
-    it('Login With Semi Spaced Email Should Error Message', async () => {
-        await LoginWithEmail();
-
-        await EnterEmailAndPassword(emails.semiSpacedEmail, emails.password);
-
-        await ShowPassword(emails.password);
-
-        await Log();
-
-        await AssertEmailOrPasswordEmpty();
-    });
-
-
-    it.only('Display Password Before Typing it', async () => {
-        await LoginWithEmail();
 
         const EmailField = await LoginPOM.emailFieldPOM();
-        await stateAssertion(EmailField);
-        const PasswordField = await LoginPOM.passwordFieldPOM();
-        await stateAssertion(PasswordField);
-        const showPasswordCheckBox = await LoginPOM.showPasswordCheckBoxPOM();
-        await stateAssertion(showPasswordCheckBox);
-
         await EmailField.addValue(emails.email);
         const email = await EmailField.getText();
         expect(email).toBe(emails.email);
 
-        await showPasswordCheckBox.click();
-
-        await PasswordField.addValue(emails.password);
-
+        const PasswordField = await LoginPOM.passwordFieldPOM();
+        await PasswordField.addValue(emails.wrongPassword);
         let password = await PasswordField.getText();
-        expect(password).toBe(emails.password);
-        expect(password).not.toBe(CreatePasswordDots(password));
+        expect(password).toBe(CreatePasswordDots(password));
+        expect(password).not.toBe(emails.wrongPassword);
 
+        const showPasswordCheckBox = await LoginPOM.showPasswordCheckBoxPOM();
         await showPasswordCheckBox.click();
-
         password = await PasswordField.getText();
+        expect(password).not.toBe(CreatePasswordDots(password));
+        expect(password).toBe(emails.wrongPassword);
+
+        const LogButton = await LoginPOM.logButtonPOM();
+        await LogButton.click();
+
+        const ErrorMessage = await LoginPOM.errorMessagePOM();
+        const errorMessage = await ErrorMessage.getText();
+        expect(errorMessage).toBe(IncorrectLoginMessage);
+    });
+
+    it('Successful Login', async () => {
+        const LoginButton = await LoginPOM.loginButtonPOM();
+
+        const SignupButton = await SignupPOM.signupButtonPOM();
+
+        await LoginButton.click();
+
+        const LoginWithEmailButton = await LoginPOM.loginWithEmailButtonPOM();
+        await LoginWithEmailButton.click();
+
+
+        const EmailField = await LoginPOM.emailFieldPOM();
+        await EmailField.addValue(emails.email);
+        const email = await EmailField.getText();
+        expect(email).toBe(emails.email);
+
+        const PasswordField = await LoginPOM.passwordFieldPOM();
+        await PasswordField.addValue(emails.password);
+        let password = await PasswordField.getText();
         expect(password).toBe(CreatePasswordDots(password));
         expect(password).not.toBe(emails.password);
 
-        await Log();
+        const showPasswordCheckBox = await LoginPOM.showPasswordCheckBoxPOM();
+        await showPasswordCheckBox.click();
+        password = await PasswordField.getText();
+        expect(password).not.toBe(CreatePasswordDots(password));
+        expect(password).toBe(emails.password);
 
-        await SuccessfulLog();
-    });
-
-    it.only('Successful Login', async () => {
-        await LoginWithEmail();
-
-        await EnterEmailAndPassword(emails.email, emails.password);
-
-        await ShowPassword(emails.password);
-
-        await Log();
-
-        await SuccessfulLog();
+        const LogButton = await LoginPOM.logButtonPOM();
+        await LogButton.click();
     });
 });
