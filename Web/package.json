@@ -4,14 +4,7 @@
   "description": "Testing CMPLR Website",
   "main": "index.js",
   "scripts": {
-    "clean:reports": "rmdir /S /Q allure-results",
-    "pretest": "npm run clean:reports",
-    "scripts": "cypress run",
-    "combine-reports": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/mochareports/report.json",
-    "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
-    "posttest": "npm run combine-reports && npm run generate-report",
-    "test-mochawesome-report": "npm run scripts || npm run posttest",
-    "test-report": "npm run pretest && npx cypress run --env allure=true",
+    "test-report": "rm -r /S /Q allure-results || npx cypress run --env allure=true || allure generate allure-results --clean && allure open",
     "allure-report": "allure generate allure-results --clean",
     "test": "npx cypress open"
   },
@@ -28,7 +21,7 @@
   "license": "ISC",
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.22.0",
-    "cypress": "^9.0.0",
+    "cypress": "9.0.0",
     "cypress-dotenv": "^2.0.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-localstorage-commands": "^1.6.1",

@@ -120,12 +120,13 @@ cypress/fixtures/userLoginData.json
 cypress/fixtures/userSignupData.json
 
 #cypress reports and videos
-web/cypress/reports
-web/allure-results
-web/cypress/videos
-web/reports
-web/cypress/screenshots
+Web/cypress/reports
+Web/cypress/videos
+Web/cypress.env.json
+# Web/allure-report
+Web/cypress/screenshots
 Web/cypress/fixtures/PersonalData.json
+Web/allure-results
 Mobile/test/fixtures/emails.json
 Mobile/allure-results
 Mobile/allure-report
@@ -133,6 +134,6 @@ Mobile/NativeResults
 # Mobile/Native Report
 # Mobile/Flutter Report
 Mobile/FlutterResults
-Web/cypress.env.json
 Mobile/Flutter/fixtures/emails.json
 Mobile/index.js
+Web/target
