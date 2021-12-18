@@ -5,7 +5,7 @@ import {
 describe('User Authorizations', () => {
     before(() => {
         cy.fixture('PersonalData').then((user) => {
-            cy.authorize(user.email, user.password);
+            cy.authenticate(user.email, user.password);
             cy.visit("http://13.68.206.72/dashboard");
         });
         cy.url().should('not.include', "login");

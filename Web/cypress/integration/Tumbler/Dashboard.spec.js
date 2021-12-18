@@ -17,7 +17,7 @@ const DashboardPOM = new Dashboard();
 
 describe("Dashboard Posting", () => {
     beforeEach(() => {
-        cy.authorize();
+        cy.authenticate();
         cy.url().should('include', 'dashboard');
         success();
     });

@@ -1,12 +1,10 @@
+import Dashboard from '../../Page Objects/dashboard';
+const DashboardPOM = new Dashboard();
+
 describe("Basic", () => {
-  beforeEach(() => {
-    /*
-            first you have to pass the url of the website, or the page you want
-            to start your test with, you want to test
-        */
-    cy.visit("/");
-  });
+
   it("when reload the page the background changes", () => {
+    cy.visit("/");
     cy.get('section[data-testid="home-sec1"]')
       .invoke("attr", "style")
       .then((prevBackground) => {
@@ -19,5 +17,13 @@ describe("Basic", () => {
             expect(currBackground).to.not.eq(prevBackground);
           });
       });
+  });
+
+  it('Log Out', () => {
+    cy.fixture('PersonalData').then((user) => {
+      cy.authenticate(user.email, user.password);
+      cy.visit('/');
+    });
+    DashboardPOM.accountButton();
   });
 });

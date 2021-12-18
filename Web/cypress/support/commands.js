@@ -42,7 +42,7 @@ Cypress.Commands.add('login', (POM, email, password, successfulLogin = true, fai
     else
         fail(failMessage);
 });
-Cypress.Commands.add('authorize', (email, password) => {
+Cypress.Commands.add('authenticate', (email, password) => {
     cy.request('POST', 'http://13.68.206.72/api/login', {
         email,
         password

@@ -27,9 +27,12 @@ class Dashboard {
         return cy.get('ul.kbIQf').children('li');
     }
 
+    LogoutButton() {
+        return
+    }
     DashboardPosts() {
         return cy.get('div.j8ha0').children().eq(1)
-        .should('be.visible');
+            .should('be.visible');
     }
 }
 
