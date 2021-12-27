@@ -3,6 +3,7 @@ const faker = require('faker');
 
 let ChatPOM = new Chat();
 let email1, password1;
+let email2, password2;
 describe("Chatting", () => {
 
     beforeEach(() => {
@@ -15,6 +16,10 @@ describe("Chatting", () => {
         cy.fixture('PersonalData').then((user) => {
             email1 = user.email;
             password1 = user.password;
+        });
+        cy.fixture('ChatData').then((user) => {
+            email2 = user.email;
+            password2 = user.password;
         });
     });
 
@@ -33,8 +38,11 @@ describe("Chatting", () => {
 
         ChatPOM.messageField().type(Message);
         ChatPOM.sendButton().click();
+
+        ChatPOM.lastMessage().contains(Message).should("exist").and("be.visible");
     });
 
+    /*
     it("sending GIF to someone already in the conversations", () => {
         const word = faker.lorem.words(faker.random.number({min: 1,max: 1}));
         const Message = faker.lorem.sentence(3, 10);
@@ -52,7 +60,7 @@ describe("Chatting", () => {
         ChatPOM.GIF();
         ChatPOM.sendButton().click();
     });
-
+    */
     it("sending messages to someone already in the conversations", () => {
         const Message = faker.lorem.sentence(3, 10);
         ChatPOM.emailField().type(email1);
@@ -63,8 +71,11 @@ describe("Chatting", () => {
         ChatPOM.conversationButton();
         ChatPOM.messageField().type(Message);
         ChatPOM.sendButton().click();
+
+        ChatPOM.lastMessage().contains(Message).should("exist").and("be.visible");
     });
 
+    /*
     it("sending GIF to someone already in the conversations", () => {
         const Message = faker.lorem.sentence(3, 10);
         ChatPOM.emailField().type(email1);
@@ -78,4 +89,5 @@ describe("Chatting", () => {
         ChatPOM.GIF();
         ChatPOM.sendButton().click();
     });
+    */
   });

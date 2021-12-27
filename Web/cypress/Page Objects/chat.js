@@ -62,5 +62,8 @@ class Chat {
             return Cypress._.sample(items);
         }).click()
     }
+    lastMessage() {
+        return cy.get('div[class="CX_9D"]').last();
+    }
 }
 export default Chat;
