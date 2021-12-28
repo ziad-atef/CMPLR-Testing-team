@@ -22,8 +22,6 @@ RUN npm install
 RUN npm install cypress@9.0.0 --save-dev
 
 
-
-# VOLUME [ "/app/node_modules" ]
 VOLUME [ "/app/cypress/reports" ]
 
 
