@@ -2,7 +2,7 @@ FROM cypress/base
 
 WORKDIR /app
 
-COPY . .
+COPY ./Web .
 
 RUN npm install
 

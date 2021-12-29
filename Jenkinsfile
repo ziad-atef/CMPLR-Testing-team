@@ -35,7 +35,7 @@ pipeline {
             steps {
                 echo "========docker build ========"
                 sh """
-                    docker build -t $LOGIN_SERVER/testing:latest -f ./Web/Dockerfile .
+                    docker build -t $LOGIN_SERVER/testing:latest .
                 """    
             }
             post {
