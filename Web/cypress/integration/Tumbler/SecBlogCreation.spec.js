@@ -28,13 +28,13 @@ describe("Secondary blog creation", () => {
               first you have to pass the url of the website, or the page you want
               to start your test with, you want to test
           */
-        cy.visit("https://www.tumblr.com/login");
+        cy.visit("https://beta.cmplr.tech/login");
         cy.fixture('PersonalData').then((user) => {
             email1 = user.email;
             password1 = user.password;
         });
     });
-    it("Creating blog with used url", () => {
+    it.only("Creating blog with used url", () => {
         //Login
         BlogcreationPOM.emailField().type(email1);
         BlogcreationPOM.passwordField().type(password1);
@@ -42,7 +42,8 @@ describe("Secondary blog creation", () => {
         //get to account menu
         BlogcreationPOM.accountMenu().click();
         //Click new blog button
-        BlogcreationPOM.newBlog().click();
+        BlogcreationPOM.settings().click();
+        BlogcreationPOM.createBlog().click();
         //Typing title
         const Title = faker.lorem.words(faker.random.number({min: 1,max: 5}));
         if (Title !== '') {
@@ -74,7 +75,7 @@ describe("Secondary blog creation", () => {
         //get to account menu
         BlogcreationPOM.accountMenu().click();
         //Click new blog button
-        BlogcreationPOM.newBlog().click();
+        BlogcreationPOM.settings().click();
         //Typing title
         const Title = faker.lorem.words(faker.random.number({min: 1,max: 5}));
         if (Title !== '') {
@@ -87,7 +88,7 @@ describe("Secondary blog creation", () => {
         BlogcreationPOM.blogField().contains(createdBlogURL).click();
         //////////////////////////ADD Assertions?????????????????????????????????????/
     });
-    it.only("Creating blog with password", () => {
+    it("Creating blog with password", () => {
         //Login
         BlogcreationPOM.emailField().type(email1);
         BlogcreationPOM.passwordField().type(password1);
