@@ -1,9 +1,11 @@
-import Login from '../../Page Objects/login';
+import Login from "../../Page Objects/login";
+import { success, fail } from "../../Utils/log in/pageassertion";
 import {
-    success,
-    fail
-} from '../../Utils/log in/pageassertion';
-
+  pressAppBarLoginButton,
+  pressBodyLoginButton,
+  pressLowerLoginButton,
+  fillEmailAndPassword,
+} from "../../Utils/log in/utils";
 let LoginPOM = new Login();
 let email, spacedEmail, semiSpacedEmail;
 let password;
@@ -12,171 +14,142 @@ const emptyEmailMessage = "please enter your email";
 const emptyPasswordMessage = "please enter your password";
 const InvalidEmailMessage = "The email must be a valid email address.";
 const InvalidLoginMessage = "email or password is not valid";
-const pressAppBarLoginButton = () => {
-    LoginPOM.loginButton();
-    LoginPOM.loginButton();
-    LoginPOM.appbarLoginButton().click();
-}
-const pressBodyLoginButton = () => {
-    LoginPOM.loginButton();
-    LoginPOM.appbarLoginButton();
-    LoginPOM.loginButton().click({
-        force: true
+
+describe("Logging In With App Bar Button", () => {
+  beforeEach(() => {
+    cy.visit("/");
+
+    cy.fixture("PersonalData").then((user) => {
+      email = user.email;
+      spacedEmail = user.spacedEmail;
+      semiSpacedEmail = user.semiSpacedEmail;
+      password = user.password;
     });
-}
-const pressLowerLoginButton = () => {
-    LoginPOM.loginButton();
-    LoginPOM.appbarLoginButton();
-    LoginPOM.loginButton();
-    LoginPOM.secondaryLoginButton().click({
-        force: true
-    });
-}
-const fillEmailAndPassword = (passEmail, passPassword) => {
-    if (passEmail === '')
-        LoginPOM.emailField();
-    else
-        LoginPOM.emailField().type(passEmail);
+  });
 
-    if (passPassword === '')
-        LoginPOM.passwordField();
-    else
-        LoginPOM.passwordField().type(passPassword);
+  it("log in with empty email", () => {
+    pressAppBarLoginButton();
 
-    LoginPOM.loginButtoninside().click();
-}
+    fillEmailAndPassword("", password);
 
-describe('Logging In With App Bar Button', () => {
-    beforeEach(() => {
-        cy.visit('http://13.68.206.72/');
+    fail(emptyEmailMessage);
+  });
 
-        cy.fixture('PersonalData').then((user) => {
-            email = user.email;
-            spacedEmail = user.spacedEmail;
-            semiSpacedEmail = user.semiSpacedEmail;
-            password = user.password;
-        });
-    });
+  it("log in with empty password", () => {
+    pressAppBarLoginButton();
 
-    it('log in with empty email', () => {
-        pressAppBarLoginButton();
+    fillEmailAndPassword(email, "");
 
-        fillEmailAndPassword("", password);
+    fail(emptyPasswordMessage);
+  });
 
-        fail(emptyEmailMessage);
-    });
+  it("log in with empty email and password", () => {
+    pressAppBarLoginButton();
 
-    it('log in with empty password', () => {
-        pressAppBarLoginButton();
+    fillEmailAndPassword("", "");
 
-        fillEmailAndPassword(email, "");
+    fail(emptyEmailMessage);
+  });
 
-        fail(emptyPasswordMessage);
-    });
+  it("log in with valid email not valid password", () => {
+    pressAppBarLoginButton();
 
-    it('log in with empty email and password', () => {
-        pressAppBarLoginButton();
+    fillEmailAndPassword(email, "WRONG PASSWORD");
 
-        fillEmailAndPassword("", "");
+    fail(InvalidLoginMessage);
+  });
 
-        fail(emptyEmailMessage);
-    });
+  it("log in with not valid email valid password (1)", () => {
+    pressAppBarLoginButton();
 
-    it('log in with valid email not valid password', () => {
-        pressAppBarLoginButton();
+    fillEmailAndPassword("TEST_EMAIL", password);
 
-        fillEmailAndPassword(email, "WRONG PASSWORD");
+    fail(InvalidEmailMessage);
+  });
 
-        fail(InvalidLoginMessage);
-    });
+  it("log in with not valid email valid password (2)", () => {
+    pressAppBarLoginButton();
 
-    it('log in with not valid email valid password (1)', () => {
-        pressAppBarLoginButton();
+    fillEmailAndPassword("TEST_EMAIL@gmail", password);
 
-        fillEmailAndPassword("TEST_EMAIL", password);
+    fail(InvalidEmailMessage);
+  });
 
-        fail(InvalidEmailMessage);
-    });
+  it("log in with not valid email valid password (3)", () => {
+    pressAppBarLoginButton();
 
-    it('log in with not valid email valid password (2)', () => {
-        pressAppBarLoginButton();
+    fillEmailAndPassword("TEST_EMAIL.com", password);
 
-        fillEmailAndPassword("TEST_EMAIL@gmail", password);
+    fail(InvalidEmailMessage);
+  });
 
-        fail(InvalidEmailMessage);
-    });
+  it("log in with not registered email valid password", () => {
+    pressAppBarLoginButton();
 
-    it('log in with not valid email valid password (3)', () => {
-        pressAppBarLoginButton();
+    fillEmailAndPassword("TEST_EMAIL@yahoo.com", password);
 
-        fillEmailAndPassword("TEST_EMAIL.com", password);
+    fail(InvalidLoginMessage);
+  });
 
-        fail(InvalidEmailMessage);
-    });
+  it("successfully log in", () => {
+    pressAppBarLoginButton();
 
-    it('log in with not registered email valid password', () => {
-        pressAppBarLoginButton();
+    fillEmailAndPassword(email, password);
 
-        fillEmailAndPassword("TEST_EMAIL@yahoo.com", password);
+    success();
+    cy.url().should("include", "dashboard");
+  });
 
-        fail(InvalidLoginMessage);
-    });
+  it("successfully log in with command", () => {
+    pressAppBarLoginButton();
+    cy.login(LoginPOM, email, password);
+    cy.url().should("include", "dashboard");
+  });
 
-    it('successfully log in', () => {
-        pressAppBarLoginButton();
+  it("Spaced Email Login", () => {
+    pressAppBarLoginButton();
+    cy.login(LoginPOM, spacedEmail, password, false, InvalidEmailMessage);
+  });
 
-        fillEmailAndPassword(email, password);
+  it("Spaced Email Login", () => {
+    pressAppBarLoginButton();
+    cy.login(LoginPOM, semiSpacedEmail, password, false, InvalidEmailMessage);
+  });
 
-        success();
-        cy.url().should('include', "dashboard");
-    });
-
-    it('successfully log in with command', () => {
-        pressAppBarLoginButton();
-        cy.login(LoginPOM, email, password);
-        cy.url().should('include', "dashboard");
-    });
-
-    it('Spaced Email Login', () => {
-        pressAppBarLoginButton();
-        cy.login(LoginPOM, spacedEmail, password, false, InvalidEmailMessage);
-    });
-
-    it('Spaced Email Login', () => {
-        pressAppBarLoginButton();
-        cy.login(LoginPOM, semiSpacedEmail, password, false, InvalidEmailMessage);
-    });
-
-    it('Login With Registered Invalid Email', () => {
-        pressAppBarLoginButton();
-        cy.login(LoginPOM, email.slice(0, 19), password, false, InvalidEmailMessage);
-    });
+  it("Login With Registered Invalid Email", () => {
+    pressAppBarLoginButton();
+    cy.login(
+      LoginPOM,
+      email.slice(0, 19),
+      password,
+      false,
+      InvalidEmailMessage
+    );
+  });
 });
 
-describe('Logging In With Body And Lower Button', () => {
+describe("Logging In With Body And Lower Button", () => {
+  beforeEach(() => {
+    cy.visit("/");
 
-    beforeEach(() => {
-        cy.visit('http://13.68.206.72/');
-
-
-        cy.fixture('PersonalData').then((user) => {
-            email = user.email;
-            password = user.password;
-        });
+    cy.fixture("PersonalData").then((user) => {
+      email = user.email;
+      password = user.password;
     });
+  });
 
-    it('log in with Body Button', () => {
-        pressBodyLoginButton();
+  it("log in with Body Button", () => {
+    pressBodyLoginButton();
 
-        fillEmailAndPassword(email, password);
+    fillEmailAndPassword(email, password);
 
-        cy.url().should('include', 'login');
-    });
-    it('log in with Lower Button', () => {
-        pressLowerLoginButton();
+    cy.url().should("include", "login");
+  });
+  it("log in with Lower Button", () => {
+    pressLowerLoginButton();
 
-        fillEmailAndPassword(email, password);
+    fillEmailAndPassword(email, password);
 
-        cy.url().should('include', 'login');
-    });
+    cy.url().should("include", "login");
+  });
 });
