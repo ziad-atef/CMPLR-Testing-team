@@ -2,12 +2,11 @@ FROM cypress/base
 
 WORKDIR /app
 
-COPY package.json .
+COPY . .
 
 RUN npm install
 
-RUN apt-get install       
-RUN apt-get update && apt-get install -y \
+RUN apt-get install -y \
     libgtk2.0-0 \
     libgtk-3-0 \
     libgbm-dev \
@@ -19,12 +18,8 @@ RUN apt-get update && apt-get install -y \
     libxtst6 \
     xauth \
     xvfb   
+RUN npm install
 RUN npm install cypress@9.0.0 --save-dev
 
-COPY . .
 
-EXPOSE 3000
-
-VOLUME [ "/app/node_modules" ]
-
-CMD ["npm", "run", "test-report"]
+CMD ["npm", "run", "test"]
