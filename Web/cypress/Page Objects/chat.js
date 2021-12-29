@@ -1,16 +1,4 @@
 class Chat {
-    loginButton() {
-        // return cy.get('a.HhR12._xpjA.kmijQ.QqnsM[href="/login"]').first();
-        return cy.get('a[data-testid="login-btn"]').first();
-        // return cy.get('form').last();
-    }
-    appbarLoginButton() {
-        // return cy.get('a.HhR12._xpjA.i_kY6[href="/login"]');
-        return cy.get('a[href="/login"]').first();
-    }
-    secondaryLoginButton() {
-        return cy.get('a[data-testid="login-btn"]').last();
-    }
     emailField() {
         // return cy.get('input.o4KIk[name="email"]');
         return cy.get('input[name="email"]');
@@ -21,36 +9,51 @@ class Chat {
         return cy.get('input[name="password"]');
     }
     loginButtoninside() {
-        return cy.get('button.TRX6J.CxLjL.qjTo7.CguuB.yC5pj[type="submit"]');
+        return cy.get('button[data-testid="login"]');
         //return cy.get('a[data-testid="login"]');
     }
     chatsButton() {
-        return cy.get('button.TRX6J.B1L2M[aria-label="Messaging"]');
+        if(Cypress.config("viewportWidth") > 950)
+        {
+            return cy.get('li[class="link-icon message "]');
+        }
+        else
+        {
+            return cy.get('class="navbar-menu-mobile-menu-item"]');
+        }
     }
     newMessagesButton() {
-        return cy.get('button.TRX6J[aria-label="New Message"]');
+        return cy.get('button').contains("new message");
     }
     newMessageReciverField() {
-        return cy.get('div.glTqf input');
+        return cy.get('input[name="search"]');
     }
-    newReciversButton() {
-        cy.get('button.TRX6J[aria-label="New Message"]').then(($cov) => {
-            const items = $cov.toArray(); 
-            return Cypress._.sample(items);
-        }).click()
+    newRecieverContainer() {
+        return cy.get('div[class="popup-newmessage"]');
+    }
+    newRecieverFieldVal() {
+        return 'div[class="popup-messages-message"]';
+    } 
+    newRecieverField() {
+        return cy.get('div[class="popup-messages-message"]');
     }
     conversationButton() {
-        //return cy.get('button.TRX6J._vFtf[aria-label="Conversation"]');
-        cy.get('button.TRX6J._vFtf[aria-label="Conversation"]').then(($cov) => {
-            const items = $cov.toArray(); 
-            return Cypress._.sample(items);
-        }).click()
+        return cy.get('div[class="popup-messages-message "]');
+    }
+    chatHeader() {
+        return cy.get('div[class="chat-popup-chat-header"] div[class="img"]')
     }
     messageField() {
-        return cy.get('textarea.xXTjk');
+        return cy.get('textarea[placeholder="Say your thing"]');
     }
     sendButton() {
-        return cy.get('button.TRX6J.nWfaK.PbfxP[aria-label="Send"]');
+        return cy.get('i[class="far fa-paper-plane"]');
+    }
+    lastMessage() {
+        return cy.get('div[class="msg"]');
+    }
+    unseenField() {
+        return cy.get('div[class="popup-messages-message notSeen"]');
     }
     gifButton() {
         return cy.get('button.TRX6J.PbfxP[aria-label="Gif Search"]');
@@ -61,9 +64,6 @@ class Chat {
             const items = $cov.toArray(); 
             return Cypress._.sample(items);
         }).click()
-    }
-    lastMessage() {
-        return cy.get('div[class="CX_9D"]').last();
     }
 }
 export default Chat;
