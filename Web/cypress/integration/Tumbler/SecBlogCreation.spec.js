@@ -10,15 +10,10 @@ const urlFilling = () => {
     const url = faker.lorem.words(faker.random.number({min: 1,max: 1}));
     createdBlogURL = url;
     if (url !== '') {
+        BlogcreationPOM.urlField().clear();
         BlogcreationPOM.urlField().type(url);
     }
     BlogcreationPOM.createButton().click();
-    BlogcreationPOM.existingUrlError().then( $el => {
-        if($el.length > 0)
-            urlFilling();
-        else
-            return;
-    });
 };
 
 describe("Secondary blog creation", () => {
@@ -42,8 +37,7 @@ describe("Secondary blog creation", () => {
         //get to account menu
         BlogcreationPOM.accountMenu().click();
         //Click new blog button
-        BlogcreationPOM.settings().click();
-        BlogcreationPOM.createBlog().click();
+        BlogcreationPOM.newBlog().click();
         //Typing title
         const Title = faker.lorem.words(faker.random.number({min: 1,max: 5}));
         if (Title !== '') {
@@ -52,6 +46,7 @@ describe("Secondary blog creation", () => {
         //Typing url and completing test
         urlFilling();
         //get to account menu
+        /*
         BlogcreationPOM.accountMenu().click();
         //Click new blog button
         BlogcreationPOM.newBlog().click();
@@ -65,6 +60,7 @@ describe("Secondary blog creation", () => {
         BlogcreationPOM.createButton().click();
         //checking the appearence of an error
         BlogcreationPOM.existingUrlError().should("exist").and("be.visible");
+        */
     });
     
     it("Creating blog without password", () => {
