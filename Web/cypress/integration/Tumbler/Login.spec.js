@@ -72,7 +72,7 @@ describe("Logging In With App Bar Button", () => {
 
     fillEmailAndPassword("TEST_EMAIL@gmail", password);
 
-    fail(InvalidEmailMessage);
+    fail(InvalidLoginMessage);
   });
 
   it("log in with not valid email valid password (3)", () => {
