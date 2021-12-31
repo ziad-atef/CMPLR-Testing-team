@@ -103,9 +103,9 @@ describe("Secondary blog creation", () => {
             BlogcreationPOM.titleField().type(Title);
         }
         //Password entry
-        const Password = faker.lorem.words(faker.random.number({min: 1,max: 5}));
+        const Password = faker.lorem.words(faker.random.number({min: 5,max: 8}));
         BlogcreationPOM.blogPasswordField().click();
-        BlogcreationPOM.blogPasswordField().type(Password);
+        BlogcreationPOM.blogPasswordField().type(String(Password));
         //Typing url and completing test
         urlFilling();
     });
