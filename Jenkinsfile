@@ -22,10 +22,11 @@ pipeline {
                     cp ~/env/testing.env/cypress.env.json ./Web/cypress.env.json
                     cp ~/env/testing.env/PersonalData.json ./Web/cypress/fixtures/PersonalData.json
                     """
+                    discordSend description: "Jenkins Pipeline Build", footer: "Fetch executed successfully", result: currentBuild.currentResult, title: JOB_NAME, webhookURL: "https://discord.com/api/webhooks/926441648605528114/L_GjAOFAUJGwUt0_N9Wu58T0OTR5OksSXvgiZnnWruTfVmuLJpTjDQvB7bDaaBypUxjE"
                 }
                 failure{
                     echo "========fetch execution failed========"
-                    //slackSend (color:"#FF0000", message: "Failed to pull code-base from github")
+                    discordSend description: "Jenkins Pipeline Build", footer: "Fetch execution failed", result: currentBuild.currentResult, title: JOB_NAME, webhookURL: "https://discord.com/api/webhooks/926441648605528114/L_GjAOFAUJGwUt0_N9Wu58T0OTR5OksSXvgiZnnWruTfVmuLJpTjDQvB7bDaaBypUxjE"
                     
                 }
             }
@@ -41,11 +42,11 @@ pipeline {
             post {
                 success {
                     echo "========docker build success ========"
-                    //slackSend (color:"#00FF00",  message: "Master: Building Image success")
+                    discordSend description: "Jenkins Pipeline Build", footer: "Docker building succeed", result: currentBuild.currentResult, title: JOB_NAME, webhookURL: "https://discord.com/api/webhooks/926441648605528114/L_GjAOFAUJGwUt0_N9Wu58T0OTR5OksSXvgiZnnWruTfVmuLJpTjDQvB7bDaaBypUxjE"
                 }
                 failure {
                     echo "========docker build failed========"
-                    //slackSend (color:"#FF0000", message: "Master: Building Image failure")
+                    discordSend description: "Jenkins Pipeline Build", footer: "Docker building Failed", result: currentBuild.currentResult, title: JOB_NAME, webhookURL: "https://discord.com/api/webhooks/926441648605528114/L_GjAOFAUJGwUt0_N9Wu58T0OTR5OksSXvgiZnnWruTfVmuLJpTjDQvB7bDaaBypUxjE"
                 }
            }
         }
