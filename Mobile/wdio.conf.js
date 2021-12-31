@@ -5,7 +5,7 @@
     'appium:appActivity': "com.tumblr.ui.activity.JumpoffActivity",
 */
 const isNative = false;
-const specFiles = isNative ? './test/specs/**/*.js' : './Flutter/specs/**/chat.spec.js';
+const specFiles = isNative ? './test/specs/**/Posts.spec.js' : './Flutter/specs/**/chat.spec.js';
 const AllureOutputDir = isNative ? 'NativeResults' : 'FlutterResults';
 const desiredCapabilities = isNative ? {
     //  Android Native
@@ -35,8 +35,10 @@ exports.config = {
     maxInstances: 1,
     capabilities: [{
         platformName: "Android",
-        'appium:platformVersion': "11",
+        'appium:platformVersion': "9",
         'appium:udid': "emulator-5554",
+        "appium:noReset": true,
+        "appium:fullReset": false,
         ...desiredCapabilities
     }],
     logLevel: 'info',
