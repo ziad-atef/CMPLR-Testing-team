@@ -1,4 +1,3 @@
-const existingURLMessage = "error creating blog";
 class BlogCreation {
     emailField() {
         return cy.get('input[name="email"]');
@@ -29,16 +28,19 @@ class BlogCreation {
         return cy.get('div[class="subcontainer2"]');
     }
     existingUrlError() {
-        return 'p';
+        return cy.get('div[class="error-msg"] p');
+    }
+    existingURLMessage() {
+        return "error creating blog";
     }
     blogField() {
-        return cy.get('div.Ut4iZ.veU9u');
+        return cy.get('div[data-testid="AccountPopupBlog"]');
     }
     passwordCheckbox() {
         return cy.get('input[id="password_protected_checkbox"]');
     }
     blogPasswordField() {
-        return cy.get('input[id="new_group_password_protected"]');
+        return cy.get('input[id="privacy-create-blog"]');
     }
 }
 export default BlogCreation;

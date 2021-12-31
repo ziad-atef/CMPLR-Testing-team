@@ -14,6 +14,13 @@ const urlFilling = () => {
         BlogcreationPOM.urlField().type(url);
     }
     BlogcreationPOM.createButton().click();
+    cy.wait(1000);
+    cy.location().its("href").then( $url => {
+        if(String($url) == "https://beta.cmplr.tech/blog/new")
+        {
+            urlFilling();
+        }
+    });
 };
 
 describe("Secondary blog creation", () => {
@@ -29,7 +36,7 @@ describe("Secondary blog creation", () => {
             password1 = user.password;
         });
     });
-    it.only("Creating blog with used url", () => {
+    it("Creating blog with used url", () => {
         //Login
         BlogcreationPOM.emailField().type(email1);
         BlogcreationPOM.passwordField().type(password1);
@@ -46,7 +53,6 @@ describe("Secondary blog creation", () => {
         //Typing url and completing test
         urlFilling();
         //get to account menu
-        /*
         BlogcreationPOM.accountMenu().click();
         //Click new blog button
         BlogcreationPOM.newBlog().click();
@@ -56,11 +62,13 @@ describe("Secondary blog creation", () => {
         }
         //Typing used url
         BlogcreationPOM.urlField().type(createdBlogURL);
+        
         //Creating blog
         BlogcreationPOM.createButton().click();
+
         //checking the appearence of an error
-        BlogcreationPOM.existingUrlError().should("exist").and("be.visible");
-        */
+        BlogcreationPOM.existingUrlError().contains(BlogcreationPOM.existingURLMessage()).should("exist").and("be.visible");
+        
     });
     
     it("Creating blog without password", () => {
@@ -71,7 +79,7 @@ describe("Secondary blog creation", () => {
         //get to account menu
         BlogcreationPOM.accountMenu().click();
         //Click new blog button
-        BlogcreationPOM.settings().click();
+        BlogcreationPOM.newBlog().click();
         //Typing title
         const Title = faker.lorem.words(faker.random.number({min: 1,max: 5}));
         if (Title !== '') {
@@ -79,10 +87,6 @@ describe("Secondary blog creation", () => {
         }
         //Typing url and completing test
         urlFilling();
-        //assertions
-        BlogcreationPOM.accountMenu().click();
-        BlogcreationPOM.blogField().contains(createdBlogURL).click();
-        //////////////////////////ADD Assertions?????????????????????????????????????/
     });
     it("Creating blog with password", () => {
         //Login
@@ -100,14 +104,10 @@ describe("Secondary blog creation", () => {
         }
         //Password entry
         const Password = faker.lorem.words(faker.random.number({min: 1,max: 5}));
-        BlogcreationPOM.passwordCheckbox().click();
-        BlogcreationPOM.blogPasswordField().type(Password)
+        BlogcreationPOM.blogPasswordField().click();
+        BlogcreationPOM.blogPasswordField().type(Password);
         //Typing url and completing test
         urlFilling();
-        //assertions
-        BlogcreationPOM.accountMenu().click();
-        BlogcreationPOM.blogField().contains(createdBlogURL).click();
-        //////////////////////////ADD Assertions?????????????????????????????????????/
     });
   });
   
