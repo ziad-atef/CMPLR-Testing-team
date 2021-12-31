@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-12-30T23:34:25.770Z",
+    "end": "2021-12-30T23:35:04.661Z",
+    "duration": 38891,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2f472aab-09a0-495e-a4f4-83455582cc6f",
+      "title": "",
+      "fullFile": "cypress/integration/Tumbler/Stress.spec.js",
+      "file": "cypress/integration/Tumbler/Stress.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c1dba733-6741-41da-a15e-c8e30a37c85b",
+          "title": "Stress",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "when reload the page the background changes",
+              "fullTitle": "Stress when reload the page the background changes",
+              "timedOut": null,
+              "duration": 38866,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://beta.cmplr.tech/');",
+              "err": {},
+              "uuid": "c0a9a63d-fcb8-4dfc-8e23-ff4757538fb5",
+              "parentUUID": "c1dba733-6741-41da-a15e-c8e30a37c85b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c0a9a63d-fcb8-4dfc-8e23-ff4757538fb5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 38866,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "video": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

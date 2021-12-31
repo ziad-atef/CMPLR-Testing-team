@@ -1,0 +1,112 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-12-30T23:37:17.766Z",
+    "end": "2021-12-30T23:37:36.029Z",
+    "duration": 18263,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "45fdeb67-ef0d-4299-ad01-de023e9a2019",
+      "title": "",
+      "fullFile": "cypress/integration/Tumbler/Stress.spec.js",
+      "file": "cypress/integration/Tumbler/Stress.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7dbcf69a-3caf-4d3f-be04-8a725ddb2dfc",
+          "title": "Stress",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "when reload the page the background changes",
+              "fullTitle": "Stress when reload the page the background changes",
+              "timedOut": null,
+              "duration": 18188,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://beta.cmplr.tech/');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://beta.cmplr.tech/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ESOCKETTIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://beta.cmplr.tech/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ESOCKETTIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:158176:82\n    at visitFailedByErr (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:157529:12)\n    at https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:158175:11\n    at tryCatcher (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:13212:23)\n    at Promise._settlePromiseFromHandler (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:11147:31)\n    at Promise._settlePromise (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:11204:18)\n    at Promise._settlePromise0 (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:11249:10)\n    at Promise._settlePromises (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:11325:18)\n    at _drainQueueStep (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:7919:12)\n    at _drainQueue (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:7912:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:7928:5)\n    at Async.drainQueues (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:7798:14)\nFrom Your Spec Code:\n    at Context.eval (https://beta.cmplr.tech/__cypress/tests?p=cypress\\integration\\Tumbler\\Stress.spec.js:101:8)\n\nFrom Node.js Internals:\n  Error: ESOCKETTIMEDOUT\n      at ClientRequest.<anonymous> (C:\\Users\\ziada\\AppData\\Local\\Cypress\\Cache\\9.0.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\@cypress\\request\\request.js:808:19)\n      at Object.onceWrapper (node:events:513:28)\n      at ClientRequest.emit (node:events:394:28)\n      at TLSSocket.emitRequestTimeout (node:_http_client:761:9)\n      at Object.onceWrapper (node:events:513:28)\n      at TLSSocket.emit (node:events:406:35)\n      at TLSSocket.Socket._onTimeout (node:net:486:8)\n      at listOnTimeout (node:internal/timers:557:17)\n      at processTimers (node:internal/timers:500:7)\n  ",
+                "diff": null
+              },
+              "uuid": "87f671fe-d235-49c4-b1c8-aae46bcdfcef",
+              "parentUUID": "7dbcf69a-3caf-4d3f-be04-8a725ddb2dfc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "87f671fe-d235-49c4-b1c8-aae46bcdfcef"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 18188,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "video": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

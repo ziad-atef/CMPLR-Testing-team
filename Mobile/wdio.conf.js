@@ -35,7 +35,7 @@ exports.config = {
     maxInstances: 1,
     capabilities: [{
         platformName: "Android",
-        'appium:platformVersion': "9",
+        'appium:platformVersion': "11",
         'appium:udid': "emulator-5554",
         "appium:noReset": true,
         "appium:fullReset": false,

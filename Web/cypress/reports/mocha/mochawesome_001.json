@@ -1,0 +1,328 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2021-12-30T23:22:17.797Z",
+    "end": "2021-12-30T23:22:26.419Z",
+    "duration": 8622,
+    "testsRegistered": 11,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 9,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "c77632d0-8e24-4cb7-af0e-f2cfc4eb7383",
+      "title": "",
+      "fullFile": "cypress/integration/Tumbler/Dashboard.spec.js",
+      "file": "cypress/integration/Tumbler/Dashboard.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "af193a20-9314-4d5e-823f-0270254b3ee6",
+          "title": "Dashboard Posting",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Render Posts",
+              "fullTitle": "Dashboard Posting Render Posts",
+              "timedOut": null,
+              "duration": 4324,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "DashboardPOM.DashboardPosts().children().should('have.length.greaterThan', 1);",
+              "err": {
+                "message": "CypressError: `cy.request()` failed on:\n\nhttp://13.68.206.72/api/login\n\nThe response we received from your web server was:\n\n  > 502: Bad Gateway\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: http://13.68.206.72/api/login\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.0.0 Chrome/94.0.4606.81 Electron/15.2.0 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-type\": \"application/json\",\n  \"content-length\": 2\n}\nBody: {}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 502 - Bad Gateway\nHeaders: {\n  \"date\": \"Thu, 30 Dec 2021 23:22:20 GMT\",\n  \"connection\": \"close\",\n  \"cache-control\": \"no-store\",\n  \"content-type\": \"text/html\",\n  \"content-language\": \"en\",\n  \"content-length\": \"219\"\n}\nBody: <HEAD><TITLE>Connection timed out</TITLE></HEAD>\n<BODY BGCOLOR=\"white\" FGCOLOR=\"black\">\n<FONT FACE=\"Helvetica,Arial\"><B>\n Connection timed out</B></FONT>\n\n<!-- default \"Connection timed out\" response (502) -->\n</BODY>\n\u0000\n\n\nhttps://on.cypress.io/request\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Dashboard Posting`",
+                "estack": "CypressError: `cy.request()` failed on:\n\nhttp://13.68.206.72/api/login\n\nThe response we received from your web server was:\n\n  > 502: Bad Gateway\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: http://13.68.206.72/api/login\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.0.0 Chrome/94.0.4606.81 Electron/15.2.0 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-type\": \"application/json\",\n  \"content-length\": 2\n}\nBody: {}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 502 - Bad Gateway\nHeaders: {\n  \"date\": \"Thu, 30 Dec 2021 23:22:20 GMT\",\n  \"connection\": \"close\",\n  \"cache-control\": \"no-store\",\n  \"content-type\": \"text/html\",\n  \"content-language\": \"en\",\n  \"content-length\": \"219\"\n}\nBody: <HEAD><TITLE>Connection timed out</TITLE></HEAD>\n<BODY BGCOLOR=\"white\" FGCOLOR=\"black\">\n<FONT FACE=\"Helvetica,Arial\"><B>\n Connection timed out</B></FONT>\n\n<!-- default \"Connection timed out\" response (502) -->\n</BODY>\n\u0000\n\n\nhttps://on.cypress.io/request\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Dashboard Posting`\n    at https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:159437:80\n    at tryCatcher (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:13212:23)\n    at Promise._settlePromiseFromHandler (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:11147:31)\n    at Promise._settlePromise (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:11204:18)\n    at Promise._settlePromise0 (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:11249:10)\n    at Promise._settlePromises (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:11329:18)\n    at _drainQueueStep (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:7919:12)\n    at _drainQueue (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:7912:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:7928:5)\n    at Async.drainQueues (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:7798:14)\nFrom Your Spec Code:\n    at Context.eval (https://beta.cmplr.tech/__cypress/tests?p=cypress\\support\\index.js:191:6)",
+                "diff": null
+              },
+              "uuid": "f3392b5a-443c-454f-a8df-24d9cc9fd9ff",
+              "parentUUID": "af193a20-9314-4d5e-823f-0270254b3ee6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Post a text post",
+              "fullTitle": "Dashboard Posting Post a text post",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const Title = faker.lorem.sentence(3, 10);\nconst Body = faker.lorem.paragraph(faker.random.number({\n  min: 3,\n  max: 10\n}));\nconst Tags = faker.lorem.words(faker.random.number({\n  min: 3,\n  max: 10\n})).split(' ');\n(0, _utils.TextPost)(Title, Body, Tags);\nPostboardPOM.postButton('button.button-area').should('be.enabled').should(\"have.text\", \"Post\").click();\n(0, _utils.VisitMyBlog)();\n(0, _utils.TextPostAssertions)(Title, Body, Tags);",
+              "err": {},
+              "uuid": "12089f80-c19b-4f30-80ea-2e6b31f28681",
+              "parentUUID": "af193a20-9314-4d5e-823f-0270254b3ee6",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "(Text) Disable Post Button After Clearing",
+              "fullTitle": "Dashboard Posting (Text) Disable Post Button After Clearing",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const Title = faker.lorem.sentence(3, 10);\nconst Body = faker.lorem.paragraph(faker.random.number({\n  min: 3,\n  max: 10\n}));\nconst Tags = faker.lorem.words(faker.random.number({\n  min: 3,\n  max: 10\n})).split(' ');\n(0, _utils.TextPost)(Title, Body, Tags);\nPostboardPOM.postTitleDOM().clear();\nPostboardPOM.postBodyDOM().clear();\nPostboardPOM.postButton('button.button-area').should('be.disabled').should(\"have.text\", \"Post\");",
+              "err": {},
+              "uuid": "54681fba-ecb1-4143-97ba-4deccf7d043c",
+              "parentUUID": "af193a20-9314-4d5e-823f-0270254b3ee6",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "(Text) Only Tags Doesn't Enable Post Button",
+              "fullTitle": "Dashboard Posting (Text) Only Tags Doesn't Enable Post Button",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const Tags = faker.lorem.words(faker.random.number({\n  min: 3,\n  max: 10\n})).split(' ');\n(0, _utils.TextPost)('', '', Tags);\nPostboardPOM.postButton('button.button-area').should('be.disabled').should(\"have.text\", \"Post\");",
+              "err": {},
+              "uuid": "94137bd0-169d-4abd-a57f-f7c9fe309af2",
+              "parentUUID": "af193a20-9314-4d5e-823f-0270254b3ee6",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Post a Quote post",
+              "fullTitle": "Dashboard Posting Post a Quote post",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const Quote = faker.lorem.sentences(faker.random.number({\n  min: 1,\n  max: 2\n}));\nconst Source = faker.name.firstName();\nconst Tags = faker.lorem.words(faker.random.number({\n  min: 0,\n  max: 10\n})).split(' ');\n(0, _utils.QuotePost)(Quote, Source, Tags);\nPostboardPOM.postButton('button.button-area').should('be.enabled').click();\n(0, _utils.VisitMyBlog)();\n(0, _utils.QuotePostAssertions)(Quote, Source, Tags);",
+              "err": {},
+              "uuid": "fe65e7cf-1e7d-41e4-8657-77ab5b04aa80",
+              "parentUUID": "af193a20-9314-4d5e-823f-0270254b3ee6",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "(Quote) Disable Post Button After Clearing",
+              "fullTitle": "Dashboard Posting (Quote) Disable Post Button After Clearing",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const Quote = faker.lorem.sentences(faker.random.number({\n  min: 1,\n  max: 2\n}));\nconst Source = faker.name.firstName();\nconst Tags = faker.lorem.words(faker.random.number({\n  min: 0,\n  max: 10\n})).split(' ');\n(0, _utils.QuotePost)(Quote, Source, Tags);\nPostboardPOM.quoteDOM().clear();\nPostboardPOM.sourceDOM().clear();\nPostboardPOM.postButton('button.button-area').should('be.disabled').should(\"have.text\", \"Post\");",
+              "err": {},
+              "uuid": "3503b218-cb64-49f5-af20-0b0d52913f7d",
+              "parentUUID": "af193a20-9314-4d5e-823f-0270254b3ee6",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "(Quote) Only Tags Doesn't Enable Post Button",
+              "fullTitle": "Dashboard Posting (Quote) Only Tags Doesn't Enable Post Button",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const Tags = faker.lorem.words(faker.random.number({\n  min: 3,\n  max: 10\n})).split(' ');\n(0, _utils.QuotePost)('', '', Tags);\nPostboardPOM.postButton('button.button-area').should('be.disabled').should(\"have.text\", \"Post\");",
+              "err": {},
+              "uuid": "9ccaa519-e1a6-4c4f-8d4b-c0f76d37af79",
+              "parentUUID": "af193a20-9314-4d5e-823f-0270254b3ee6",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Post a Photo post",
+              "fullTitle": "Dashboard Posting Post a Photo post",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "DashboardPOM.photoPostButton().click();\ncy.visit(\"https://www.tumblr.com/new/photo\");\nPostboardPOM.postButton(\"button.button-area.disabled\").should('be.disabled').should(\"have.text\", \"Post\");\nconst imageFile = \"2.jpg\";\nPostboardPOM.photoDOM().attachFile(imageFile);\ncy.wait(300);\nPostboardPOM.postButton('button.button-area').should('be.enabled').click({\n  force: true\n});\nDashboardPOM.accountButton().click();\nDashboardPOM.accountLowerList().eq(0).click();\ncy.get('figure').first().find('div').children();",
+              "err": {},
+              "uuid": "04ab1bfc-e754-40f9-bf64-a8d81f0d6684",
+              "parentUUID": "af193a20-9314-4d5e-823f-0270254b3ee6",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f3392b5a-443c-454f-a8df-24d9cc9fd9ff"
+          ],
+          "pending": [],
+          "skipped": [
+            "12089f80-c19b-4f30-80ea-2e6b31f28681",
+            "54681fba-ecb1-4143-97ba-4deccf7d043c",
+            "94137bd0-169d-4abd-a57f-f7c9fe309af2",
+            "fe65e7cf-1e7d-41e4-8657-77ab5b04aa80",
+            "3503b218-cb64-49f5-af20-0b0d52913f7d",
+            "9ccaa519-e1a6-4c4f-8d4b-c0f76d37af79",
+            "04ab1bfc-e754-40f9-bf64-a8d81f0d6684"
+          ],
+          "duration": 4324,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "867394e4-be3f-4838-bd51-a6bbba0d1f7d",
+          "title": "Dashboard Rebloging",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Render Posts",
+              "fullTitle": "Dashboard Rebloging Render Posts",
+              "timedOut": null,
+              "duration": 4173,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "DashboardPOM.DashboardPosts().children().should('have.length.greaterThan', 1);",
+              "err": {
+                "message": "CypressError: `cy.request()` failed on:\n\nhttp://13.68.206.72/api/login\n\nThe response we received from your web server was:\n\n  > 502: Bad Gateway\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: http://13.68.206.72/api/login\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.0.0 Chrome/94.0.4606.81 Electron/15.2.0 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-type\": \"application/json\",\n  \"content-length\": 2\n}\nBody: {}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 502 - Bad Gateway\nHeaders: {\n  \"date\": \"Thu, 30 Dec 2021 23:22:24 GMT\",\n  \"connection\": \"close\",\n  \"cache-control\": \"no-store\",\n  \"content-type\": \"text/html\",\n  \"content-language\": \"en\",\n  \"content-length\": \"219\"\n}\nBody: <HEAD><TITLE>Connection timed out</TITLE></HEAD>\n<BODY BGCOLOR=\"white\" FGCOLOR=\"black\">\n<FONT FACE=\"Helvetica,Arial\"><B>\n Connection timed out</B></FONT>\n\n<!-- default \"Connection timed out\" response (502) -->\n</BODY>\n\u0000\n\n\nhttps://on.cypress.io/request\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Dashboard Rebloging`",
+                "estack": "CypressError: `cy.request()` failed on:\n\nhttp://13.68.206.72/api/login\n\nThe response we received from your web server was:\n\n  > 502: Bad Gateway\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: http://13.68.206.72/api/login\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.0.0 Chrome/94.0.4606.81 Electron/15.2.0 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-type\": \"application/json\",\n  \"content-length\": 2\n}\nBody: {}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 502 - Bad Gateway\nHeaders: {\n  \"date\": \"Thu, 30 Dec 2021 23:22:24 GMT\",\n  \"connection\": \"close\",\n  \"cache-control\": \"no-store\",\n  \"content-type\": \"text/html\",\n  \"content-language\": \"en\",\n  \"content-length\": \"219\"\n}\nBody: <HEAD><TITLE>Connection timed out</TITLE></HEAD>\n<BODY BGCOLOR=\"white\" FGCOLOR=\"black\">\n<FONT FACE=\"Helvetica,Arial\"><B>\n Connection timed out</B></FONT>\n\n<!-- default \"Connection timed out\" response (502) -->\n</BODY>\n\u0000\n\n\nhttps://on.cypress.io/request\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Dashboard Rebloging`\n    at https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:159437:80\n    at tryCatcher (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:13212:23)\n    at Promise._settlePromiseFromHandler (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:11147:31)\n    at Promise._settlePromise (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:11204:18)\n    at Promise._settlePromise0 (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:11249:10)\n    at Promise._settlePromises (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:11329:18)\n    at _drainQueueStep (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:7919:12)\n    at _drainQueue (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:7912:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:7928:5)\n    at Async.drainQueues (https://beta.cmplr.tech/__cypress/runner/cypress_runner.js:7798:14)\nFrom Your Spec Code:\n    at Context.eval (https://beta.cmplr.tech/__cypress/tests?p=cypress\\support\\index.js:191:6)",
+                "diff": null
+              },
+              "uuid": "f3d5fdec-8c5d-4528-b766-57730f21ec11",
+              "parentUUID": "867394e4-be3f-4838-bd51-a6bbba0d1f7d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Reblog a Post",
+              "fullTitle": "Dashboard Rebloging Reblog a Post",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "DashboardPOM.DashboardPosts().children().should('have.length.greaterThan', 1);\nPostboardPOM.PostContentDom(postIndex).within($content => {\n  $content.toArray().forEach(element => {\n    content.push(element.innerHTML);\n  });\n});\nPostboardPOM.PostTagsDom(postIndex).within($tags => {\n  tags = $tags.text().split('#');\n});\nPostboardPOM.PostOwnerDom(postIndex).within($postOwner => {\n  owner = $postOwner.text();\n}).then(() => {\n  PostboardPOM.reblogButtonDom(postIndex).click();\n  PostboardPOM.visitPostIframe(owner);\n  PostboardPOM.reblogBodyDom();\n  PostboardPOM.reblogTagsDom(); // PostboardPOM.reblogCloseButtonDom();\n  PostboardPOM.reblogReblogButtonDom().click({\n    force: true\n  });\n});",
+              "err": {},
+              "uuid": "1bf12507-53a8-41cb-9181-5f1562fae7fd",
+              "parentUUID": "867394e4-be3f-4838-bd51-a6bbba0d1f7d",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Assert That Post Is Reblogged",
+              "fullTitle": "Dashboard Rebloging Assert That Post Is Reblogged",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.tumblr.com/blog/cmplr23');\ncy.get('article').children('header').within($header => {\n  cy.log($header.attr('aria-label'));\n  expect($header.attr('aria-label')).to.equal(`cmplr23 reblogged a post from ${owner}`);\n});\ncy.get('article').children('div').eq(1).find('div.GzjsW').children().within($currentContent => {\n  var i = 0;\n  $currentContent.toArray().forEach(currentContent => {\n    expect(currentContent.innerHTML).to.equal(content[i++]);\n  });\n});",
+              "err": {},
+              "uuid": "d8982488-f1fe-42be-8eb0-cf3b9ec72bf4",
+              "parentUUID": "867394e4-be3f-4838-bd51-a6bbba0d1f7d",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f3d5fdec-8c5d-4528-b766-57730f21ec11"
+          ],
+          "pending": [],
+          "skipped": [
+            "1bf12507-53a8-41cb-9181-5f1562fae7fd",
+            "d8982488-f1fe-42be-8eb0-cf3b9ec72bf4"
+          ],
+          "duration": 4173,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "video": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

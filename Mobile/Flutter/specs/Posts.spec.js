@@ -6,11 +6,16 @@ const emails = require('../fixtures/emails.json');
 const {
     byType
 } = require('appium-flutter-finder');
-
 const {
     WritePost,
     AssertPostOnProfile
 } = require('../utils/utilsPosts');
+
+const {
+    LoginWithEmail,
+    EnterEmail,
+    EnterPassword
+} = require('../utils/utilsLogin');
 
 const faker = require('faker/locale/en');
 const ProfilePOM = new Profile();
@@ -19,14 +24,25 @@ const HomePOM = new Home();
 const NotesPOM = new Notes();
 
 describe('Posting', () => {
-
-    afterEach(async () => {
-        await driver.launchApp();
-    });
+    
     beforeEach(async () => {
         await driver.switchContext('FLUTTER');
     });
 
+    afterEach(async () => {
+        await driver.launchapp();
+    });
+    
+    it.only('trial', async () => {
+        await driver.pause(20000);
+        const firstPostNotesPOM = HomePOM.HomeNotesButton();
+        driver.execute('flutter:scrollUntilVisible', byType('ListView'), {
+            item: firstPostNotesPOM,
+            dxScroll: 0,
+            dyScroll: -400
+        });
+        await driver.execute('flutter:scroll', byType('ListView'), {dx: 0, dy: 100, durationMilliseconds: 200, frequency: 1});
+    });
     it('Enter Posts Screen', async () => {
         const Body = faker.lorem.paragraph(faker.random.number({
             min: 3,
@@ -45,7 +61,7 @@ describe('Posting', () => {
         await driver.pause(4000);
     });
 
-    it.only('Enter Posts Screen', async () => {
+    it('Enter Posts Screen', async () => {
         const Body = faker.lorem.paragraph(faker.random.number({
             min: 1,
             max: 3
