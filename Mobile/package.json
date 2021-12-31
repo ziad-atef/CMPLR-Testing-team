@@ -6,11 +6,10 @@
     "emu-appium": "start /b emulator @Pixel -no-boot-anim -gpu on && Appium",
     "test": "wdio",
     "wdio": "wdio run wdio.conf.js",
-    "clean:reports": "rmdir /S /Q NativeResults | rmdir /S /Q FlutterResults",
+    "clean:reports": "rm -r /S /Q NativeResults ||rm -r /S /Q FlutterResults",
     "test-report-native": "allure generate NativeResults --report-dir 'Native Report' --clean",
     "test-report-flutter": "allure generate FlutterResults --report-dir 'Flutter Report' --clean",
-    "allure-open-native": "allure open 'Native Report'",
-    "pretest": "npm run clean:reports"
+    "allure-open-native": "allure open 'Native Report'"
   },
   "keywords": [],
   "author": "We'am and Ziad",

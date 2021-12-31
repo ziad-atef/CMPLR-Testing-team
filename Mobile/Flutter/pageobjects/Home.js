@@ -17,4 +17,7 @@ module.exports = class Home {
     ProfileScreenButton() {
         return byValueKey('masterPage_profile');
     }
+    HomeNotesButton(index=0){
+        return byValueKey(`HomeFollowing_postNotes_${index}`);
+    }
 }

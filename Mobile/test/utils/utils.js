@@ -6,6 +6,11 @@ module.exports.returnPOM = async (selector) => {
     });
     return POM;
 }
+module.exports.returnPOMs = async (selector) => {
+    const POM = (await $$(`android=${selector}`));
+    await driver.pause(1500);
+    return POM;
+}
 module.exports.stateAssertion = async (POM, isDisplayed = true, isEnabled = true, isSelected = false) => {
     console.log(await POM.isDisplayed());
     if (isDisplayed)
