@@ -3,28 +3,28 @@ import Signup from "../../Page Objects/signup";
 
 const faker = require('faker');
 
-
 let ChatPOM = new Chat();
 let SignupPOM = new Signup();
 let email1, password1;
+let email2, password2;
+ 
+const blogNameFill = function() {
+    const word = faker.lorem.words(faker.random.number({min: 1,max: 1}));
 
-const fillSignupData = function(email, password, blogName) {
-    if (email === '')
-        SignupPOM.emailField();
-    else
-        SignupPOM.emailField().type(email);
+    SignupPOM.blogNameField().clear();
 
-    if (password === '')
-        SignupPOM.passwordField();
-    else
-        SignupPOM.passwordField().type(password);
-
-    if (blogName === '')
-        SignupPOM.blogNameField();
-    else
-        SignupPOM.blogNameField().type(blogName);
+    SignupPOM.blogNameField().type(word);
 
     SignupPOM.signupButtoninside().click();
+
+    cy.wait(1000);
+
+    ChatPOM.loginCard().then( $cont => {
+        if($cont.find('input[data-testid = "register_age"]').length)
+        {
+            blogNameFill();
+        }
+    });
 }
 
 const newReciver = () => {
@@ -147,11 +147,16 @@ describe("Chatting (send-only)", () => {
 
 describe('Sending and recieving checks', () => {
     let Message;
-    before(function () {
+    beforeEach(function () {
         cy.fixture('PersonalData').then((user) => {
             email1 = user.email;
             password1 = user.password;
+            email2 = user.email2;
+            password2 = user.password2;
         });
+
+        cy.visit("https://beta.cmplr.tech/login");
+        /*
         return cy.mailslurp()
             .then(mailslurp => mailslurp.createInbox())
             .then(inbox => {
@@ -159,18 +164,32 @@ describe('Sending and recieving checks', () => {
                 cy.wrap(inbox.id).as('newInboxId')
                 cy.wrap(inbox.emailAddress).as('newEmailAddress')
             })
+        */
     });
-    it.only("sending messages", function() {
-        const word = faker.lorem.words(faker.random.number({min: 1,max: 1}));
+    it("sending messages", function() {
         Message = faker.lorem.sentence(3, 10);
 
-        cy.visit("https://beta.cmplr.tech/register");
+        
 
-        fillSignupData(this.newEmailAddress, "Qwer12334##", word);
+        ChatPOM.emailField().type(email2);
+
+        ChatPOM.passwordField().type(password2);
+
+        ChatPOM.loginButtoninside().click();
+
+        /*
+        cy.visit("https://beta.cmplr.tech/login");
+
+        SignupPOM.emailField().type(this.newEmailAddress);
+
+        SignupPOM.passwordField().type("Qwer12334##");
+
+        blogNameFill();
 
         SignupPOM.ageField().type(20,{ force: true });
 
         SignupPOM.ageButton().click({ force: true });
+        */
 
         ChatPOM.chatsButton().click();
 
@@ -193,9 +212,7 @@ describe('Sending and recieving checks', () => {
         ChatPOM.lastMessage().contains(Message).should("exist").and("be.visible");
     });
 
-    it.only("recieving messages", function() {
-
-        cy.visit("https://beta.cmplr.tech/login");
+    it("recieving messages", function() {
 
         ChatPOM.emailField().type(email1);
 

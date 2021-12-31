@@ -65,5 +65,11 @@ class Chat {
             return Cypress._.sample(items);
         }).click()
     }
+    loginCard() {
+        return cy.get('div[class="LoginCard"]');
+    }
+    ageField() {
+        return 'input[data-testid = "register_age"]';
+    }
 }
 export default Chat;

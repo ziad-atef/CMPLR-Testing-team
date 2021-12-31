@@ -4,8 +4,8 @@
     'appium:appPackage': "com.tumblr",
     'appium:appActivity': "com.tumblr.ui.activity.JumpoffActivity",
 */
-const isNative = true;
-const specFiles = isNative ? './test/specs/**/*.js' : './Flutter/specs/**/login.spec.js';
+const isNative = false;
+const specFiles = isNative ? './test/specs/**/*.js' : './Flutter/specs/**/chat.spec.js';
 const AllureOutputDir = isNative ? 'NativeResults' : 'FlutterResults';
 const desiredCapabilities = isNative ? {
     //  Android Native
@@ -14,8 +14,8 @@ const desiredCapabilities = isNative ? {
     "appium:automationName": "UiAutomator2",
 } : {
     // Flutter
-    "appium:appPackage": "com.example.cmplr",
-    "appium:appActivity": "com.example.cmplr.MainActivity",
+    "appium:appPackage": "cmplr.android",
+    "appium:appActivity": "cmplr.android.MainActivity",
     "appium:automationName": "Flutter",
     "appium:retryBackoffTime": 500
 };
