@@ -120,10 +120,10 @@ cypress/fixtures/userLoginData.json
 cypress/fixtures/userSignupData.json
 
 #cypress reports and videos
-# Web/cypress/reports
+#Web/cypress/reports
 Web/cypress/videos
 Web/cypress.env.json
-# Web/allure-report
+#Web/allure-report
 Web/cypress/screenshots
 Web/cypress/fixtures/PersonalData.json
 Web/allure-results

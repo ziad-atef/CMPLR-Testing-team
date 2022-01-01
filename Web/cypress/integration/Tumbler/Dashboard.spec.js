@@ -1,18 +1,15 @@
 import Postboard from "../../Page Objects/post";
 import Dashboard from "../../Page Objects/dashboard";
-import Navbar from "../../Page Objects/Navbar";
 import { success } from "../../Utils/Dashboard/pageassertion";
 import {
   TextPost,
   QuotePost,
   TextPostAssertions,
-  QuotePostAssertions,
   VisitMyBlog,
 } from "../../Utils/Dashboard/utils";
 const faker = require("faker/locale/en");
 const PostboardPOM = new Postboard();
 const DashboardPOM = new Dashboard();
-const NavbarPOM = new Navbar();
 
 describe("Dashboard Posting", () => {
   beforeEach(() => {
@@ -237,9 +234,11 @@ describe.skip("Dashboard Rebloging", () => {
         content.push(element.innerHTML);
       });
     });
-    PostboardPOM.PostTagsDom(postIndex).eq(0).within(($tags) => {
-      tags = $tags.text().split("#");
-    });
+    PostboardPOM.PostTagsDom(postIndex)
+      .eq(0)
+      .within(($tags) => {
+        tags = $tags.text().split("#");
+      });
     PostboardPOM.PostOwnerDom(postIndex)
       .within(($postOwner) => {
         owner = $postOwner.text();

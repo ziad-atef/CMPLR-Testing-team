@@ -27,6 +27,9 @@ class Postboard {
   }
 
   photoDOM() {
+    return cy.get('div[data-testid="content-postInput"]');
+  }
+  photoIconDOM() {
     return cy.get('label[for="to-image-words"]');
   }
 
@@ -69,16 +72,16 @@ class Postboard {
     return cy.get('button[data-testid="post-postBtn"]');
   }
 
-  reblogCloseButtonDom() {    
-  return cy.get('button[data-testid="cancel-postBtn"]');
+  reblogCloseButtonDom() {
+    return cy.get('button[data-testid="cancel-postBtn"]');
   }
 
   reblogBodyDom() {
-      return cy.$$('div[data-testid="content-postInput"]')
+    return cy.$$('div[data-testid="content-postInput"]');
   }
 
   reblogTagsDom() {
-      return cy.get('input.editorDiv#tagsEditor[placeholder="#tags"]')
+    return cy.get('input.editorDiv#tagsEditor[placeholder="#tags"]');
   }
 
   visitPostIframe(owner) {

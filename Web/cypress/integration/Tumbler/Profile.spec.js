@@ -13,7 +13,7 @@ const NavbarPOM = new Navbar();
 
 let blogName, anotherBlogName;
 
-describe("Profile", () => {
+describe.skip("Profile", () => {
   let ProfilePOM;
 
   context.skip("UI Assertion", () => {

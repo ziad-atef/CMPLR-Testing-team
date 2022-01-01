@@ -17,6 +17,6 @@
   "responseTimeout": 10000,
   "requestTimeout": 10000,
   "video": false,
-  "screenshotOnRunFailure": false,
-  "baseUrl": "https://beta.cmplr.tech/"
+  "screenshotOnRunFailure": false
+  
 }
