@@ -132,7 +132,7 @@ describe('Login', () => {
     });
 
 
-    it.only('Display Password Before Typing it', async () => {
+    it('Display Password Before Typing it', async () => {
         await LoginWithEmail();
 
         const EmailField = await LoginPOM.emailFieldPOM();
@@ -165,7 +165,7 @@ describe('Login', () => {
         await SuccessfulLog();
     });
 
-    it.only('Successful Login', async () => {
+    it('Successful Login', async () => {
         await LoginWithEmail();
 
         await EnterEmailAndPassword(emails.email, emails.password);

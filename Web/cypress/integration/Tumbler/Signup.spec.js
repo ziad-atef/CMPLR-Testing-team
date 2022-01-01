@@ -2,8 +2,8 @@ import Signup from "../../Page Objects/signup";
 
 let SignupPOM;
 let email;
-let takenEmail = "testEmail@gmail.com";
-let takenBlogName = "testBlog";
+let takenEmail;
+let takenBlogName;
 let password;
 let blogName;
 let inbox;
@@ -62,7 +62,7 @@ const successAssertions = () =>{
 }
 
 const ageFail = () =>{
-    cy.contains("Age must be between 16-120");
+    cy.contains("Age must be between 18-80");
 }
 
 const ageSucess = () =>{
@@ -168,15 +168,6 @@ describe('Signup', () => {
         failAssertions(emptyEmailPasswordAndBlogNameMessage);
     });
 
-    it('signup taken email', () => {
-
-        SignupPOM.signupButton().click({ force: true });
-
-        fillSignupData(takenEmail, password, blogName);
-
-        failAssertions(takenEmailMessage);
-    });
-
     it('signup invalid email', () => {
 
         SignupPOM.signupButton().click({ force: true });
@@ -195,15 +186,6 @@ describe('Signup', () => {
         failAssertions(invalidPasswordMessage);
     });
 
-    it('signup taken blog name', () => {
-
-        SignupPOM.signupButton().click({ force: true });
-
-        fillSignupData(email, password, takenBlogName);
-
-        failAssertions(takenBlogNameMessage);
-    });
-
     describe('Signup2', () => {
         before(function () {
             return cy.mailslurp()
@@ -218,7 +200,7 @@ describe('Signup', () => {
 
             SignupPOM.signupButton().click({ force: true });
 
-            fillSignupData(this.newEmailAddress, password, this.newInboxId);
+            fillSignupData(this.newEmailAddress, password, this.newInboxId.slice(0,15));
 
             successAssertions();
 
@@ -230,11 +212,33 @@ describe('Signup', () => {
 
             SignupPOM.signupButton().click({ force: true });
 
-            fillSignupData(this.newEmailAddress, password, this.newInboxId);
+            takenEmail = this.newEmailAddress;
+
+            takenBlogName = this.newInboxId.slice(0,15);
+
+            fillSignupData(this.newEmailAddress, password, this.newInboxId.slice(0,15));
 
             successAssertions();
 
             ageEntry(18);
+        });
+
+        it('signup taken email', () => {
+
+            SignupPOM.signupButton().click({ force: true });
+    
+            fillSignupData(takenEmail, password, blogName);
+    
+            failAssertions(takenEmailMessage);
+        });
+
+        it('signup taken blog name', () => {
+
+            SignupPOM.signupButton().click({ force: true });
+    
+            fillSignupData(email, password, takenBlogName);
+    
+            failAssertions(takenBlogNameMessage);
         });
     });
 });

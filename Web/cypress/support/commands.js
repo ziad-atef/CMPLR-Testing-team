@@ -1,9 +1,6 @@
-import {
-    success,
-    fail
-} from '../Utils/log in/pageassertion'
-import 'cypress-file-upload';
-import "cypress-localstorage-commands"
+import { success, fail } from "../Utils/log in/pageassertion";
+import "cypress-file-upload";
+import "cypress-localstorage-commands";
 
 // ***********************************************
 // This example commands.js shows you how to
@@ -31,38 +28,42 @@ import "cypress-localstorage-commands"
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('login', (POM, email, password, successfulLogin = true, failMessage = '') => {
+Cypress.Commands.add(
+  "login",
+  (POM, email, password, successfulLogin = true, failMessage = "") => {
     POM.emailField().type(email);
     POM.passwordField().type(password);
     POM.loginButtoninside().click();
 
+    if (successfulLogin) success();
+    else fail(failMessage);
+  }
+);
+Cypress.Commands.add("authenticate", (email, password) => {
+  cy.request("POST", "https://beta.cmplr.tech/api/login", {
+    email,
+    password,
+  }).then(async (response) => {
+    expect(response.body.response).to.have.property("token");
+    expect(response.body.response).to.have.property("user");
+    expect(response.body.response.user).to.have.property("email", email);
 
-    if (successfulLogin)
-        success();
-    else
-        fail(failMessage);
+    const token = await response.body.response.token;
+    const user = await response.body.response.user;
+    const blogName = "cmplr";
+    cy.setLocalStorage(
+      "user",
+      JSON.stringify({
+        token: token,
+        userData: user,
+        blogName: blogName,
+      })
+    );
+  });
 });
-Cypress.Commands.add('authorize', (email, password) => {
-    cy.request('POST', 'http://13.68.206.72/api/login', {
-        email,
-        password
-    }).then(async (response) => {
-        expect(response.body).to.have.property('token');
-        expect(response.body).to.have.property('user');
-        expect(response.body.user).to.have.property('email', email);
 
-        const token = await response.body.token;
-        const user = await response.body.user;
-        cy.setLocalStorage('user',
-            JSON.stringify({
-                token: token,
-                userData: user
-            }));
-    })
-});
-
-Cypress.Commands.add('forceVisit', url => {
-    cy.window().then(win => {
-        return win.open(url, '_self');
-    });
+Cypress.Commands.add("forceVisit", (url) => {
+  cy.window().then((win) => {
+    return win.open(url, "_self");
+  });
 });
