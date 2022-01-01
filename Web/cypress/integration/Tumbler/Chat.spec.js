@@ -69,7 +69,7 @@ describe("Chatting (send-only)", () => {
         newReciver();
 
         //add wait for load if time allows
-        ChatPOM.chatHeader().should("exist").and("be.visible");
+        ChatPOM.chatHeader().should("exist");
 
         ChatPOM.messageField().type(Message);
 
@@ -115,7 +115,7 @@ describe("Chatting (send-only)", () => {
         }).click();
 
         //add wait for load if time allows
-        ChatPOM.chatHeader().should("exist").and("be.visible");
+        ChatPOM.chatHeader().should("exist");
 
         ChatPOM.messageField().type(Message);
 
@@ -199,7 +199,7 @@ describe('Sending and recieving checks', () => {
 
         ChatPOM.newRecieverField().first().click();
 
-        ChatPOM.chatHeader().should("exist").and("be.visible");
+        ChatPOM.chatHeader().should("exist");
 
         ChatPOM.messageField().type(Message);
 
@@ -224,7 +224,7 @@ describe('Sending and recieving checks', () => {
         
         ChatPOM.unseenField().first().click();
 
-        ChatPOM.chatHeader().should("exist").and("be.visible");
+        ChatPOM.chatHeader().should("exist");
 
         cy.wait(1000);
 
