@@ -14,7 +14,7 @@ pipeline {
                 sh"""
                    pwd
                 """
-                git branch: "main", url: "https://CMPLR-Technologies@dev.azure.com/CMPLR-Technologies/CMPLR-Technologies.Testing/_git/CMPLR-Technologies.Testing"
+                git branch: "prod", url: "https://CMPLR-Technologies@dev.azure.com/CMPLR-Technologies/CMPLR-Technologies.Testing/_git/CMPLR-Technologies.Testing"
             }
             post{
                 success{
