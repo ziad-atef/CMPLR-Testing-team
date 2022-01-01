@@ -6,7 +6,6 @@ need to add tests at set new password screen:
 
 import Login from "../../Page Objects/login";
 import ResetPassword from "../../Page Objects/resetpassword";
-import MailSlurp from "../../Page Objects/mailslurp";
 import { success } from "../../Utils/log in/pageassertion";
 const openResetPasswordScreen = (LoginPOM, ResetPasswordPOM) => {
   cy.visit("/login");
@@ -24,14 +23,14 @@ const InteractWithResetPasswordScreen = (ResetPasswordPOM, email) => {
   if (email === "") ResetPasswordPOM.emailField();
   else ResetPasswordPOM.emailField().type(email, { force: true });
 
-  //   cy.wait(1000);
+  cy.wait(1000);
   ResetPasswordPOM.cancelButton();
   ResetPasswordPOM.resetButton().click();
 };
 var resetPasswordLink;
 describe("reset password", () => {
   let emailAddress, password, newPassword, weakNewPassword;
-  let LoginPOM, ResetPasswordPOM, MailSlurpPOM;
+  let LoginPOM, ResetPasswordPOM;
   let sentenceChecker = [
     "We've sent you an email with instructions to reset your password.",
     "Please make sure it didn't wind up in your Junk Mail.",
@@ -60,7 +59,6 @@ describe("reset password", () => {
     });
     LoginPOM = new Login();
     ResetPasswordPOM = new ResetPassword();
-    MailSlurpPOM = new MailSlurp();
   });
 
   it("Log In With Old Password", () => {

@@ -11,6 +11,12 @@ class Dashboard {
   DashboardPosts() {
     return cy.get("section.normal-layout").children().eq(1);
   }
+
+  PostLikeButton(index = 0) {
+    return this.DashboardPosts()
+      .children('div[data-testid="post-footer-cont-ts"]')
+      .find('button[data-testid="love-icon-footer488"]');
+  }
 }
 
 export default Dashboard;
