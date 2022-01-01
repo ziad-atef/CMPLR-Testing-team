@@ -39,7 +39,7 @@ Cypress.Commands.add(
     else fail(failMessage);
   }
 );
-Cypress.Commands.add("authenticate", (email, password) => {
+Cypress.Commands.add("authenticate", (email, password, blogName = "cmplr") => {
   cy.request("POST", "https://beta.cmplr.tech/api/login", {
     email,
     password,
@@ -50,7 +50,6 @@ Cypress.Commands.add("authenticate", (email, password) => {
 
     const token = await response.body.response.token;
     const user = await response.body.response.user;
-    const blogName = "cmplr";
     cy.setLocalStorage(
       "user",
       JSON.stringify({

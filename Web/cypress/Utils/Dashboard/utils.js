@@ -76,10 +76,7 @@ module.exports.QuotePostAssertions = (Quote = "", Source = "", Tags = []) => {
   }
 };
 
-module.exports.VisitMyBlog = (Title = "", Body = "", Tags = []) => {
+module.exports.VisitMyBlog = (blogName = "cmplr") => {
   cy.wait(3000);
-  cy.visit("/blog/cmplr");
-  //   NavbarPOM.accountButton().click();
-  //   cy.wait(2000)
-  //   NavbarPOM.blogButton().first().click();
+  cy.visit(`/blog/${blogName}`);
 };
