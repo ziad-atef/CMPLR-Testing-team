@@ -3,21 +3,17 @@ const faker = require('faker');
 
 let BlogBlockPOM = new BlogBlocking();
 let email1, password1;
-let blockedURL;
+
 describe("Blog Block", () => {
     beforeEach(() => {
-
-        /*
-            first you have to pass the url of the website, or the page you want
-            to start your test with, you want to test
-        */
-        cy.visit("https://www.tumblr.com/login");
+        cy.visit("https://beta.cmplr.tech/login");
         cy.fixture('PersonalData').then((user) => {
             email1 = user.email;
             password1 = user.password;
         });
     });
-    it("test1", () => {
+
+    it("Block a blog", () => {
         //loging in
         BlogBlockPOM.emailField().type(email1);
         BlogBlockPOM.passwordField().type(password1);
@@ -25,17 +21,24 @@ describe("Blog Block", () => {
         BlogBlockPOM.checkOutBlog().should('be.visible');
         //get to the blog
         const word = faker.lorem.words(faker.random.number({min: 1,max: 1}));
-        BlogBlockPOM.searchField().type(word);
-        BlogBlockPOM.searchResult().click();
-        cy.get('button.SaLOl[aria-label="Close"]').should('be.visible');
-        //get more options menu
-        cy.wait(3000);
-        BlogBlockPOM.moreOptions().click({force:true});
-        /*
-        BlogBlockPOM.searchField().type(word);
-        BlogBlockPOM.searchResult().click();
-        cy.wait(3000);
-        BlogBlockPOM.moreOptions().click();
-        */
+        BlogBlockPOM.searchField().type(word[0]);
+        cy.wait(2000);
+        BlogBlockPOM.searchResult().then(($res) => {
+            const items = $res.toArray(); 
+            return Cypress._.sample(items);
+        }).click();
+        cy.wait(2000);
+        BlogBlockPOM.avatar().click({force: true});
+        BlogBlockPOM.block().click({force: true});
+    });
+    it("Unblock a blog", () => {
+        //loging in
+        BlogBlockPOM.emailField().type(email1);
+        BlogBlockPOM.passwordField().type(password1);
+        BlogBlockPOM.loginButtoninside().click();
+        BlogBlockPOM.checkOutBlog().should('be.visible');
+        BlogBlockPOM.avatar().click();
+        BlogBlockPOM.settings().click();
+        BlogBlockPOM.avatar().click();
     });
   });
