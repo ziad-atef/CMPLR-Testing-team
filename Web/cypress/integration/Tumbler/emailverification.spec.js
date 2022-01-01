@@ -1,8 +1,13 @@
 import Login from "../../Page Objects/login";
-import MailSlurp from "../../Page Objects/mailslurp";
-import Verification from "../../Page Objects/verification";
+import Navbar from "../../Page Objects/Navbar";
+import AccountSettings from "../../Page Objects/accountSettings";
+import { beforeEach } from "mocha";
+
 var faker = require("faker/locale/en");
 var verifyEmailLink;
+const NavbarPOM = new Navbar();
+const AccountSettingsPOM = new AccountSettings();
+
 describe("email verification", () => {
   let email, password;
   const verificationSentence =
@@ -12,14 +17,11 @@ describe("email verification", () => {
     // "Hello! Just need you to verify that this is your email address. Is this you?",
     // "Thanks! Gotta keep the internet safe from spambots and all that.",
   ];
-  const emailVerificationButtonText = "This is me!";
-  const MailSlurpPOM = new MailSlurp();
-  const VerificationPOM = new Verification();
   const linkExtractStart = 'href="https://beta.cmplr.tech/verify-email',
     linkExtractEnd = '" ';
   const linkExtractIndex = 6;
 
-  before(function () {
+  beforeEach(function () {
     cy.fixture("PersonalData").then((user) => {
       email = user.newEmail;
       password = user.newPassword;
@@ -70,9 +72,69 @@ describe("email verification", () => {
   });
 
   it("Verify email", function () {
-    cy.authenticate(email, password);
     cy.visit(verifyEmailLink);
+    cy.wait(5000);
+    cy.visit("/");
 
     cy.contains(verificationSentence).should("not.exist");
+  });
+
+  it("Try To Delete Email With Wrong Password", function () {
+    cy.authenticate(email, password);
+    cy.visit("/settings/account");
+
+    AccountSettingsPOM.deleteAccountButton().click();
+    AccountSettingsPOM.deleteAccountEmailField().type(email);
+    AccountSettingsPOM.deleteAccountPasswordField().type(
+      faker.internet.password()
+    );
+    AccountSettingsPOM.deleteAccountDeleteButton().click();
+    cy.contains("email or password is incorrect");
+  });
+
+  it("Try To Delete Email With Wrong Email", function () {
+    cy.authenticate(email, password);
+    cy.visit("/settings/account");
+
+    AccountSettingsPOM.deleteAccountButton().click();
+    AccountSettingsPOM.deleteAccountEmailField().type(faker.internet.email());
+    AccountSettingsPOM.deleteAccountPasswordField().type(password);
+    AccountSettingsPOM.deleteAccountDeleteButton().click();
+    cy.contains("email or password is incorrect");
+  });
+
+  it("Try To Delete Email With Another Registered Email", function () {
+    cy.fixture("PersonalData").then((user) => {
+      cy.authenticate(email, password);
+      cy.visit("/settings/account");
+
+      AccountSettingsPOM.deleteAccountButton().click();
+      AccountSettingsPOM.deleteAccountEmailField().type(user.email);
+      AccountSettingsPOM.deleteAccountPasswordField().type(user.password);
+      AccountSettingsPOM.deleteAccountDeleteButton().click();
+      cy.contains("email or password is incorrect");
+    });
+  });
+
+  it("Delete Email", function () {
+    cy.authenticate(email, password);
+    cy.visit("/settings/account");
+
+    AccountSettingsPOM.deleteAccountButton().click();
+    AccountSettingsPOM.deleteAccountEmailField().type(email);
+    AccountSettingsPOM.deleteAccountPasswordField().type(password);
+    AccountSettingsPOM.deleteAccountDeleteButton().click();
+
+    cy.url().should("include", "login");
+  });
+  it("Check That Email Is Deleted", function () {
+    cy.visit("/login");
+    cy.login(
+      new Login(),
+      email,
+      password,
+      false,
+      "email or password is not valid"
+    );
   });
 });

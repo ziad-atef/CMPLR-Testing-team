@@ -7,12 +7,18 @@ class Navbar {
     return cy.get('div[data-testid="AccountPopupActions"]');
   }
 
-//   accountLowerList() {
-//     return cy.get("ul.kbIQf").children("li");
-//   }
+  SearchInput() {
+    return cy.get('input[placeholder="Search Tumblr"]');
+  }
+  SearchResults() {
+    return cy.get('div.search-result');
+  }
+  SearchResultsBlogsSection() {
+    return this.SearchResults().children().find('div.search-result-blog-section1');
+  }
 
   blogButton() {
-    return cy.get('a.account-popup-blog-head-text');
+    return cy.get("a.account-popup-blog-head-text");
   }
   LogoutButton() {
     return cy.get('div[data-testid="LogOutButton"]');
