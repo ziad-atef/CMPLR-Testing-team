@@ -10,8 +10,8 @@
     "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
     "posttest": "npm run combine-reports && npm run generate-report",
     "run-before-test": "rm -r cypress/reports & npm run clean:reports",
-    "test": "cypress run --config baseUrl=https://localhost:443/ || npm run posttest",
-    "cypress:open": "npx cypress open --config baseUrl=https://localhost:443/"
+    "test": "cypress run --config baseUrl=http://20.127.114.33:443/ || npm run posttest",
+    "cypress:open": "npx cypress open --config baseUrl=http://20.127.114.33:443/"
   },
   "repository": {
     "type": "git",
