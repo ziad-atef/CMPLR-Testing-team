@@ -1,16 +1,15 @@
 class Signup{
     signupButton() {
-        return cy.get('[data-testid="signup-btn"]').first();
+        return cy.get('a[data-testid="signup-btn"]').first();
     }
     appbarSignupButton() {
-        return cy.get('a.Z8Ux2.qjTo7.IMvK3[href="/register"]');
+        return cy.get('a[href="/register"]').first();
     }
     secondarySignupButton() {
-        return cy.get('[data-testid="signup-btn"]').last();
+        return cy.get('a[data-testid="signup-btn"]').last();
     }
     emailField() {
         return cy.get('[data-testid="register_email"]');
-
     }
     passwordField() {
         return cy.get('[data-testid="register_password"]');
