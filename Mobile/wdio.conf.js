@@ -5,7 +5,7 @@
     'appium:appActivity': "com.tumblr.ui.activity.JumpoffActivity",
 */
 const isNative = false;
-const specFiles = isNative ? './test/specs/**/Posts.spec.js' : './Flutter/specs/**/Posts.spec.js';
+const specFiles = isNative ? './test/specs/**/Signup.spec.js' : './Flutter/specs/**/chat.spec.js';
 const AllureOutputDir = isNative ? 'NativeResults' : 'FlutterResults';
 const desiredCapabilities = isNative ? {
     //  Android Native

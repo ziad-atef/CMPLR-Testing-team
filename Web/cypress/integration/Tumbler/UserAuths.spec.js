@@ -2,9 +2,10 @@ import Login from '../../Page Objects/login';
 import { noAuth } from '../../Utils/log in/pageassertion';
 
 let LoginPOM;
-let blogLink;
+let blogLink = "/blog/ziadd";
 let email;
 let password;
+let email1, password1;
 
 const fillEmailAndPassword = (passEmail, passPassword) => {
     if (passEmail === '')
@@ -26,14 +27,12 @@ describe('Authorizations', () => {
             first you have to pass the url of the website, or the page you want
             to start your test with, you want to test
         */
-        cy.visit('https://www.tumblr.com/');
-        
         LoginPOM = new Login();
 
-        cy.fixture('userAuthData').then((auths) => {
-            blogLink = auths.blogLink;
-            email = auths.email;
-            password = auths.password;
+        cy.visit("/login");
+        cy.fixture('PersonalData').then((user) => {
+            email1 = user.email;
+            password1 = user.password;
         });
     });
 
@@ -45,8 +44,7 @@ describe('Authorizations', () => {
     //should we give access to help center or not??
 
     it('sign in and access different blog', () => {
-        LoginPOM.loginButton().click({ force: true });
-        fillEmailAndPassword(email,password);
+        fillEmailAndPassword(email1,password1);
         cy.visit(blogLink);
         noAuth();
     });

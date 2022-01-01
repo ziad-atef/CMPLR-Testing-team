@@ -37,13 +37,33 @@ describe('Help center', () => {
         cy.get('button[aria-label = "Account"]').click();
         cy.get('a[href="/help"]').click();
         */
+        
+        var head;
+        cy.visit('/help');
 
-        cy.visit('https://tumblr.zendesk.com/hc/en-us#');
-
-        cy.get('a[class="article-list-link"]').each( ($el)=>{
-            cy.wrap($el).click();
-            cy.contains(helpPageContent).should("be.visible");
+        cy.get('a[class="help-center-container-category-content-link"]').then(($topic) => {
+            const items = $topic.toArray(); 
+            return Cypress._.sample(items);
+        }).click({force: true});
+        /*
+        cy.get('a[class="help-center-container-category-content-link"]').then(($topic) => {
+            const items = $topic.toArray(); 
+            return Cypress._.sample(items);
+        }).then( $el => {
+            head = $el.get(0).innerText
+            cy.log(head);
+            cy.wrap($el).click({force: true});
+            cy.get('h1[title="'+head+'"]').should("exist");
         });
+        */
+        /*
+        first().invoke('text').then((text) => {
+            head = text;
+            cy.log(head);
+            
+        });
+        cy.log(head);
+        */
     });
 
 

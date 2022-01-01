@@ -135,7 +135,6 @@ describe("Dashboard Posting", () => {
 
     VisitMyBlog();
 
-    // QuotePostAssertions(Quote, Source, Tags);
     TextPostAssertions(Quote, Source, Tags);
   });
   it("(Quote) Disable Post Button After Clearing", () => {
@@ -195,8 +194,6 @@ describe("Dashboard Posting", () => {
       force: true,
     });
 
-    // NavbarPOM.accountButton().click();
-    // NavbarPOM.accountLowerList().eq(0).click();
     VisitMyBlog();
 
     cy.get("figure").first().find("div").children();
@@ -207,7 +204,7 @@ describe.skip("Dashboard Rebloging", () => {
   let postIndex = 0,
     owner,
     content = [];
-  let contentLength, tags;
+  let tags;
   beforeEach(() => {
     cy.fixture("PersonalData").then((user) => {
       cy.authenticate(user.email, user.password);
@@ -246,11 +243,9 @@ describe.skip("Dashboard Rebloging", () => {
       .then(() => {
         PostboardPOM.reblogButtonDom(postIndex).click();
 
-        // PostboardPOM.visitPostIframe(owner);
 
         PostboardPOM.reblogBodyDom();
         PostboardPOM.reblogTagsDom();
-        // PostboardPOM.reblogCloseButtonDom();
         PostboardPOM.reblogReblogButtonDom().click({
           force: true,
         });

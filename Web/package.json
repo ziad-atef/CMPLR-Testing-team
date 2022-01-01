@@ -10,8 +10,8 @@
     "generate-report": "marge cypress/reports/mochareports/report.json -f report -o cypress/reports/mochareports",
     "posttest": "npm run combine-reports && npm run generate-report",
     "run-before-test": "rm -r cypress/reports & npm run clean:reports",
-    "test": "cypress run --config baseUrl=https://www.cmplr.tech/ || npm run posttest",
-    "cypress:open": "npx cypress open --config baseUrl=https://www.cmplr.tech/"
+    "test": "cypress run --config baseUrl=https://beta.cmplr.tech/ || npm run posttest",
+    "cypress:open": "npx cypress open --config baseUrl=https://beta.cmplr.tech/"
   },
   "repository": {
     "type": "git",
@@ -39,6 +39,7 @@
     "mochawesome-report-generator": "^6.0.1"
   },
   "dependencies": {
+    "@cypress/code-coverage": "^3.9.12",
     "faker": "^5.5.3",
     "fakerator": "^0.3.4"
   }
