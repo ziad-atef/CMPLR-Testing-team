@@ -1,7 +1,7 @@
 const {returnPOM} = require('../utils/utils');
 module.exports = class Home {
     async WritePostButton() {
-        const selector = await 'new UiSelector().resourceId("com.cmp.cmplr:id/writePostBtn")';
+        const selector = await 'new UiSelector().resourceId("com.cmp.cmplr:id/writePostBtn2")';
         return returnPOM(selector);
     }
     async HomeScreenButton() {
@@ -18,6 +18,10 @@ module.exports = class Home {
     }
     async ProfileScreenButton() {
         const selector = await 'new UiSelector().resourceId("com.cmp.cmplr:id/profileScreenFragment")';
+        return returnPOM(selector);
+    }
+    async postNotes() {
+        const selector = await 'new UiSelector().resourceId("com.cmp.cmplr:id/comments_btn")';
         return returnPOM(selector);
     }
 }

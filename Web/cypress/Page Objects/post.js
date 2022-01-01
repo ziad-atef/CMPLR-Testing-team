@@ -1,87 +1,104 @@
-import Dashboard from './dashboard';
+import Dashboard from "./dashboard";
 const DashboardPOM = new Dashboard();
-import {
-    getIframeBody
-} from '../Utils/utils';
+import { getIframeBody } from "../Utils/utils";
 class Postboard {
-    postButton() {
-        return getIframeBody('iframe.vP3g8').find("button.button-area").should('have.text', 'Post');
-    }
+  postButton() {
+    return cy.get('button[data-testid="post-postBtn"]');
+  }
 
-    postTitleDOM() {
-        return getIframeBody('iframe.vP3g8').find('div.editor.editor-plaintext[aria-label="Post title"]');
-    }
+  postTitleDOM() {
+    return cy.get('div[data-testid="title-postInput"]');
+  }
 
-    postBodyDOM() {
-        return getIframeBody('iframe.vP3g8').find('div.editor-richtext[aria-label="Post body"]');
-    }
+  postBodyDOM() {
+    return cy.get('div[data-testid="content-postInput"]');
+  }
 
-    postTagsDOM() {
-        return getIframeBody('iframe.vP3g8').find('div.editor-plaintext[aria-label="Post tags"]');
-    }
+  postTagsDOM() {
+    return cy.get('input.editorDiv#tagsEditor[placeholder="#tags"]');
+  }
 
-    quoteDOM() {
-        return getIframeBody('iframe.vP3g8').find('div.editor.editor-plaintext[aria-label="Quote"]');
-    }
+  quoteDOM() {
+    return cy.get('div[data-testid="title-postInput"]');
+  }
 
-    sourceDOM() {
-        return getIframeBody('iframe.vP3g8').find('div.editor.editor-richtext[aria-label="Source"]')
-    }
+  sourceDOM() {
+    return cy.get('div[data-testid="content-postInput"]');
+  }
 
-    photoDOM() {
-        return getIframeBody('iframe.vP3g8').find('input[type="file"]').first();
-    }
+  photoDOM() {
+    return cy.get('div[data-testid="content-postInput"]');
+  }
+  photoIconDOM() {
+    return cy.get('label[for="to-image-words"]');
+  }
 
-    videoSwitchDOM() {
-        return getIframeBody('iframe.vP3g8').find('input.confirm-tos--checkbox[type="checkbox"]');
-    }
+  videoSwitchDOM() {
+    return cy.get('label[for="to-video-words"]');
+  }
 
-    PostOwnerDom(index) {
-        return DashboardPOM.DashboardPosts().children().eq(index).find('a.BSUG4[role="link"]').eq(1);
-    }
+  PostOwnerDom(index) {
+    return DashboardPOM.DashboardPosts()
+      .children()
+      .eq(index)
+      .find('span[data-testid="post-heading-ts"]');
+  }
 
-    PostContentDom(index) {
-        return DashboardPOM.DashboardPosts().children().eq(index).find('div.GzjsW').children();
-    }
+  PostContentDom(index) {
+    return DashboardPOM.DashboardPosts()
+      .children()
+      .eq(index)
+      .find('div[data-testid="post-body-ts"]')
+      .children();
+  }
 
-    PostTagsDom(index) {
-        return DashboardPOM.DashboardPosts().children().eq(index).find('div.hAFp3').find('a');
-    }
+  PostTagsDom(index) {
+    return DashboardPOM.DashboardPosts()
+      .children()
+      .eq(index)
+      .find('div[data-testid="tags-cont-ts"]')
+      .find("a");
+  }
 
-    reblogButtonDom(index) {
-        return DashboardPOM.DashboardPosts().children().eq(index).find('div.MCavR').find('a[aria-label="Reblog"]');
-    }
+  reblogButtonDom(index) {
+    return DashboardPOM.DashboardPosts()
+      .children()
+      .eq(index)
+      .find('button[data-testid="reblog-icon-footer148"]');
+    //   .find('a[aria-label="Reblog"]');
+  }
 
-    reblogReblogButtonDom() {
-        return getIframeBody('iframe.vP3g8').find('button.button-area.create_post_button')
-            .should('have.text', 'Reblog').and('be.visible').and('be.enabled');
-    }
+  reblogReblogButtonDom() {
+    return cy.get('button[data-testid="post-postBtn"]');
+  }
 
-    reblogCloseButtonDom() {
-        return getIframeBody('iframe.vP3g8').find('button.tx-button')
-            .should('have.text', 'Close').and('be.visible').and('be.enabled');
-    }
+  reblogCloseButtonDom() {
+    return cy.get('button[data-testid="cancel-postBtn"]');
+  }
 
-    reblogBodyDom() {
-        return getIframeBody('iframe.vP3g8').find('div.editor[aria-label="Post body"]')
-            .should('be.visible');
-    }
+  reblogBodyDom() {
+    return cy.$$('div[data-testid="content-postInput"]');
+  }
 
-    reblogTagsDom() {
-        return getIframeBody('iframe.vP3g8').find('div.editor[aria-label="Post tags"]')
-            .should('be.visible');
-    }
+  reblogTagsDom() {
+    return cy.get('input.editorDiv#tagsEditor[placeholder="#tags"]');
+  }
 
-    visitPostIframe(owner) {
-        cy.get('iframe.vP3g8').within($element => {
-            const src = $element.attr('src')
-            const link = src.substring(src.indexOf('reblog/')).split('/')
-            // cy.log(`https://www.tumblr.com/${link[0]+'/'+owner+'/'+link[1]+'/'+link[2]}`);
-            cy.visit(`https://www.tumblr.com/${link[0]+'/'+owner+'/'+link[1]+'/'+link[2]}`, {
-                failOnStatusCode: false
-            })
-        });
-    }
+  visitPostIframe(owner) {
+    cy.get("iframe.vP3g8").within(($element) => {
+      const src = $element.attr("src");
+      const link = src.substring(src.indexOf("reblog/")).split("/");
+      // cy.log(`https://www.tumblr.com/${link[0]+'/'+owner+'/'+link[1]+'/'+link[2]}`);
+      cy.visit(
+        `https://www.tumblr.com/${
+          link[0] + "/" + owner + "/" + link[1] + "/" + link[2]
+        }`,
+        {
+          failOnStatusCode: false,
+        }
+      );
+    });
+  }
 }
 
 export default Postboard;

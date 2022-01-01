@@ -1,7 +1,7 @@
 const {returnPOM} = require('../utils/utils');
 module.exports = class Home {
     async WritePostButton() {
-        const selector = await 'new UiSelector().resourceId("com.cmp.cmplr:id/writePostBtn")';
+        const selector = await 'new UiSelector().resourceId("com.tumblr:id/composer_fab")';
         return returnPOM(selector);
     }
     async HomeScreenButton() {
@@ -17,7 +17,7 @@ module.exports = class Home {
         return returnPOM(selector);
     }
     async ProfileScreenButton() {
-        const selector = await 'new UiSelector().resourceId("com.cmp.cmplr:id/profileScreenFragment")';
+        const selector = await 'new UiSelector().resourceId("com.tumblr:id/topnav_account_button_img_active")';
         return returnPOM(selector);
     }
 }
