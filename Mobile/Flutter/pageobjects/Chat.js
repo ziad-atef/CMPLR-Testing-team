@@ -6,7 +6,7 @@ module.exports = class Chat {
         return byValueKey('chat_0');
     }
     textField() {
-        return byValueKey('chat_testField');
+        return byValueKey('chat_textField');
     }
     sendButton() {
         return byValueKey('chatSend');
