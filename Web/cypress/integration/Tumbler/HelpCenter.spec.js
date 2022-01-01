@@ -39,7 +39,7 @@ describe('Help center', () => {
         */
         
         var head;
-        cy.visit('https://beta.cmplr.tech/help');
+        cy.visit('/help');
 
         cy.get('a[class="help-center-container-category-content-link"]').then(($topic) => {
             const items = $topic.toArray(); 

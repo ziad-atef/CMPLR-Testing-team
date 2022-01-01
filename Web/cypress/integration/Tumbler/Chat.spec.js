@@ -50,7 +50,7 @@ describe("Chatting (send-only)", () => {
 
     beforeEach(() => {
 
-        cy.visit("https://beta.cmplr.tech/login");
+        cy.visit("/login");
         cy.fixture('PersonalData').then((user) => {
             email1 = user.email;
             password1 = user.password;
@@ -155,7 +155,7 @@ describe('Sending and recieving checks', () => {
             password2 = user.password2;
         });
 
-        cy.visit("https://beta.cmplr.tech/login");
+        cy.visit("/login");
         /*
         return cy.mailslurp()
             .then(mailslurp => mailslurp.createInbox())

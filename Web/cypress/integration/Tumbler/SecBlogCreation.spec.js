@@ -30,7 +30,7 @@ describe("Secondary blog creation", () => {
               first you have to pass the url of the website, or the page you want
               to start your test with, you want to test
           */
-        cy.visit("https://beta.cmplr.tech/login");
+        cy.visit("/login");
         cy.fixture('PersonalData').then((user) => {
             email1 = user.email;
             password1 = user.password;

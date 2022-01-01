@@ -2,7 +2,7 @@ import Login from '../../Page Objects/login';
 import { noAuth } from '../../Utils/log in/pageassertion';
 
 let LoginPOM;
-let blogLink = "https://beta.cmplr.tech/blog/ziadd";
+let blogLink = "/blog/ziadd";
 let email;
 let password;
 let email1, password1;
@@ -29,7 +29,7 @@ describe('Authorizations', () => {
         */
         LoginPOM = new Login();
 
-        cy.visit("https://beta.cmplr.tech/login");
+        cy.visit("/login");
         cy.fixture('PersonalData').then((user) => {
             email1 = user.email;
             password1 = user.password;
